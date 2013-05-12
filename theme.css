@@ -1132,7 +1132,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 
 .firm-news .headlines {
     width: 680px;
-    padding-bottom: 30px;
+    padding-bottom: 30px
 }
 
 .firm-news .headlines .readmore {
@@ -1173,7 +1173,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 .community .featured-thumbnail {
     margin-bottom: 5px;
     padding-bottom: 5px;
-    border-bottom: 1px solid #4a3b15;
+    border-bottom: 1px solid #4a3b15
 }
 
 
@@ -1187,13 +1187,13 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     letter-spacing: 1px;
     padding-right: 10px;
     font-style: italic;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .byline {
     padding-top: 14px;
     padding-bottom: 2px;
-    font-size: 12px;
+    font-size: 12px
 }
 
 .recent-post p {
@@ -1203,7 +1203,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 
 .recent-post {
     margin-bottom: 20px;
-    border-bottom: 3px double #D21532;
+    border-bottom: 3px double #D21532
 }
 
 
@@ -1212,7 +1212,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 .map {
     -moz-box-shadow: 1px 1px 1px 1px #999;
     -webkit-box-shadow: 1px 1px 1px 1px #999;
-    box-shadow: 1px 1px 1px 1px #999;
+    box-shadow: 1px 1px 1px 1px #999
 }
 
 
@@ -1222,7 +1222,7 @@ table.contact {
 
 .contactinfo {
     margin-top: -3px;
-    padding-bottom: 5px;
+    padding-bottom: 5px
 }
 
 .address-text {
