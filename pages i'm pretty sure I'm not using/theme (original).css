@@ -1,0 +1,1712 @@
+/*	Resets
+	------	*/
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,hgroup,menu,header,footer,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}article,aside,canvas,figure,figure img,figcaption,hgroup,footer,header,nav,section,audio,video{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+
+* {margin: 0; padding:0;}
+
+
+
+
+
+/*
+	general styles
+ */
+
+ body {
+     	font-family: 'EB Garamond', sans-serif;
+      background-image: url(images/bg_gradient.png); 
+        background-repeat: repeat-x;
+               background-color: #efeee9;
+              /* color: #403b2c; */
+              color: #574F4D;
+              padding-left: 20px;
+ }
+h2.lawyer-name {
+    color: #D21532;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.17em;
+}
+
+
+  .page-id-545 #content {
+    padding-top: 75px;
+} 
+
+#post-545 {
+    padding-top: 30px;
+}
+
+aside {
+    margin-top: 50px;
+    padding-left: 5px;
+    height: 100%;
+  }
+  
+  
+#sidebar.border {
+          border-left: 2px solid #C41230;
+          margin-bottom: 10px;
+          }
+          
+          
+ 
+#sidebar {
+              padding-left: 10px;
+              height: 100%;
+}
+
+
+
+a {
+     text-decoration: none;
+ }
+ 
+ a:hover {
+     text-decoration: underline;    
+ }
+ 
+
+.serif,
+cite,
+blockquote,
+h1 {
+    font-family: 'EB Garamond', Georgia, serif; 
+      
+}
+ 
+#title {
+    height: 50px;
+width: 278px;
+float: right;
+}
+
+#logo {
+    color: #c41230;
+    font-size: 102px;
+    /*  margin-left: 72%;
+  top: 35px; */
+}
+
+#navbar {
+    float: left;
+    width: 70%;
+    padding-top: 23px;
+}
+
+.home #content h1 {
+    font-size: 86px;
+    line-height: 80px;
+    color: #D21532;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing:-1px;
+    padding-bottom: 50px;
+}
+
+#content h1, #content h1 a {
+    color: #D21532;
+    font-weight: 200;
+  }
+
+  #content h1 {
+    font-size: 43px; /* was 56 */
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+  }
+  
+  #content h1 a {
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+  
+  
+.page-id-64 #content {
+    padding-top: 100px;
+}
+
+.page-id-64 h1 {
+    margin-top: 60px;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'BebasNeueRegular', sans-serif;
+	font-weight: normal;
+        letter-spacing: 1px;
+}
+
+h3, h3 a, h3 a:visited, #sidebar h3 a, #lawyer-right h3 a, .office-sidebar h4, .contact h4, .contact h4 a {
+    padding-bottom: 5px;
+    color: #817566;
+}
+
+.sidebar h3 {
+    padding-top: 10px;
+}
+.post h2, .h2
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+	margin-top: 24px;
+        margin-bottom: 24px;
+}
+
+.archive h2, .archive h2 a, .h2 {
+    font-size: 1.15em;
+    letter-spacing: 1px;
+     font-family: 'BebasNeueRegular';
+    color: #817566;
+}
+
+.monospace,
+var,
+code {
+	font-family: "courier new", courier, monospace;
+}
+
+.amp {
+	font-style: italic;
+	font-family: baskerville,palatino,"palatino linotype","book antiqua",georgia,times,"times new roman",serif;
+	font-weight: normal;
+}
+
+a:link {
+	color: #4A3B15; 
+}
+a:visited {
+	color: #4A3B15;
+}
+a:hover,a:active {
+	color: #4A3B15;
+        text-decoration: underline;
+}
+ 
+.post-content ul,
+.post-content ol {
+	padding-left: 24px;
+        padding-bottom: 20px;
+}
+
+
+.post-content ul li,
+.post-content ol li {
+        padding-bottom: 4px;
+}
+
+/* style  search box */
+/* Container */
+.nav-search {
+	background: url(images/searchbar.png) no-repeat;
+	color: #212121;
+	height: 23px;
+	width: 270px;
+        right: 5px;
+}
+
+#content.practice-page .nav-search, .home .nav-search {
+    	background: url(images/searchbar-practice.png) no-repeat;
+     width: 278px;
+    margin-top: 5px;  
+}
+
+.video {
+    padding-bottom: 10px;
+}
+
+.search-wide {
+    background: url(images/searchbar_wide.png) no-repeat;
+	color: #212121;
+	height: 23px;
+	width: 500px;
+}
+
+.home {
+    bottom: 25px;
+}
+
+
+
+input,
+textarea { 
+        height: 13px;
+	outline: none;
+}
+
+
+
+input[type=text], [type=image] {
+    margin-left: 10px;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+	border: 1px #444 solid;
+}
+
+textarea {
+	min-height: 150px;
+	width: 100%;
+}
+
+blockquote {
+	border-top: 1px #ccc dotted;
+	border-bottom: 1px #ccc dotted;
+	text-align: justify;
+	margin: 20px;
+	padding: 12px;
+}
+	blockquote:first-letter {
+		font-size: 24px;
+		padding-right: 1px;
+	}
+	blockquote:first-line {
+		font-size: 20px;
+}
+
+li {
+  font-size: 1em;
+}
+
+
+p {
+  font-size: 1.1em;
+  line-height:1.7em;
+  padding-bottom: 10px;
+    color: #574F4D;
+}
+
+.fullbio p {
+    font-family: 'EB Garamond';
+}
+
+
+
+/* FOR CLEARING FLOATS */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+} 
+
+/*
+	layout styles
+ */
+
+#if-logged-in .container {
+	background: #000;
+	margin-top: -24px;
+}
+
+
+
+body {
+   padding: 0;
+}
+
+
+/* Different backgrounds for Different pages */
+
+.home:after, .page-id-109:after, .page-id-157:after, .page-id-75:after, .page-id-66:after, .page-id-545:after, .page-id-595:after, .page-id-555:after, .page-id-592:after, .page-id-60:after     {
+    
+   position:absolute;
+   z-index:-1;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   text-align: center;
+   width: 100%;
+   }
+
+
+.home:after {                                   /* positioning is above */
+            content: url(images/bg_home.jpg);
+            }
+
+
+
+.page-id-595:after {                                  /* positioning is above */
+            content: url(images/bg_practiceareas.jpg);
+          }
+
+          
+.page-id-157:after {                                  /* positioning is above */
+       content: url(images/bg_attorneys.jpg);
+          }
+
+.page-id-75:after {                                  /* positioning is above */
+       content: url(images/bg_firmnews.jpg);
+          }
+
+          
+.page-id-66:after {                                  /* positioning is above */
+            content: url(images/bg_awards.jpg);
+          }      
+          
+          
+.page-id-545:after {                                  /* positioning is above */
+            content: url(images/bg_community.jpg);
+          }
+          
+      
+          
+.page-id-555:after {                                  /* positioning is above */
+            content: url(images/bg_publications.jpg);
+          }
+          
+.page-id-592:after {                                  /* positioning is above */
+            content: url(images/bg_indiana.jpg);
+          }
+          
+.page-id-60:after {                                  /* positioning is above */
+            content: url(images/bg_contact.jpg);
+          }          
+          
+.container {
+    	margin:0px auto;
+        width: 990px;
+       /* padding-left: 25px; */
+        position: relative;
+	}
+        
+        
+        #header .container {
+            padding-top: 30px;
+        }
+		#title {
+			/* position: relative; */
+			height: 50px;
+		}
+			 #logo,
+			#tagline {
+				/*position: absolute;
+				bottom: 0; */ 
+			}
+			#logo {
+				font-size: 72px;
+				line-height: 72px;
+			}
+			#tagline {
+				font-size: 18px;
+				right: 0;
+				line-height: 36px;
+			}
+			#header-image.container {
+				padding: 0;
+			}
+	
+
+#menu-header-menu li.current_page_item a {
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+ul li .sub-menu {
+    background: none repeat scroll 0 0 #FFF;
+    padding-bottom: 20px !important;
+    padding-left: 17px !important;
+}           
+      
+#article ul  {
+    margin-left: 30px;
+}
+                        
+	#widget-header {
+		clear: both;
+	}
+	
+	#content {
+            margin-top: 40px;
+
+	}
+		#widget-alert {
+			background: #C6D8CD;
+			border: 1px #5b816a solid;
+			padding: 24px;
+			margin-bottom: 24px;
+		}
+		.post-single {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			border-bottom: 1px #dedede solid;
+                        margin-top: 20px;
+                        width: 650px;
+		}
+	#sidebar {
+
+        }
+		#sidebar .widget-area {
+			/* padding-bottom: 20px; */
+			/* margin-bottom: 20px; */
+		}
+                
+              
+			 
+			#sidebar li {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+                        
+                        #sidebar ul {
+                            padding-bottom: 5px;
+                            margin: 0;
+                            list-style: none;
+                        }
+                        
+				#sidebar .children {
+					padding-left: 10px;
+				}
+					#sidebar .children .children {
+						padding-left: 10px;
+					}
+                                        
+                                
+	#footer .container {
+		padding-top: 80px; 
+		padding-bottom: 20px;
+        }
+        
+		#footer-content {
+			padding: 20px;
+		}
+			#footer ul,
+			#footer li {
+				display: inline;
+				list-style: none;
+			}
+				#footer li a {
+					padding: 0 10px;
+				}
+                                #footer p, .bonus {
+                                    font-size: 10px;
+                                    font-family: 'franklin_gothic_fs_bookRg', serif;
+                                }      
+                                
+                                .footer-right {float: right; margin-top: -20px; padding-right: 10px;}
+.column {
+     padding: 0;  
+}
+
+.home .column {
+    margin-top: 30px;
+}
+
+.front-left, .practice-areas-list-small {
+    width: 680px;
+    float: left;
+    padding-right: 10px;
+    display: inline-block;
+    
+}
+
+.front-right {
+    float: right;
+    width: 290px;
+    display: inline-block;
+}
+
+/* .practice-page .front-right {
+     width: 290px;
+ } */
+
+#nav-primary {
+		/* clear: both;
+		width: 70%; */
+		padding: 0;
+                 font-family: "OpenSansSemibold";
+    text-transform: uppercase;
+ /*   margin-left: 25px; */
+    min-height: 15px;
+    border-top: #4A3B15 thin solid;
+	}
+		#nav-primary ul,
+		#nav-primary li {
+			list-style: none;
+		}
+			#nav-primary a {
+				float: left;
+				display: block;
+				padding: 0 10px;
+                                font-family: "OpenSansSemibold";
+                                color: #4A3B15;
+			}
+                        
+                        
+         
+#nav-primary ul li {
+    /* color: #4A3B15; */
+    display: block;
+    float: left;
+    font-size: 10px;
+    font-weight: normal;
+    padding-right: 32px;
+    text-align: center;
+    width: auto;
+    position: relative;
+    z-index: 1002;
+}
+
+#nav-primary ul li:last-child {
+    padding-right: 0;
+}
+
+        #nav-primary li a, #nav-primary li a:visited {
+           /* color: #4A3B15; */
+            padding: 2px 0;
+        }
+        #nav-primary ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        
+#nav-primary ul {
+    line-height: normal;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    z-index: 1001;
+}
+
+#nav-primary ul ul {
+   /* border-style:  solid solid;
+    border-width:  1px 1px;     THE BOX AROUND THE SUBMENU ITEMS*/
+    display: none;
+    left: 0;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 20px; /* how far below the menu the dropdown shows up */
+    width: 100px;
+    z-index: 999;
+}
+#nav-primary ul li:hover ul, #nav-primary ul li.hover ul {
+    display: inline;
+}
+#nav-primary ul ul li {
+    color: #333333;
+    display: block;
+    font-weight: normal !important;
+    text-align: left;
+    text-transform: none;
+    padding: 0;
+}
+#menu ul ul li #menu ul ul li a:hover {
+    color: #FF6C00;
+}
+#menu ul ul li.last {
+    border: 0 none;
+}
+#menu ul ul li a {
+    display: block;
+    float: none;
+    height: auto;
+    padding: 10px 0;
+    text-align: left;
+}
+#nav-primary ul ul li a:link, #nav-primary ul ul li a:visited {
+    color: #333333 !important;
+}
+#nav-primary ul ul li a:hover, #nav-primary ul ul li a:active {
+    background: none repeat scroll 0 0 transparent !important;
+    color: #00529C !important;
+    
+}
+
+
+
+	 
+#photo-row  {
+    width: 680px;
+/*   position: absolute; */
+/*    bottom: 30px; */
+    margin-left: 5px;
+    margin-top: 25px;
+}
+
+.photo-block {
+	width: 90px;
+    float: left;
+	padding-right: 7px;
+	display: inline-block;
+	min-height: 100px;
+}
+
+
+.photo-block h4 {
+/*	position: absolute; */
+	margin-top: 15px;
+	/* min-height: 80px; */
+        height: 32px;
+}
+
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.bar { /* bar behind LAWYER NAME */
+	height: 30px;
+	zoom: 1;
+   /*  background-image: url(images/bg_photobar.png); */
+   background-image: url(images/bg_photobar_feather.png);
+    display:block;
+	position: relative;
+	margin-top: -30px; 
+	z-index: 3999;
+}
+
+h5.lawyer-name,  h5.lawyer-name a {
+    color: white;
+
+  
+}
+
+h4.practice-name  {
+        margin-top: -3px;
+        text-align: center;
+}
+
+h4.practice-name a {
+            color: #403b2c;
+}
+
+h5.lawyer-name {
+font: 11px/12px 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+display: block;
+vertical-align: text-bottom;
+position: relative;
+z-index: 4000;
+margin-top: -27px;
+height: 30px;
+width: 85px;
+margin-left: 3px;
+margin-right: 3px;
+    text-align: center;
+
+
+}
+
+.photo-block h4 span {  /*PRACTICE NAME */
+   font: 10px/11px 'franklin_gothic_fs_bookbold',  'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif; 
+   padding-top: 6px;
+   padding-bottom: 3px;
+   letter-spacing: .25px;
+    margin: auto;
+    /*	height: 24px; removed by PMH */
+    text-transform: uppercase;	
+    display: block;
+    width: 85px;
+}
+
+	
+
+.product.liability {
+	background-color: #cb9137;	
+}
+
+
+.health.care {
+	background-color: #95ABAE;
+}
+
+.construction {
+	background-color: #B38A3B;
+}
+
+.employment {
+	background-color: #92a8be;
+}
+
+
+.insurance {
+	background-color: #d2b970;
+}
+
+.business {
+	background-color: #C4521c;
+}
+
+.energy {
+	background-color: #78a12e;
+}
+
+.mediation {
+	background-color: #95b29b;
+}
+
+.commercial {
+	background-color: #9d7463;
+}
+
+.transportation {
+	background-color: #cf7129;
+}
+
+.toxic {
+	background-color: #b44438;
+}
+
+.retail {
+	background-color: #a4bec2;
+}
+
+.administrative {
+	background-color: #7098b2;
+}
+
+.appellate {
+	background-color: #938172;
+}
+
+.complex {
+    background-color: #afb494;
+}
+.professional.liability {
+    background-color: #687f8d;
+}
+
+.municipal {
+    background-color: #ab9e8c;
+}
+
+.general.negligence {
+    background-color: #c1645e;
+}
+
+.transportation {
+    background-color: #cf7129;
+}
+
+.environmental {
+    background-color: #a0b054;
+}
+
+
+
+
+/* News Styles */
+
+.news_headlines_home { 
+  position: relative; 
+  left: 50px; 
+  display: table; 
+  width: 600px;
+  /* margin-top: 20px; */
+}
+
+.news_headlines_home h3, .headlines h3 {
+  display: table-cell; 
+  width: 100px;
+  vertical-align: middle; 
+  text-align: center; 
+}
+
+.headlines h3 {
+    padding-left: 10px;
+}
+
+
+.news_headlines_home ul, .headlines ul {
+    padding-left: 10px;
+}
+
+.news_headlines_home ul, .news_headlines_home li {
+    list-style: none;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    padding-top: 1px;
+    
+}
+
+.icons {
+    float: right;
+    padding-right: 20px;
+}    
+
+#lawyer-left {
+    width: 570px;
+float: left;
+}
+
+#lawyer-right .featured-thumbnail, .avatar, .post-thumbnail, .attachment-post-add-news-image-thumbnail {
+  -moz-box-shadow:     4px 1px 2px #666;
+  -webkit-box-shadow:  4px 1px 2px #666;
+  box-shadow:          4px 1px 2px #666;
+}
+
+
+
+#lawyer-right {
+      width: 400px;
+      float:right;
+}
+
+#lawyer-right h3 {
+  font-size: 1.07em;
+   padding-bottom: 0;
+}
+
+.lawyer-list {
+    border-left:  1px solid #D21532;
+    position: relative;
+    float:left;
+    padding: 15px;
+    width: 175px;
+    min-height: 200px;
+    
+}
+
+.lawyer-list br { /*spacing between multiple items in a single field */
+    line-height: 5px;
+}
+
+.practice-areas {  /* List of practice areas on Lawyer Profile page */
+    background-color: #EFECE0;
+    width: 150px;
+    position: relative;
+    top: 45px;
+    padding: 5px 5px 15px 20px;
+    float: left;
+    color: #574F4D;
+
+}
+
+.practice-areas ul, .lawyer-list ul {
+    list-style-type: none;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+     font-weight: 100;
+     font-size: .8em;
+     line-height: 1.1em;
+}
+
+
+.practice-areas li, .lawyer-list li {
+    padding-bottom: 4px;
+}
+
+h3  {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    }
+
+.lawyer-list h3, .practice-areas h3 {
+    letter-spacing: 2px;
+    margin: 0;
+    padding-top: 12px;
+    
+}
+
+h3 .and {
+    letter-spacing: 0;
+}
+
+
+.single-lawyer_profile p {
+    width: 500px;
+}
+
+.phone {
+    font-size: 14px;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 200;
+    margin-bottom: 12px;
+    
+}
+
+.title {
+    font-size: 1.05em;
+    line-height: 1.4em;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    margin-bottom: 12px;
+}
+
+.practice-areas-list ul { /* List of practice areas on Practice Area Page */
+    list-style-type: none;
+    font: 1em/1.3em 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.practice-areas-list li { /* List of practice areas on Practice Area Page */
+    padding-bottom: 10px;
+}
+
+
+
+
+.practice-areas-list {
+      padding-top: 20px;
+}
+
+
+.two-columns{
+-webkit-column-count: 2;
+-webkit-column-gap: 15px; 
+-webkit-column-rule: 0;
+-moz-column-count: 2;
+-moz-column-gap: 15px;  
+-moz-column-rule: 0;
+column-count: 2;
+column-gap: 15px; 
+column-rule: 0;
+}
+
+.three-columns{
+-webkit-column-count: 3;
+-webkit-column-gap: 35px; 
+-webkit-column-rule: 0;
+-moz-column-count: 3;
+-moz-column-gap: 35px;  
+-moz-column-rule: 0;
+column-count: 3;
+column-gap: 35px; 
+column-rule: 0;
+width: 100%;
+}
+
+
+.four-columns{
+-webkit-column-count: 4;
+-webkit-column-gap: 15px; 
+-webkit-column-rule: 0;
+-moz-column-count: 4;
+-moz-column-gap: 15px;  
+-moz-column-rule: 0;
+column-count: 4;
+column-gap: 15px; 
+column-rule: 0;
+}
+
+
+
+.practice-areas-list-small ul { /* List of practice areas on Practice Area Page */
+    list-style-type: none;
+    font: .8em/1.3em 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.practice-areas-list-small ul li { /* List of practice areas on Practice Area Page */
+    padding-bottom: 3px;
+}
+
+hr {
+    width: 700px;
+    border: none;
+    background-color: #E9E5D9;
+    color: #E9E5D9;
+    height: 2px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+.practice .sidebar .nav-search {
+
+}
+
+#sidebar.practice ul {
+    padding: 15px;
+
+}
+
+.sidebar.publications {
+      padding-top: 50px; 
+}
+
+
+.blockquote, .quote-source, .quote-source-title, .quote {
+    color: #c41230;
+}
+
+#alphaList { 
+        font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 700;
+        width:600px; overflow:hidden; 
+        font-size:12px; 
+        clear:both; 
+        padding-bottom: 20px;
+      
+}
+#alphaList .first { border:0; }
+#alphaList a { display:block; line-height:22px; 
+width:22px; float:left; text-align:center; 
+border-left:1px solid #4A3B15;
+}
+ 
+#alphaList a:hover { background:#f1f1f1;
+ text-decoration:none; color:black 
+}
+
+
+.laywer_search_form  {
+  /*   border: 1px solid black; JUST FOR TESTING */
+   margin-left: 5px;
+    color: #212121;
+        bottom: 35px;
+        right: 5px;
+}
+
+
+.search-text {
+	margin-top: 3px;
+        margin-right: 5px;
+	background: none !important;
+	-moz-box-shadow: none !important;
+	border: none !important;
+	color:#000;
+	/* height:16px;*/
+}
+
+.textInput { 
+    background-color: white;
+    color: #000;
+    font-size: .8em;
+    width: 400px;
+    
+    }
+    
+.textInput.lawyer-search { 
+        height: 25px;        
+}
+
+ input.textInput, input.textInput:hover,
+textarea.textInput:hover,
+input.textInput:focus,
+textarea.textInput:focus  {
+
+        text-indent: 5px;
+         border: 1px solid #eae7dd; 
+         nargun-bottom: 4px;
+         -moz-box-shadow:     1px 1px 1px #8e8e8e;
+      -webkit-box-shadow:  1px 1px 1px #8e8e8e;
+      box-shadow:         1px 1px 1px #8e8e8e;
+
+}  
+
+
+td.searchLabel {
+    text-align: right;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+    width: 150px;
+}
+
+.attorney-search {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.toggleBox {
+    display: none;
+}
+
+.newsletter-list, .newsletter-list a {
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #403b2c;
+    margin-left: 15px;
+}
+
+
+.headlines { 
+  position: relative; 
+  display: table; 
+  width: 530px;
+  padding-top: 15px;
+}
+
+.firm-news .headlines {
+    width: 680px;
+    padding-bottom: 30px;
+}
+
+.publications .headlines {
+    width: 600px;
+}
+
+
+.headlines li {
+    border-bottom: 2px solid #D21532;
+    padding: 10px 0 15px 0;
+ }
+ 
+ .firm-news .headlines li, .publications .headlines li, .awards .headlines li {
+     padding: 5px 0 5px 7px;
+ }
+
+.headlines li:first-child {
+       border-top: 2px solid #D21532;
+ }
+ 
+ 
+.headlines ul, .headlines li, .newer-older {
+    list-style: none;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-weight: 600;
+    padding-left: 9px;
+}
+
+
+.headlines .readmore  {
+    font-family: 'franklin_gothic_fs_bookitalic', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 10px;
+   /* font-style: italic; */
+    letter-spacing: 1px;
+    margin-left: 400px;
+    
+}
+
+.firm-news .headlines .readmore {
+    margin-left: 600px;
+}
+
+.read-more  {
+    font-size: 11px;
+    font-weight: 800;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+a.read-more, a:visited.read-more {    
+    color: #C41230;
+}
+
+.quote-block {
+    width: 675px;
+    padding-top: 20px;  
+    float: left;
+}
+
+.quote {
+    text-indent: -0.5em;
+    font-size: 19px;
+    line-height: 22px;
+    font-style: italic;
+    padding-top: 10px;
+}
+
+.quote-source {
+    float: right;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: right;
+    width: 700px;
+}
+
+.quote-source-title {
+    text-transform: none;
+    font-family: 'franklin_gothic_fs_bookitalic', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    /* font-style: italic; */
+}
+
+.awards .headlines {
+    margin-left: 80px;
+  
+}
+
+.community .featured-thumbnail {
+    border-bottom: 1px solid #4a3b15;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
+.sidebar-text, .address-text {
+    font-size: 13px;
+    line-height: 15px;
+    font-family: 'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+#sidebar li.sidebar-text.news {
+    padding-bottom: 5px;
+}
+
+#sidebar li.contactinfo {
+    margin-top: -3px;
+    padding-bottom: 5px;
+}
+
+.address-text {
+    margin-left: 100px;
+    margin-top: -22px;
+}
+
+table.contact {
+    padding-top: 5px;
+}
+
+.community h2 {
+    font-size: 1.15em;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    color: #D21532;
+}
+
+#sidebar-search.solo {
+    /* padding-top: 275px; */
+    position: absolute; /* to get search bar on the bottom */
+    bottom: 150px;/* to get search bar on the bottom */
+
+}
+
+.white-border {
+    border: #FFF solid 2px;
+}
+
+
+
+/*Practice Pages */
+
+/* #content.practice-page {
+        margin-top: 35px;
+} */
+
+
+#content.practice-page .sidebar {
+    height: 100%;
+    background-color: #E9E5D9;
+    width: 278px;
+        
+}
+
+#content.practice-page aside {
+    margin-left: -10px;
+    margin-top: 0;
+        
+}
+
+#content.practice-page h1  {
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 26px 40px 26px 20px;
+    width: 655px;
+    /* margin-top: 10px; */
+   margin-bottom: 27px;
+   
+}
+
+
+.practice-body  {
+   /* font-size: 1.1em;  */
+    padding-left: 20px;
+    width: 648px;
+}
+
+.practice-body ul {
+    margin-left: 50px;
+    list-style-type: none;
+}
+
+.practice-body ul li {
+    margin-bottom: 10px;
+    font-size: .8em;
+    line-height: 1.3em;
+    font-family:'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif; 
+}
+
+.post-content.fullbio  ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-size: .9em;
+    line-height: 1.4em;
+    font-family:'franklin_gothic_fs_bookRg', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif; 
+}
+
+
+.three-columns ul li, .two-columns ul li, .four-columns ul li {
+
+-webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
+    }
+
+.practice-body .three-columns ul li, .practice-body .two-columns ul li, .practice-body .four-columns ul li {
+    line-height: 1.4em;
+        
+
+}
+
+.practice-body .three-columns, .practice-body .two-columns, .practice-body .four-columns {
+}
+
+
+.practice-body h3 {
+    margin-bottom: 4px;
+    margin-top: 12px;
+    margin-left: 50px;
+}
+
+#sidebar.practice {
+   min-height: 360px;
+   height: 100%;
+}
+
+
+.page-administrative-law h1, .page-administrative-law-attorneys h1, .page-administrative-law-rep h1 {  
+    background-color: #7098b2;
+}
+
+.page-administrative-law hr, .page-administrative-law-attorneys hr, .page-administrative-law-rep hr {  
+    background-color: #7098b2;
+    color: #7098b2;
+}
+
+.page-appellate-law h1, .page-appellate-law-attorneys h1, .page-appellate-law-rep h1 {  
+    background-color: #938172;
+}
+
+.page-appellate-law hr, .page-appellate-law-attorneys hr, .page-appellate-law-rep hr  {  
+    background-color: #938172;
+    color: #938172;
+}
+
+.page-environmental  h1, .page-environmental-attorneys h1, .page-environmental-rep h1 {  
+    background-color: #A0B054;
+}
+
+
+.page-environmental  hr, .page-environmental-attorneys  hr, .page-environmental-rep  hr {  
+    background-color: #A0B054;
+    color: #A0B054;
+}
+
+
+.page-business-litigation h1, .page-business-litigation-attorneys h1, .page-business-litigation-rep h1, .page-business-litigation-more h1 {  
+    background-color: #c4521c;
+}
+
+.page-business-litigation hr, .page-business-litigation-attorneys h1, .page-business-litigation-rep hr, .page-business-litigation-more hr {  
+    background-color: #c4521c;
+    color: #c4521c;
+}
+
+
+.page-commercial-transactions h1, .page-commercial-transactions-attorneys h1, .page-commercial-transactions-rep h1 {  
+    background-color: #9d7463;
+}
+
+.page-commercial-transactions hr, .page-commercial-transactions-attorneys hr, .page-commercial-transactions-rep hr {  
+    background-color: #9d7463;
+    color: #9d7463;
+}
+
+
+.page-complex-catastrophic #content h1, .page-complex-catastrophic-attorneys #content h1, .page-complex-catastrophic-rep #content h1 {  
+    background-color: #afb494;
+}
+
+.page-complex-catastrophic hr, .page-complex-catastrophic-attorneys hr, .page-complex-catastrophic-rep hr {  
+    background-color: #afb494;
+    color: #afb494;
+}
+
+.page-construction h1, .page-construction-attorneys h1, .page-construction-rep h1 {  
+    background-color: #b38a3b;
+}
+
+.page-construction hr, .page-construction-attorneys hr, .page-construction-rep hr {  
+    background-color: #b38a3b;
+    color: #b38a3b;
+}
+
+.page-employment h1, .page-employment-attorneys h1, .page-employment-rep h1 {  
+    background-color: #92a8be;
+}
+
+.page-employment hr, .page-employment-attorneys hr, .page-employment-rep hr {  
+    background-color: #92a8be;
+    color: #92a8be;
+}
+
+
+.page-energy h1, .page-energy-attorneys h1, .page-energy-rep h1 {  
+    background-color: #78a12e;
+}
+
+.page-energy hr, .page-energy-attorneys hr, .page-energy-rep hr {  
+    background-color: #78a12e;
+    color: #78a12e;
+}
+
+.page-general-negligence h1, .page-general-negligence-attorneys h1, .page-general-negligence-rep h1 {  
+    background-color: #c1645e;
+}
+
+.page-general-negligence hr, .page-general-negligence-attorneys hr, .page-general-negligence-rep hr {  
+    background-color: #c1645e;
+    color: #c1645e;
+}
+
+.page-health-care h1, .page-health-care-attorneys h1, .page-health-care-rep h1 {  
+    background-color: #95aaaf;
+}
+.page-health-care hr, .page-health-care-attorneys hr, .page-health-care-rep hr {  
+    background-color: #95aaaf;
+    color: #95aaaf;
+}
+
+
+.page-insurance h1, .page-insurance-attorneys h1, .page-insurance-rep h1, .page-insurance-more h1 {  
+    background-color: #d2b970;
+}
+
+.page-insurance hr, .page-insurance-attorneys hr, .page-insurance-rep hr, .page-insurance-more hr {  
+    background-color: #d2b970;
+    color: #d2b970;
+}
+
+.page-mediation h1, .page-mediation-attorneys h1, .page-mediation-rep h1 {  
+    background-color: #95b29b;
+}
+
+
+.page-mediation hr, .page-mediation-attorneys hr, .page-mediation-rep hr {  
+    background-color: #95b29b;
+    color: #95b29b;
+}
+
+.page-municipal-liability h1, .page-municipal-liability-attorneys h1, .page-municipal-liability-rep h1  {  
+    background-color: #ab9e8c;
+}
+
+
+.page-municipal-liability hr, .page-municipal-liability-attorneys hr, .page-municipal-liability-rep hr {  
+    background-color: #ab9e8c;
+    color: #ab9e8c;
+}
+
+.page-product-liability h1, .page-product-liability-attorneys h1, .page-product-liability-rep h1 {  
+    background-color: #cb9137;
+}
+
+.page-product-liability hr, .page-product-liability-attorneys hr, .page-product-liability-rep hr {  
+    background-color: #cb9137;
+    color: #cb9137;
+}
+
+.page-professional-liability h1, .page-professional-liability-attorneys h1, .page-professional-liability-rep h1 {  
+    background-color: #687f8d;
+}
+
+.page-professional-liability hr, .page-professional-liability-attorneys hr, .page-professional-liability-rep hr {  
+    background-color: #687f8d;
+    color: #687f8d;
+}
+
+.page-retail h1, .page-retail-attorneys h1, .page-retail-rep h1 {  
+    background-color: #a4bec2;
+}
+
+.page-retail hr, .page-retail-attorneys hr, .page-retail-rep hr {  
+    background-color: #a4bec2;
+    color: #a4bec2;
+}
+
+.page-toxic-tort h1, .page-toxic-tort-attorneys h1, .page-toxic-tort-rep h1 {  
+    background-color: #b44438;
+}
+
+.page-toxic-tort hr, .page-toxic-tort-attorneys hr, .page-toxic-tort-rep hr {  
+    background-color: #b44438;
+    color: #b44438;
+}
+
+.page-transportation h1, .page-transportation-attorneys h1, .page-transportation-rep h1 {  
+    background-color: #cf7129;
+}
+
+.page-transportation hr, .page-transportation-attorneys hr, .page-transportation-rep hr {  
+    background-color: #cf7129;
+    color: #cf7129;
+}
+
+
+.h3 {
+    font-size: 1em;
+    font-family: 'BebasNeueRegular';
+    color: #817566;
+}
+
+
+.newer-older {
+    text-align: right;
+}
+ 
+
+.source, .author {
+    /*font-style: italic; */
+    font-family: 'franklin_gothic_fs_bookitalic', 'Franklin Gothic Medium', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.author {
+    color: #574F4D;
+}
+
+.author:before{
+    content: "\3E \ ";
+}
+
+
+.embed-youtube {
+    text-align: left;
+    margin-left: -5px;
+}
+
+.full-bio {
+    width: 500px;
+    padding: 20px;
+}
+
+.map {
+    /* border: 1px solid #FFF; */
+       -moz-box-shadow:   1px 1px 1px 1px #999;
+      -webkit-box-shadow: 1px 1px 1px 1px #999;
+      box-shadow:         1px 1px 1px 1px #999;
+
+}
+
+
+.affiliation-logo-footer {
+    margin-top: -50px;
+}
+
+.repcases.Energy, .repcases.Mediation, .repcases.Commercial {
+    display: none;
+}
+
+#footer .employee, .bonus {
+    font-size: 12px;
+}
+
+.youtube-player {
+   margin-left: -5px;
+}
+
+.bonus {
+    width: 700px;
+    padding-top: 20px;
+}
+
+
+/* .ie .column div { padding-right: 55px; } */
+
+.ie p {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.ie .practice-areas-list {
+    font: .95em/1.2em "franklin_gothic_fs_bookRg", "Franklin Gothic Medium", sans-serif;
+}
+
+.ie .bonus {
+    font-size: 11px;
+}
+
+
+
+.ie .two, .ie .four, .ie #wrapper, .ie #two-col { /*for columns js */
+      clear:both; 
+}
+
+.ie #sidebar p {
+    font-size: 12px;
+}
+ 
+
+.news-thumbnail {
+    text-align: right;
+    padding-top: 12px;
+}
+
+
+
+.mejs-container {
+background: none;
+}
+
+
+audio {
+width: 225px !important; 
+height: 25px !important;
+}
+
+
+.post-thumbnail, .attachment-post-add-news-image-thumbnail{
+    float: right; 
+    clear: right; 
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+
+
+.audio-block {
+    padding: 20px 0 20px 20px; /* 75px being the width of the thumbnail + how much space you want to put between it and your text */
+    border-bottom: 1px solid #D21532;
+    min-height: 120px;
+    position: relative;
+    }
+    
+    .audio-clip {
+        position: absolute;
+        bottom: 30px;
+    }
+    
+    .audio-right {
+        padding-left: 120px;
+        bottom: 0;
+    }
+    .audio-block h3 {
+        margin-left: 0;
+        
+    }
+.audio-block img {
+    float: left;
+    bottom: 20px;
+    position: absolute;
+    }
+
+
+/* Always remember to compress your live stylesheet and keep an uncompressed backup */

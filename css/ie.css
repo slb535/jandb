@@ -1,0 +1,25 @@
+
+#nav-primary ul li {
+  font-size: 10px;
+    padding-right: 29px;
+}
+
+ 
+
+h1 {
+    color: green;
+}
+
+.two-columns {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.four-columns {
+    column-count: 4;
+    column-gap: 20px;
+}
+
+h3 {
+  /*  font-family: cursive; */
+}

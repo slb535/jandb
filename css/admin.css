@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
+text-shadow: 0 -1px 0 #333;
+color: #fff;
+}
+
+
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, #adminmenu li.current a.menu-top, .folded #adminmenu li.wp-has-current-submenu, .folded #adminmenu li.current.menu-top, #adminmenu .wp-menu-arrow, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
+background-color: #d1cdc3;
+background-image: -ms-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: -moz-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: -o-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: -webkit-gradient(linear,left bottom,left top,from(#d1cdc3),to(#d1cdc3));
+background-image: -webkit-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: linear-gradient(bottom,#d1cdc3,#d1cdc3);
+}
+
+#adminmenu .wp-menu-arrow div {
+	
+	background-color: #574f4d;
+background-image: -ms-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: -moz-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: -o-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: -webkit-gradient(linear,left bottom,left top,from(#d1cdc3),to(#d1cdc3));
+background-image: -webkit-linear-gradient(bottom,#d1cdc3,#d1cdc3);
+background-image: linear-gradient(bottom,#d1cdc3,#d1cdc3);
+
+
+}
+	
+#wpadminbar {
+background-color: #574f4d;
+background-image: -ms-linear-gradient(bottom,#574f4d,#5f5654 5px);
+background-image: -moz-linear-gradient(bottom,#574f4d,#5f5654 5px);
+background-image: -o-linear-gradient(bottom,#574f4d,#5f5654 5px);
+background-image: -webkit-gradient(linear,left bottom,left top,from(#574f4d),to(#5f5654));
+background-image: -webkit-linear-gradient(bottom,#574f4d,#5f5654 5px);
+background-image: linear-gradient(bottom,#574f4d,#5f5654 5px);
+}
+
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, #adminmenu li.current a.menu-top, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
+text-shadow: none;
+color: #383734;
+border-top-color: none;
+border-bottom-color: none;
