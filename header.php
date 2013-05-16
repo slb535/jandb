@@ -37,7 +37,7 @@
 
         <meta charset="<?php bloginfo('charset'); ?>" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
-        <meta name="viewport" content="width=device-width; initial-scale=1"/><?php /* Add "maximum-scale=1" to fix the Mobile Safari auto-zoom bug on orientation changes, but keep in mind that it will disable user-zooming completely. Bad for accessibility. */ ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
@@ -52,12 +52,21 @@
 
         <link href='http://fonts.googleapis.com/css?family=EB+Garamond|Archivo+Narrow:700|Open+Sans:600,700' rel='stylesheet' type='text/css' />
 
+
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fonts/stylesheet.css" />
 
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/theme.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/menubar.css" />
+        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/theme.css" media="all and (min-width: 980px)" class="rwdretrofit-desktop"/>
+        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/css/menubar.css" media="all and (min-width: 980px)"/>
+
+        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/rwd.css" media="all and (max-width: 979px)" class="rwdretrofit-mobile" />
+
+        <!--[if lt IE 9 ]><link href="<?php bloginfo('template_url'); ?>/theme.css" rel="stylesheet" type="text/css" media="all" /><![endif]-->
+
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
         <link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('template_url'); ?>/css/print.css" />
+
+        <script src="/js/base.min.js"></script>
+        <!-- contains: /js/rwd.retrofit.min.js, /js/modernizr.min.js, /js/supports.touch.min.js, /js/layout.engine.min.js -->
 
 
         <?php /* The HTML5 Shim is required for older browsers, mainly older versions IE */ ?>

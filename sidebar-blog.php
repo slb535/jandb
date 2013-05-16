@@ -3,6 +3,9 @@
 
 
 
+
+
+
     <h2>Recent Posts</h2>
 
     <?php /*
@@ -31,8 +34,17 @@
         <p class="read-more"><a href="">read more</a></p>
 
     </div><!--end recent post -->
+    <div class="publications-sidebar">
 
+        <?php dynamic_sidebar('Publications'); ?>
 
+        <!-- create sidebar widget for speaking engagements -->
+
+    </div>
+
+    <li>
+        <h2 class="subscribe"><a href="mailto:info@jbltd.com">Subscribe</a></h2>
+    <li class="sidebar-text">If you are interested in receiving our law alerts and/or newsletters, please <a href="mailto:info@jbltd.com">send us an email</a> and we’d be happy to include you on our next electronic alert.</li>
 
 
 </div>	<!--sidebar-->

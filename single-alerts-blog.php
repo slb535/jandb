@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Blog
+  Template Name: Alerts-Blog
  */
 ?>
 
@@ -21,7 +21,7 @@
 
                     <h2><?php the_title(); ?></h2>
 
-                    <div class="post-content page-content">
+                    <div class="post-content page-content alerts-blog">
                         <?php the_content(); ?>
                     </div><!--.post-content .page-content -->
 
