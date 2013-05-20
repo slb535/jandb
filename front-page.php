@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="content" >
+<div id="content" class="grid_13">
     <?php if (!dynamic_sidebar('Alert')) : ?>
         <!--Wigitized 'Alert' for the home page -->
     <?php endif; ?>
@@ -40,13 +40,15 @@
                 $first_name = substr($lawyer_name, 0, 5);
                 ?>
                 <div class="photo-block">
-    <?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
-    endif; ?>
+                    <?php
+                    if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+                    endif;
+                    ?>
                     <div class="bar"></div>
 
                     <?php if ($first_name == 'Moyen') { ?>
                         <h5 class="lawyer-name"><a href="<?php the_permalink(); ?>">Moyenda M. Knapp</a></h5> <?php } else {
-                ?>
+                        ?>
                         <h5 class="lawyer-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5> <?php } ?>
                     <?php
                     $practice_area_select = types_render_field("practice-area-select", array("raw" => "true"));
@@ -56,7 +58,7 @@
                     echo '</h4>';
                     ?>
                 </div>
-            <?php
+                <?php
             }
             wp_reset_query();
             ?>
@@ -64,10 +66,10 @@
         </div> <!-- end photo-row-->
         <div style='clear:both;'></div>
     </div> <!-- end column front-left-->
-    <div class="column front-right" >
-        <div class="sidebar">
-<?php get_sidebar('home'); ?>
-        </div>
+    <div class="column front-right omega" >
+        <!--  <div class="sidebar"> -->
+        <?php get_sidebar('home'); ?>
+        <!--  </div> -->
     </div>
     <div style='clear:both;'></div>
 </div><!--#content-home-->

@@ -52,21 +52,14 @@
 
         <link href='http://fonts.googleapis.com/css?family=EB+Garamond|Archivo+Narrow:700|Open+Sans:600,700' rel='stylesheet' type='text/css' />
 
-
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fonts/stylesheet.css" />
 
-        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/theme.css" media="all and (min-width: 980px)" class="rwdretrofit-desktop"/>
-        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/css/menubar.css" media="all and (min-width: 980px)"/>
+        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/theme.css" media="screen"/>
+        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/css/menubar.css" media="screen" />
 
-        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/rwd.css" media="all and (max-width: 979px)" class="rwdretrofit-mobile" />
-
-        <!--[if lt IE 9 ]><link href="<?php bloginfo('template_url'); ?>/theme.css" rel="stylesheet" type="text/css" media="all" /><![endif]-->
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
         <link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('template_url'); ?>/css/print.css" />
-
-        <script src="/js/base.min.js"></script>
-        <!-- contains: /js/rwd.retrofit.min.js, /js/modernizr.min.js, /js/supports.touch.min.js, /js/layout.engine.min.js -->
 
 
         <?php /* The HTML5 Shim is required for older browsers, mainly older versions IE */ ?>
@@ -144,21 +137,17 @@
         </div><!--.none-->
 
 
+        <div class="container">
 
-        <div id="header">
-            <div class="container">
-                <div id="title">
-                    <div id="logo">
-                        <h1><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/jandb_logo.png" alt="<?php bloginfo('name'); ?>" title="Click to return to <?php bloginfo('name'); ?> homepage" width="278" height="45" class="screen" /></a><img src="<?php bloginfo('template_url'); ?>/images/logo_print.png"  width="278" height="50" alt="" class="print"/> </h1>
-                    </div>
-                </div><!--#title-->
-                <div id="navbar">
+            <div id="header">
+                <div id="logo" class="theta">
+                    <h1><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/jandb_logo.png" alt="<?php bloginfo('name'); ?>" title="Click to return to <?php bloginfo('name'); ?> homepage" width="278" height="45" class="screen" /></a><img src="<?php bloginfo('template_url'); ?>/images/logo_print.png"  width="278" height="50" alt="" class="print"/> </h1>
+                </div>
+                <div id="navbar" class="grid_9">
                     <div id="nav-primary" class="nav">
                         <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
                     </div><!--#nav-primary-->
                     <?php if (!dynamic_sidebar('Header')) : ?><!-- Wigitized Header --><?php endif ?>
                 </div> <!--end navbar -->
                 <div class="clear"></div>
-            </div><!--.container-->
-        </div><!--#header-->
-        <div class="container">
+            </div><!--#header-->
