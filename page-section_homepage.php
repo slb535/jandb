@@ -161,7 +161,7 @@
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?><br /><span class="readmore">read more</span></a>
+                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?><br /><div class="readmore">read more</div></a>
                                         </li>
                                         <?php
                                     endwhile;
@@ -199,7 +199,7 @@
                                         <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?><br />
                                                 <span class="source"><?php echo types_render_field("award-source", array('raw' => 'true')); ?></span>
 
-                                                <span class="readmore">read more</a></span>
+                                                <div class="readmore">read more</a></div>
                                         </li>
 
 

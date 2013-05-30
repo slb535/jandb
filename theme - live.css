@@ -80,20 +80,20 @@ h2, h3, h4, h5, h6, .archive h2, .archive h2 a, .h2, .h3, p.alerts-blog-author {
 
 /*===[ Colors ]=== */
 
-body, p, .practice-areas, .author, #sidebar.read-more a, .alerts-blog h3  {
+body, p, .practice-areas, .author, #sidebar.read-more a {
     color: #574F4D;
-}
-
-#parent-link .lawyer-name, .archive h2, .archive h2 a, .h2,  h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .contact h4, .contact h4 a, h4, h4 a:link, h4 a:visited, .alerts-blog h2, #sidebar.alerts-blog h3, .divider  {
-    color: #817566;
-}
-
-a:visited, .blockquote, .quote-source, .quote-source-title, .quote {
-    color: #C41230
 }
 
 a:link, a:visited, a:hover, a:active {
     color: #4A3B15
+}
+
+#parent-link .lawyer-name, .archive h2, .archive h2 a, .h2,  h2, h2 a:link, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a:link, .office-sidebar h4, .contact h4, .contact h4 a:link, h4, h4 a:link, h4 a:visited, .alerts-blog h2, #sidebar.alerts-blog h3 a, .divider  {
+    color: #817566;
+}
+
+.blockquote, .quote-source, .quote-source-title, .quote, a.read-more {
+    color: #C41230  /* darker red */
 }
 
 #content h1, #content h1 a, .home #content h1, .community h2, h2.lawyer-name, #sidebar.alerts-blog h2, p.alerts-blog-author a {
@@ -223,7 +223,8 @@ article h1, h2 {
 }
 
 #sidebar.alerts-blog h3 {
-    font-size: 1em;
+    font-size: 1.05em;
+    padding-bottom: 8px;
 }
 
 .headlines h2 {
@@ -250,6 +251,7 @@ h2.lawyer-name {
 
 #sidebar.alerts-blog h2.subscribe  {
     border: none;
+    padding-top: 20px;
 }
 
 #sidebar.alerts-blog h2 {
@@ -392,17 +394,17 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     z-index: 1002;
 }
 
-    #nav-primary ul li:last-child {
-        padding-right: 0
-    }
+#nav-primary ul li:last-child {
+    padding-right: 0
+}
 
-    #nav-primary ul li:hover ul, #nav-primary ul li.hover ul {
-        display: inline
-    }
+#nav-primary ul li:hover ul, #nav-primary ul li.hover ul {
+    display: inline
+}
 
-    #nav-primary ul li a:hover {
-        text-decoration: underline
-    }
+#nav-primary ul li a:hover {
+    text-decoration: underline
+}
 
 #nav-primary ul ul {
     position: absolute;
@@ -489,6 +491,9 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     border-bottom: 1px #dedede solid;
 }
 
+
+
+
 .column {
     padding: 0
 }
@@ -542,6 +547,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 
 #sidebar ul {
     padding-bottom: 5px;
+    padding-top: 7px;
     margin: 0;
     list-style: none;
 }
@@ -677,9 +683,9 @@ textarea {
 
 
 .home .icon {
-float: right;
-padding-top: 5px;
-padding-right: 10px;
+    float: right;
+    padding-top: 5px;
+    padding-right: 10px;
 }
 
 
@@ -1106,6 +1112,10 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     line-height: 20px;
 }
 
+.publications {
+    padding-top: 10px;
+}
+
 .headlines {
     position: relative;
     display: table;
@@ -1153,6 +1163,12 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     padding: 5px 0 5px 7px
 }
 
+.post-excerpt {
+    padding-bottom: 5px;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
 .news-sidebar {
     margin-top: 26px
 }
@@ -1182,40 +1198,56 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     border-bottom: 1px solid #4a3b15
 }
 
-
 #sidebar.alerts-blog {
     padding-left:13px;
 }
 
 .alerts-blog .read-more {
     text-align: right;
-    font-size: 10px;
+    font-size: .625rem; /* 10px */
     letter-spacing: 1px;
+    /*    padding-top: 10px;*/
     padding-right: 10px;
     font-style: italic;
     text-transform: uppercase
 }
 
-.byline {
-    padding-top: 14px;
-    padding-bottom: 2px;
-    font-size: 12px
+p.byline {
+    font-size: 14px;
+    font-size: .875rem; /* 14px */
 }
 
-.bio {
-        border-top: 3px double #D21532;
+
+.alert-blog-post {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 1.4rem;
 }
+
 
 .recent-post p {
-    font-size: 12px;
-    line-height: 14px;
+    line-height: 16px;
+    line-height: 1.05rem;
+    font-size: 14px;
+    font-size: .875rem; /* 14px */
 }
 
+.recent-post p.byline {
+    font-size: 13px;
+    font-size: .813rem; /* 13px */
+    padding-bottom: 0
+}
+
+
+
 .recent-post {
-    margin-bottom: 20px;
     border-bottom: 3px double #D21532
 }
 
+.recent-post:last-child {
+    border-bottom: none
+}
 
 /*===[ Contact Page ]=== */
 
@@ -1271,7 +1303,7 @@ table.contact {
 
 
 
-.author:before {
+.publications .author:before {
     content: "\3E \ "
 }
 
@@ -1669,7 +1701,7 @@ table.contact {
 }
 
 .ie #nav-primary ul li {
-    padding-right: 29px
+    padding-right: 28px
 }
 
 .news-thumbnail {

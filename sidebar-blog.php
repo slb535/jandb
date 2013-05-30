@@ -1,56 +1,101 @@
 <div id="sidebar" class="border alerts-blog">
-    <h2>Recent Posts</h2>
-    <?php /*
-     *  if lawalert  -- check custom field wcpf-law-alert for 1
-     * only display from the same alert
-     *      display 4 most recent posts where
-     *      the taxonomy practice-area matches that of the main article
-     *      the published year and month matches that of the main article (can you do that?)
-     *      and is sticky
-     *      sort by date (desc)
-     *
-     *  else,
-     *      display 4 most recent posts where
-     *       the taxonomy practice-area matches that of the main article
-     *       and is sticky
-     *       (doesn't matter if it's law-alert or not)
-     *
-     */ ?>
-    <div class="recent-post">
-<?php
-$args = array(
-		'nopaging' => true,
-		'posts_per_page' => 4,
-		'showposts' => 4,
-		'order' => 'desc', // or asc
-//		'year' => '1990',  // yes, can be done
-//		'monthnum' => 4,   // yes can be done, just have to pass it the values
-		'practice-area' => 'some-practice-taxonomy-slug'  // taxonomy -> what to search for 
-		);
-
+    <div ID="recent-posts">
+        <?php
+        $practices = wp_get_post_terms($post->ID, 'practice-area', array("fields" => "names"));
+        $law_alert = get_post_meta($post->ID, 'wpcf-law-alert', true);
+        if ($law_alert) {
+            $args = array(
+                'nopaging' => true,
+                'posts_per_page' => 4,
+                'showposts' => 4,
+                'order' => 'desc', // or asc
+                'year' => get_the_date('Y'),
+                'monthnum' => get_the_date('m'),
+                'post_type' => 'alerts-blog',
+                'post__not_in' => array($post->ID),
+                'meta_query' => array(
+                    array(
+                        'key' => 'wpcf-sidebar-list',
+                        'value' => '1',
+                        'compare' => '='
+                    ),
+                    array(
+                        'key' => 'wpcf-law-alert',
+                        'value' => '1',
+                        'compare' => '='
+                    )
+                ),
+                'tax_query' => array(
+                    'relation' => 'OR',
+                    array(
+                        'taxonomy' => 'practice-area', // taxonomy -> what to search for
+                        'field' => 'slug',
+                        'terms' => $practices
+                    )
+                )
+            );
+        } else {
+            $args = array(
+                'nopaging' => true,
+                'posts_per_page' => 4,
+                'showposts' => 4,
+                'order' => 'desc', // or asc
+                'post__not_in' => array($post->ID),
+                'post_type' => 'alerts-blog',
+                'tax_query' => array(
+                    'relation' => 'OR',
+                    array(
+                        'taxonomy' => 'practice-area',
+                        'field' => 'slug',
+                        'terms' => $practices
+                    )
+                )
+            );
+        }
 // The Query
-$the_query = new WP_Query( $args );
-
+        $the_query = new WP_Query($args);
 // The Loop
-while ( $the_query->have_posts() ) :
-	$the_query->the_post();
-//	echo '<li>' . get_the_title() . '</li>';
-	// put each set that gets looped in this section
-endwhile;
+        if ($the_query->have_posts()) {
+            ?>
+            <h2>Recent Articles</h2>
 
-wp_reset_postdata();
-?>
-        <p class="byline"><span class="date">NumMonth.Year</span>  <span class="divider">|</span>   <span class="author">author</span>
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia arcu non nulla conse</p>
-        <p class="read-more"><a href="">read more</a></p>
-    </div><!--end recent post -->
-    <div class="publications-sidebar">
-        <?php dynamic_sidebar('Publications'); ?>
-        <!-- create sidebar widget for speaking engagements -->
+
+            <?php
+            while ($the_query->have_posts()) :
+
+                $the_query->the_post();
+                $child_id_side = $post->ID;
+                $parent_id_side = get_post_meta($child_id_side, '_wpcf_belongs_lawyer_profile_id', true);
+                $parent_permalink_side = get_permalink($parent_id_side);
+                $parent_title_side = get_the_title($parent_id_side);
+                $child_permalink_side = get_permalink();
+                $date = get_the_date('m.Y')
+                ?>
+                <div class="recent-post">
+                    <p class="byline"><span class="date"><?php echo $date; ?></span>
+
+                        <?php
+                        if ($parent_id_side)
+                            echo '<span class="divider">|</span>   <span class="author"><a href="' . $parent_permalink_side . '" target="_blank">' . $parent_title_side . '</a></span>';
+                        ?>
+                    </p>
+
+                    <h3><a href="<?php echo $child_permalink_side; ?>"><?php the_title(); ?></a></h3>
+
+                    <?php echo pippin_excerpt_by_id($child_id_side, 20, '<a><em><p>', ' . . .<p class="read-more"><a href="' . $child_permalink_side . '">read more</a></p>'); ?>
+                </div><!--end recent post -->
+                <?php
+            endwhile;
+
+            wp_reset_postdata();
+            ?>
+
+        <?php } ?>
     </div>
-    <li>
-        <h2 class="subscribe"><a href="mailto:info@jbltd.com">Subscribe</a></h2>
+
+    <?php dynamic_sidebar('Publications'); ?>
+    <!-- create sidebar widget for speaking engagements -->
+
     <li class="sidebar-text">If you are interested in receiving our law alerts and/or newsletters, please <a href="mailto:info@jbltd.com">send us an email</a> and we’d be happy to include you on our next electronic alert.</li>
 </div>	<!--sidebar-->
 <div class="sidebar-search">
