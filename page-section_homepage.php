@@ -15,7 +15,7 @@
 
 
                     <h1><?php the_title(); ?></h1>
-                    <p><?php the_content(); ?></p>
+                    <div class="intro"><p><?php the_content(); ?></p></div>
                 </div>
                 <!--INDIANA PAGE -->
 
@@ -299,7 +299,7 @@
     $bonus = types_render_field("bonus-text", array('raw' => 'true'));
 
     if ($quote)
-        echo '<div class="quote-block"><p class="quote">' . $quote . '</p>';
+        echo '<div class="quote-block grid_9"><p class="quote">' . $quote . '</p>';
     if ($quotesource)
         echo '<p class="quote-source">' . $quotesource;
     if ($quotesourcetitle)
@@ -307,7 +307,7 @@
                         <div style="clear:both;"></div>';
 
     if ($bonus)
-        echo '<p class="bonus">' . $bonus . '</p>';
+        echo '<p class="bonus  grid_9">' . $bonus . '</p>';
     ?>
 
 </div>

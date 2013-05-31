@@ -15,41 +15,39 @@ if (isset($_REQUEST['skey']))
     <div class="column front-left">
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-                    <article>
-                        <h1><?php the_title(); ?></h1>
-                        <?php the_content(); ?>
-                        <div id="alphaList" align="center">
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=a">A</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=b">B</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=c">C</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=d">D</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=e">E</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=f">F</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=g">G</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=h">H</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=i">I</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=j">J</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=k">K</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=l">L</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=m">M</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=n">N</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=o">O</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=p">P</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=q">Q</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=r">R</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=s">S</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=t">T</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=u">U</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=v">V</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=w">W</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=x">X</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=y">Y</a>
-                            <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=z">Z</a>
-                        </div>
-                    </article>
+                    <h1><?php the_title(); ?></h1>
+                    <div class="intro"><?php the_content(); ?></div>
+                    <div id="alphaList" class="grid_13 omega" align="center">
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=a">A</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=b">B</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=c">C</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=d">D</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=e">E</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=f">F</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=g">G</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=h">H</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=i">I</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=j">J</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=k">K</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=l">L</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=m">M</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=n">N</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=o">O</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=p">P</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=q">Q</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=r">R</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=s">S</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=t">T</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=u">U</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=v">V</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=w">W</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=x">X</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=y">Y</a>
+                        <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=z">Z</a>
+                    </div>
                 <?php endwhile; /* end loop */ ?>
         </div> <!-- end post -->
-        <div class="laywer_search_form">
+        <div class="laywer_search_form ">
             <form action="" id="searchform" method="get">
                 <table>
                     <tr>
@@ -243,7 +241,7 @@ if (isset($_REQUEST['skey']))
 
 
     if ($quote)
-        echo '<div class="quote-block"><div class="quote">' . $quote . '</div>';
+        echo '<div class="quote-block grid_9"><div class="quote">' . $quote . '</div>';
     if ($quotesource)
         echo '<div class="quote-source">' . $quotesource;
     if ($quotesourcetitle)

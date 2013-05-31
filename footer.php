@@ -28,12 +28,30 @@
         </div><!--.container-->
     </footer></div><!--#footer-->
 </div><!--#main-->
-<!-- <p><?php echo get_num_queries() ?> queries. <?php if (function_exists('memory_get_usage')) {
-                $unit = array('b', 'kb', 'mb', 'gb', 'tb', 'pb');
-                echo @round(memory_get_usage(true) / pow(1024, ($i = floor(log(memory_get_usage(true), 1024)))), 2) . ' ' . $unit[$i]; ?> Memory usage. <?php } timer_stop(1) ?> seconds.</p> -->
+<!-- <p><?php echo get_num_queries() ?> queries. <?php
+if (function_exists('memory_get_usage')) {
+    $unit = array('b', 'kb', 'mb', 'gb', 'tb', 'pb');
+    echo @round(memory_get_usage(true) / pow(1024, ($i = floor(log(memory_get_usage(true), 1024)))), 2) . ' ' . $unit[$i];
+    ?> Memory usage. <?php } timer_stop(1) ?> seconds.</p> -->
 <?php wp_footer(); /* this is used by many Wordpress features and plugins to work properly */ ?>
 
-
+<script>
+    var navigation = responsiveNav("#nav", {// Selector: The ID of the wrapper
+        animate: true, // Boolean: Use CSS3 transitions, true or false
+        transition: 400, // Integer: Speed of the transition, in milliseconds
+        label: "Menu", // String: Label for the navigation toggle
+        insert: "after", // String: Insert the toggle before or after the navigation
+        customToggle: "", // Selector: Specify the ID of a custom toggle
+        openPos: "static", // String: Position of the opened nav, relative or static
+        jsClass: "js", // String: 'JS enabled' class which is added to <html> el
+        init: function() {
+        }, // Function: Init callback
+        open: function() {
+        }, // Function: Open callback
+        close: function() {
+        } // Function: Close callback
+    });
+</script>
 
 </body>
 </html>

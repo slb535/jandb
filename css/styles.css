@@ -1,0 +1,193 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 101%; }
+body { 
+  background: #f8f8f8 url('images/bg.png'); /* BG Neutral http://subtlepatterns.com/ps-neutral/ */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%; 
+  line-height: 1; 
+  color: #343434;
+  padding-bottom: 55px;
+}
+
+::selection { background: #b9e9b9; color: #555; }
+::-moz-selection { background: #b9e9b9; color: #555; }
+::-webkit-selection { background: #b9e9b9; color: #555; }
+
+br { display: block; line-height: 2.2em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+a { color: #6992c0; }
+a:hover { color: #77a4dc; }
+
+h2 { font-size: 2.9em; line-height: 1.4em; color: #626262; margin-bottom: 22px; }
+
+p { font-size: 1.6em; line-height: 1.7em; color: #777; margin-bottom: 15px; }
+
+
+#w {
+  display: block;
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+#content {
+  margin: 0 1em;
+  background: #fff;
+  padding: 0 10px;
+}
+
+#pagebody {
+  padding: 15px 25px;
+}
+
+/* navigation bar */
+#topnav {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#topnav h1 {
+  font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+  font-size: 3.3em;
+  font-weight: normal;
+  line-height: 70px;
+  letter-spacing: 0.03em;
+}
+#topnav h1 a {
+  text-decoration: none;
+  padding: 3px 7px;
+  color: #649554;
+  background: #c8e3bf;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.65);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+#topnav h1 a:hover {
+  background: #d6eece;
+  color: #7ca76d;
+}
+
+#topnav #navbtn {
+  display: none;
+  float: right;
+  top: 0;
+  width: 20px;
+  height: 70px;
+  background: url('images/menu.png') center no-repeat;
+  text-indent: -99999px;
+  overflow: hidden;
+}
+
+#topnav nav {
+  position: absolute;
+  top: 0; 
+  right: -10px;
+}
+
+#topnav nav ul {
+  list-style: none;
+}
+#topnav nav ul li {
+  display: block;
+  float: left;
+  font-size: 1.4em;
+  margin-right: 4px;
+}
+
+#topnav nav ul li a {
+  display: block;
+  text-decoration: none;
+  line-height: 70px;
+  color: #8ea188;
+  font-weight: bold;
+  padding: 0 10px;
+  border-bottom: 2px solid #fff;
+
+}
+#topnav nav ul li a:hover {
+  color: #6f8767;
+  background: #ddecd9;
+  border-bottom-color: #bdd8b5;
+}
+
+
+/* footer block */
+#btmnav {
+  display: block;
+  padding: 5px 0;
+  border-top: 1px solid #cfcfcf;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+#btmnav .credits { 
+  color: #999;
+  line-height: 1.45em;
+}
+#btmnav nav { padding: 9px 0; padding-bottom: 15px; }
+#btmnav nav ul li { display: inline; }
+#btmnav nav ul li a { font-weight: bold; }
+
+
+/* responsive styles */
+@media screen and (max-width: 560px) {
+  h2 { font-size: 2.2em; }
+  p { font-size: 1.45em; line-height: 1.55em; }
+  #topnav { height: auto; }
+  #topnav nav { 
+    display: none; 
+    position: static;
+    width: 100%;
+    top: auto;
+    right: auto;
+  }
+  #topnav nav ul li { float: none; margin: 0; }
+  #topnav nav ul li a {
+    display: block;
+    width: 100%;
+    line-height: 1.4em;
+    border: 0;
+    padding: 6px 9px;
+    background: #dcf4dc;
+  }
+  #topnav nav ul li a:hover {
+    background: #cbdcc5;
+  }
+  #topnav nav ul li a.sel {
+    color: #6f8767;
+    background: #cbdcc5;
+  }
+  
+  #topnav #navbtn {
+    display: block;
+  }
+}
