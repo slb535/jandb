@@ -23,13 +23,16 @@
                     $parent_id = get_post_meta($child_id, '_wpcf_belongs_lawyer_profile_id', true);
                     $parent_permalink = get_permalink($parent_id);
                     $parent_title = get_the_title($parent_id);
-                    $date = get_the_date('m.Y')
+                    $date = get_the_date('m.Y');
+                    $second_author = types_render_field("second-author", array("raw" => "true"))
                     ?>
                     <p class="byline"><span class="date"><?php echo $date; ?></span>
 
                         <?php
                         if ($parent_id)
                             echo '<span class="divider">|</span>   <span class="author"><a href="' . $parent_permalink . '" target="_blank">' . $parent_title . '</a></span>';
+                        if ($second_author)
+                            echo '<span class="divider">|</span>  <span class="author">' . $second_author . '</span>';
                         ?>
                     </p>
                         <!--                        <span class="divider">|</span>   <span class="author"><a href="<?php echo $parent_permalink; ?>" target="_blank"><?php echo $parent_title; ?></a></span>-->

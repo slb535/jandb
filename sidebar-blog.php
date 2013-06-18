@@ -69,7 +69,8 @@
                 $parent_permalink_side = get_permalink($parent_id_side);
                 $parent_title_side = get_the_title($parent_id_side);
                 $child_permalink_side = get_permalink();
-                $date = get_the_date('m.Y')
+                $date = get_the_date('m.Y');
+                $second_author_side = types_render_field("second-author", array("raw" => "true"))
                 ?>
                 <div class="recent-post">
                     <p class="byline"><span class="date"><?php echo $date; ?></span>
@@ -77,6 +78,8 @@
                         <?php
                         if ($parent_id_side)
                             echo '<span class="divider">|</span>   <span class="author"><a href="' . $parent_permalink_side . '" target="_blank">' . $parent_title_side . '</a></span>';
+                        if ($second_author_side)
+                            echo '<span class="divider">|</span>  <span class="author">' . $second_author_side . '</span>';
                         ?>
                     </p>
 

@@ -1183,7 +1183,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 }
 
 .firm-news .headlines {
-    width: 100%;
+    /*  width: 100%; */
     padding-bottom: 30px
 }
 
@@ -1227,7 +1227,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     text-transform: uppercase;
 }
 
-.source, .author {
+.source, .author, .byline {
     font-weight: 400;
     line-height: 30px;
 }
@@ -1856,7 +1856,6 @@ audio {
     }
 
     .quote {
-
         text-indent: 0
     }
     .quote-source {
@@ -1893,6 +1892,10 @@ audio {
         padding-right: 0;
     }
 
+    #sidebar {
+        padding-left: 0
+    }
+
     .laywer_search_form {
         width: 76%;
         float: left;
@@ -1919,6 +1922,11 @@ audio {
 
     .headlines ul {
         padding-right: 20px;
+    }
+
+    .firm-news .headlines {
+        /*  width: 100%; */
+        padding-bottom: 0
     }
 
     .firm-news .headlines li, .publications .headlines li, .awards .headlines li {

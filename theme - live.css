@@ -1183,7 +1183,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     text-transform: uppercase;
 }
 
-.source, .author {
+.source, .author, .byline {
     font-weight: 400;
     line-height: 30px;
 }

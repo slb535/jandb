@@ -87,7 +87,7 @@
                             $parent_permalink = get_permalink($parent_id);
                             $parent_title = get_the_title($parent_id);
                             $child_permalink = get_permalink();
-                            $date = get_the_date('m.Y')
+                            $date = get_the_date('m.Y');
                             ?>
 
 
