@@ -63,7 +63,7 @@ h2, h3, h4, h5, h6, .archive h2, .archive h2 a, .h2, .h3, p.alerts-blog-author {
 
 #sidebar p, .sidebar-text, .address-text,  .phone, .email, .title, .practice-areas-list ul, .practice-areas-list-small ul, #alphaList, .practice-areas ul,
 .lawyer-list ul, .practice-body ul li, .post-content.fullbio  ul li, .quote-source, .quote-source-title, .source, .author, #footer p, .bonus, .disclaimer,
-.news_headlines_home li, .searchLabel, .headlines ul, .headlines li, .newer-older, .headlines .readmore, .newsletter-list, .newsletter-list a, .read-more, .byline {
+.news_headlines_home li, .searchLabel, .headlines ul, .headlines li, .pagination, .headlines .readmore, .newsletter-list, .newsletter-list a, .read-more, .byline {
     font-family: 'FranklinGothic', Arial, 'Helvetica Neue', Helvetica, sans-serif
 }
 
@@ -120,10 +120,11 @@ blockquote:first-line {
     font-size: 20px
 }
 
-p a[href $='.pdf'], li a[href $='.pdf'] {
-    padding-right: 25px;
-    background: transparent url(images/pdf.gif) no-repeat center right;
+a[href $='.pdf'] {
+    display: block;
+    background: transparent url(images/pdf.gif) no-repeat  right;
 }
+
 
 
 
@@ -1127,9 +1128,15 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     margin-left: 400px;
     font-size: 10px;
     letter-spacing: 1px;
+    line-height: 30px;
 }
 
-.headlines ul, .headlines li, .newer-older {
+.headlines .readmore a {
+
+    background: none
+}
+
+.headlines ul, .headlines li, .pagination li {
     padding-left: 9px;
     font-size: 14px;
     font-weight: 500;
@@ -1173,9 +1180,37 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     margin-top: 26px
 }
 
-.newer-older {
-    text-align: right
+.pagination {
+    float: right
 }
+
+.pagination li a,
+.pagination li a:hover,
+.pagination li.active a,
+.pagination li.disabled {
+    text-decoration:none;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li a,
+.pagination li a:hover,
+.pagination li.active a,
+.pagination li.disabled {
+    cursor: pointer;
+    padding: 6px;
+    padding: 0.3rem;
+}
+
+.pagination li a:hover,
+.pagination li.active a {
+    background-color: #574F4D;
+    color: white
+}
+
+
 
 .read-more {
     font-size: 11px;

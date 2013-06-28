@@ -124,7 +124,7 @@ h2, h3, h4, h5, h6, .archive h2, .archive h2 a, .h2, .h3, p.alerts-blog-author {
 
 #sidebar p, .sidebar-text, .address-text,  .phone, .email, .title, .practice-areas-list ul, .practice-areas-list-small ul, #alphaList, .practice-areas ul,
 .lawyer-list ul, .practice-body ul li, .post-content.fullbio  ul li, .quote-source, .quote-source-title, .source, .author, #footer p, .bonus, .disclaimer,
-.news_headlines_home li, .searchLabel, .headlines ul, .headlines li, .newer-older, .headlines .readmore, .newsletter-list, .newsletter-list a, .read-more, .byline {
+.news_headlines_home li, .searchLabel, .headlines ul, .headlines li, .pagination, .headlines .readmore, .newsletter-list, .newsletter-list a, .read-more, .byline {
     font-family: 'FranklinGothic', Arial, 'Helvetica Neue', Helvetica, sans-serif
 }
 
@@ -182,9 +182,10 @@ blockquote:first-line {
     font-size: 20px
 }
 
-p a[href $='.pdf'], li a[href $='.pdf'] {
-    padding-right: 25px; /*25px*/
-    background: transparent url(images/pdf.gif) no-repeat center right;
+
+a[href $='.pdf'] {
+    display: block;
+    background: transparent url(images/pdf.gif) no-repeat right;
 }
 
 
@@ -321,7 +322,7 @@ h2.lawyer-name {
     padding-bottom: 5px;
 }
 
-.post h2, .h2
+/* .post h2, .h2 */
 .post h3, .post h4, .post h5, .post h6 {
     margin-top: 24px;
     margin-bottom: 24px;
@@ -413,7 +414,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 
 #nav-primary ul {
     margin: 0;
-    padding: 0 0 0 10px;
+    /* padding: 0 0 0 10px; */
     line-height: normal;
     list-style: none outside none;
     z-index: 1001;
@@ -430,7 +431,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     display: block;
     float: left;
     width: auto;
-    padding-right: 30px;
+    padding-right: 2.9em;  /* 30px;*/
     font-size: .625em; /*10px*/
     font-weight: 400;
     text-align: center;
@@ -494,7 +495,8 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 /*===[ General Main Area ]=== */
 
 #content {
-    margin-top: 40px
+    margin-top: 40px;
+    padding-top: 24px
 }
 
 #widget-alert {
@@ -925,21 +927,28 @@ h5.lawyer-name {
 
 .icons {
     float: right;
-    padding-right: 20px;
+    text-align: right
+        /* padding-right: 20px; */
 }
 
-#lawyer-left {
-    float: left;
-    width: 570px;
+/*
+.post .lawyer_profile {
+    margin-top: 24px;
 }
+
+
+#lawyer-left {
+ float: left;
+width: 570px;
+}*/
 
 #lawyer-right {
     float: right;
-    width: 400px;
+    /*   width: 400px; */
 }
 
-#lawyer-right .featured-thumbnail {
-    margin-top: 24px
+.details {
+    float: right
 }
 
 
@@ -947,14 +956,17 @@ h5.lawyer-name {
     -moz-box-shadow: 4px 1px 2px #666;
     -webkit-box-shadow: 4px 1px 2px #666;
     box-shadow: 4px 1px 2px #666;
+    width: 400px;
 }
 
-
+.lawyer_profile .featured-thumbnail {
+    float: right;
+}
 
 .lawyer-list {
     position: relative;
     float: left;
-    width: 175px;
+    /* width: 175px; */
     min-height: 200px;
     padding: 15px;
     border-left: 1px solid #D21532;
@@ -969,12 +981,13 @@ h5.lawyer-name {
 /* List of practice areas on Lawyer Profile page */
 
 .practice-areas {
-    position: relative;
-    float: left;
-    top: 45px;
-    width: 150px;
+    margin-top: 45px;
+    margin-right: 0;
     padding: 5px 5px 15px 20px;
     background-color: #EFECE0;
+    /* width: 150px; */
+    /* float: left; */
+
 }
 
 .practice-areas ul, .lawyer-list ul {
@@ -990,11 +1003,11 @@ h5.lawyer-name {
 
 /* .single-lawyer_profile p {
     width: 500px
-} */
+}
 
 .lawyer_profile .post-content {
     width: 500px
-}
+}*/
 
 .phone, .email {
     margin-bottom: 12px;
@@ -1163,9 +1176,10 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 .headlines .readmore {
     font-size: .75rem; /* 10px */
     letter-spacing: 1px;
+    line-height: 30px;
 }
 
-.headlines ul, .newer-older {
+.headlines ul, .pagination li {
     padding-right: 50px;
     font-size: 14px;
     font-size: .95rem; /* 14px */
@@ -1217,9 +1231,37 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     margin-top: 26px
 }
 
-.newer-older {
-    text-align: right
+
+.pagination {
+    float: right
 }
+
+.pagination li a,
+.pagination li a:hover,
+.pagination li.active a,
+.pagination li.disabled {
+    text-decoration:none;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li a,
+.pagination li a:hover,
+.pagination li.active a,
+.pagination li.disabled {
+    cursor: pointer;
+    padding: 6px;
+    padding: 0.3rem;
+}
+
+.pagination li a:hover,
+.pagination li.active a {
+    background-color: #574F4D;
+    color: white
+}
+
 
 .read-more {
     font-size: .6875rem; /* 11px */

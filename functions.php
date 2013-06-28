@@ -88,7 +88,7 @@ add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets');
 
 // Add a widget in WordPress Dashboard
 function wpc_dashboard_widget_function() {
-    // Entering the text between the quotes
+// Entering the text between the quotes
     echo "<table width=400>
         <tr><td><strong>Content Type</strong></td><td><strong>Where to Find/Enter</strong></td></tr>
         <tr><td colspan=2 height=5><div style=\"border-top: double #D21532 3px\">&nbsp;</div>
@@ -239,12 +239,12 @@ add_filter('post_class', 'has_thumb_class');
 remove_filter('the_excerpt', 'wpautop');
 
 function filter_ptags_on_images($content) {
-    // do a regular expression replace...
-    // find all p tags that have just
-    // <p>maybe some white space<img all stuff up to /> then maybe whitespace </p>
-    // replace it with just the image tag...
+// do a regular expression replace...
+// find all p tags that have just
+// <p>maybe some white space<img all stuff up to /> then maybe whitespace </p>
+// replace it with just the image tag...
     $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-    // now pass that through and do the same for iframes...
+// now pass that through and do the same for iframes...
     return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
 }
 
@@ -312,14 +312,14 @@ add_image_size('add-news-image-thumbnail', 200, 200, true); // Used for extra ne
 
 function custom_taxonomies_terms_links() {
     global $post, $post_id;
-    // get post by post id
+// get post by post id
     $post = &get_post($post->ID);
-    // get post type by post
+// get post type by post
     $post_type = $post->post_type;
-    // get post type taxonomies
+// get post type taxonomies
     $taxonomies = get_object_taxonomies($post_type);
     foreach ($taxonomies as $taxonomy) {
-        // get the terms related to post
+// get the terms related to post
         $terms = get_the_terms($post->ID, $taxonomy);
         if (!empty($terms)) {
             $out = array();
@@ -377,7 +377,7 @@ function easel_body_class($classes = '') {
         $classes[] = 'iphone';
 
 
-    // Hijacked from the hybrid theme, http://themehybrid.com/
+// Hijacked from the hybrid theme, http://themehybrid.com/
     if (is_single()) {
         foreach ((array) get_the_category($wp_query->post->ID) as $cat) :
             $classes[] = 'single-category-' . sanitize_html_class($cat->slug, $cat->term_id);
@@ -394,12 +394,12 @@ function easel_body_class($classes = '') {
         $classes[] = 'sticky-post';
     }
 
-    // NOT hijacked from anything, doi! people should do this.
+// NOT hijacked from anything, doi! people should do this.
     $timestamp = current_time('timestamp');
     $rightnow = (int) date('Gi', $timestamp);
     $ampm = date('a', $timestamp);
     $classes[] = $ampm;
-    //	$classes[] = 'time-'.$rightnow;
+//	$classes[] = 'time-'.$rightnow;
     if ($rightnow > 559 && (int) $rightnow < 1800)
         $classes[] = 'day';
     if ($rightnow < 600 || (int) $rightnow > 1759)
@@ -453,7 +453,7 @@ remove_filter('wp_title', 'wptexturize');
 if (!function_exists('base_extended_editor_mce_buttons')) {
 
     function base_extended_editor_mce_buttons($buttons) {
-        // The settings are returned in this array. Customize to suite your needs.
+// The settings are returned in this array. Customize to suite your needs.
         return array(
             'formatselect', 'bold', 'italic', 'sub', 'sup', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'outdent', 'indent', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
         );
@@ -474,7 +474,7 @@ if (!function_exists('base_extended_editor_mce_buttons')) {
 if (!function_exists('base_extended_editor_mce_buttons_2')) {
 
     function base_extended_editor_mce_buttons_2($buttons) {
-        // The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
+// The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
         return array();
         /* WordPress Default
           return array(
@@ -493,10 +493,10 @@ if (!function_exists('base_extended_editor_mce_buttons_2')) {
 if (!function_exists('base_custom_mce_format')) {
 
     function base_custom_mce_format($init) {
-        // Add block format elements you want to show in dropdown
+// Add block format elements you want to show in dropdown
         $init['theme_advanced_blockformats'] = 'p,h2,h3,h4,h5,h6,pre';
-        // Add elements not included in standard tinyMCE dropdown p,h1,h2,h3,h4,h5,h6
-        //$init['extended_valid_elements'] = 'code[*]';
+// Add elements not included in standard tinyMCE dropdown p,h1,h2,h3,h4,h5,h6
+//$init['extended_valid_elements'] = 'code[*]';
         return $init;
     }
 
@@ -514,7 +514,7 @@ if (!function_exists('base_custom_mce_format')) {
 function pippin_excerpt_by_id($post, $length = 10, $tags = '<a><em><strong><p>', $extra = ' . . .') {
 
     if (is_int($post)) {
-        // get the post object of the passed ID
+// get the post object of the passed ID
         $post = get_post($post);
     } elseif (!is_object($post)) {
         return false;
@@ -534,6 +534,99 @@ function pippin_excerpt_by_id($post, $length = 10, $tags = '<a><em><strong><p>',
     $the_excerpt .= $extra;
 
     return apply_filters('the_content', $the_excerpt);
+}
+
+//Pagination
+
+function numeric_posts_nav() {
+
+    if (is_singular())
+        return;
+
+    global $wp_query;
+
+    /** Stop execution if there's only 1 page */
+    if ($wp_query->max_num_pages <= 1)
+        return;
+
+    $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+    $max = intval($wp_query->max_num_pages);
+
+    /** 	Add current page to the array */
+    if ($paged >= 1)
+        $links[] = $paged;
+
+    /** 	Add the pages around the current page to the array */
+    if ($paged >= 3) {
+        $links[] = $paged - 1;
+        $links[] = $paged - 2;
+    }
+
+    if (( $paged + 2 ) <= $max) {
+        $links[] = $paged + 2;
+        $links[] = $paged + 1;
+    }
+
+    echo '<div class="pagination"><ul>' . "\n";
+
+    /** 	Previous Post Link */
+    if (get_previous_posts_link())
+        printf('<li>%s</li>' . "\n", get_previous_posts_link());
+
+    /** 	Link to first page, plus ellipses if necessary */
+    if (!in_array(1, $links)) {
+        $class = 1 == $paged ? ' class="active"' : '';
+
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link(1)), '1');
+
+        if (!in_array(2, $links))
+            echo '<li>…</li>';
+    }
+
+    /** 	Link to current page, plus 2 pages in either direction if necessary */
+    sort($links);
+    foreach ((array) $links as $link) {
+        $class = $paged == $link ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($link)), $link);
+    }
+
+    /** 	Link to last page, plus ellipses if necessary */
+    if (!in_array($max, $links)) {
+        if (!in_array($max - 1, $links))
+            echo '<li>…</li>' . "\n";
+
+        $class = $paged == $max ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)), $max);
+    }
+
+    /** 	Next Post Link */
+    if (get_next_posts_link())
+        printf('<li>%s</li>' . "\n", get_next_posts_link());
+
+    echo '</ul></div>' . "\n";
+}
+
+// custom taxonomy permalinks
+add_filter('post_link', 'practice_area_permalink', 10, 3);
+add_filter('post_type_link', 'practice_area_permalink', 10, 3);
+
+function practice_area_permalink($permalink, $post_id, $leavename) {
+    if (strpos($permalink, '%practice-area%') === FALSE)
+        return $permalink;
+
+// Get post
+    $post = get_post($post_id);
+    if (!$post)
+        return $permalink;
+
+// Get taxonomy terms
+    $terms = wp_get_object_terms($post->ID, 'practice-area');
+    if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0]))
+        $taxonomy_slug = $terms[0]->slug;
+    else
+        $taxonomy_slug = 'other';
+
+    return str_replace('%practice-area%', $taxonomy_slug, $permalink);
 }
 
 ?>

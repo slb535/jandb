@@ -462,7 +462,7 @@
         ?>
 
     </div>
-    <div style='clear:both;'></div>
+    <div style="clear:both;"></div>
 </div><!--#content-->
 
 <?php get_footer(); ?>

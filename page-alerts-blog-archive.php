@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Alerts-Blog Product Landing Page
+  Template Name: Alerts-Blog Specific Alert Archive
  */
 ?>
 
@@ -14,6 +14,8 @@
     <div class="column front-left">
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
 
+
+
                 <div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
                     <h1><?php the_title(); ?></h1>
 
@@ -21,64 +23,26 @@
                     <?php
                     $practices = wp_get_post_terms($post->ID, 'practice-area', array("fields" => "names"));
                     $law_alert = get_post_meta($post->ID, 'wpcf-law-alert', true);
-                    if ($law_alert) {
-                        $args = array(
-                            'nopaging' => false,
-                            'posts_per_page' => 1,
-                            'showposts' => 1,
-                            'order' => 'desc', // or asc
-                            'year' => get_the_date('Y'),
-                            'monthnum' => get_the_date('m'),
-                            'post_type' => 'alerts-blog',
-                            'post__not_in' => array($post->ID),
-                            'meta_query' => array(
-                                array(
-                                    'key' => 'wpcf-sidebar-list',
-                                    'value' => '1',
-                                    'compare' => '='
-                                ),
-                                array(
-                                    'key' => 'wpcf-law-alert',
-                                    'value' => '1',
-                                    'compare' => '='
-                                )
-                            ),
-                            'tax_query' => array(
-                                'relation' => 'OR',
-                                array(
-                                    'taxonomy' => 'practice-area',
-                                    'field' => 'slug',
-                                    'terms' => $practices
-                                )
+
+                    $args = array(
+                        'posts_per_page' => 4,
+                        'showposts' => 1,
+                        'order' => 'desc', // or asc
+                        'post_type' => 'alerts-blog',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'practice-area',
+                                'field' => 'slug',
+                                'terms' => $practices
                             )
-                                //		'practice-area' => 'some-practice-taxonomy-slug'  // taxonomy -> what to search for
-                        );
-                    } else {
-                        $args = array(
-                            'nopaging' => false,
-                            'posts_per_page' => 4,
-                            'showposts' => 4,
-                            'order' => 'desc', // or asc
-                            'post__not_in' => array($post->ID),
-                            'post_type' => 'alerts-blog',
-                            'tax_query' => array(
-                                'relation' => 'OR',
-                                array(
-                                    'taxonomy' => 'practice-area',
-                                    'field' => 'slug',
-                                    'terms' => $practices
-                                )
-                            )
-                        );
-                    }
+                        )
+                    );
+
 // The Query
                     $the_query = new WP_Query($args);
 // The Loop
                     if ($the_query->have_posts()) {
-                        ?>
 
-
-                        <?php
                         while ($the_query->have_posts()) :
 
                             $the_query->the_post();
@@ -111,16 +75,17 @@
                                         ?></p>
                                 </div>
                             </div><!--end recent post -->
-                            <?php
-                        endwhile;
-
-                        numeric_posts_nav();
-
-
+                        <?php endwhile; ?>
+                        <div class = "newer-older">
+                            <p class = "newer-older"><?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?></p>
+                        </div><!--.oldernewer-->
+                        <?
                         wp_reset_postdata();
-                        ?>
+                    }
+                    ?>
 
-                    <?php } ?>
+
+
 
 
                 </div><!--#post-# .post-->

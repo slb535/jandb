@@ -184,7 +184,7 @@
                             <ul>
                                 <?php
                                 $args = array(
-                                    'cat' => 25,
+                                    'category_name' => 'awards',
                                     'posts_per_page' => 3,
                                     'post__in' => get_option('sticky_posts'),
                                     'ignore_sticky_posts' => 1

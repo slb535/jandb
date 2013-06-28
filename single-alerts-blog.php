@@ -32,7 +32,7 @@
                         if ($parent_id)
                             echo '<span class="divider">|</span>   <span class="author"><a href="' . $parent_permalink . '" target="_blank">' . $parent_title . '</a></span>';
                         if ($second_author)
-                            echo '<span class="divider">|</span>  <span class="author">' . $second_author . '</span>';
+                            echo '  <span class="divider">|</span>  <span class="author">' . $second_author . '</span>';
                         ?>
                     </p>
                         <!--                        <span class="divider">|</span>   <span class="author"><a href="<?php echo $parent_permalink; ?>" target="_blank"><?php echo $parent_title; ?></a></span>-->
