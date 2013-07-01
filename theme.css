@@ -1855,6 +1855,7 @@ audio {
     }
 
 
+
     .home #content h1 {
         line-height: 1em;
         font-size: 3.375em;
@@ -1864,29 +1865,63 @@ audio {
         max-width: 60%;
     }
 
-    #navbar  {
+    #navbar, #responsive-menu.btn  {
         background-color: #9a938a;
+        margin-bottom: 20px;
+    }
+
+    #responsive-menu.btn  {
+        position: relative;
+        width: 100px;
+        color: white;
+        text-align: center;
+    }
+
+    #navbar {
         position: absolute;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
 
-    #nav-primary ul {
-        margin: 1% 0;
-
+    #nav-primary {
+        border-top: none
     }
 
-    #nav-primary ul li  {
+
+    .menu {
+        -moz-column-count:2; /* Firefox */
+        -webkit-column-count:2; /* Safari and Chrome */
+        column-count:2;
+        -moz-column-gap:0; /* Firefox */
+        -webkit-column-gap:0; /* Safari and Chrome */
+        column-gap:0;
+        -moz-column-rule:1px outset #fff; /* Firefox */
+        -webkit-column-rule:1px outset #fff; /* Safari and Chrome */
+        column-rule:1px outset #fff;
+        padding-right: 90px;
+    }
+
+    #logo {
+
+        margin-top: -50px;
+    }
+
+    #nav-primary ul li, #responsive-menu.btn   {
         -webkit-user-select: none;
-        font-size: 1em;
+        font-size: .8em;
         font-family: "OpenSans", sans-serif;
         font-weight: 100;
-        margin: 1% 0;
-        float: left;
+        padding: 0 0 10px 50px;
+        float: none;
+        text-align: left;
     }
 
 
     #nav-primary ul li a {
         color: white;
     }
+
+
 
     #sidebar-search {
         float: right;
