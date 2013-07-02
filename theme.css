@@ -184,8 +184,13 @@ blockquote:first-line {
 
 
 a[href $='.pdf'] {
-    display: block;
-    background: transparent url(images/pdf.gif) no-repeat right;
+    padding-right: 25px;
+    background: transparent url(images/pdf.gif) no-repeat  right;
+}
+
+
+.readmore + a[href $='.pdf'], .newer-older a[href $='.pdf']  {
+    background: none;
 }
 
 
@@ -1850,10 +1855,18 @@ audio {
         width: 100%;
     }
 
-    #responsive-menu {
+    #responsive-menu.btn {
         display: block;
+        width: 50px;
+        text-align: center;
+        position: relative;
+        padding: 10px;
     }
 
+
+    #responsive-menu a {
+        color: white;
+    }
 
 
     .home #content h1 {
@@ -1865,16 +1878,9 @@ audio {
         max-width: 60%;
     }
 
-    #navbar, #responsive-menu.btn  {
+    .menu-top-navigation-menu-container, #responsive-menu.btn  {
         background-color: #9a938a;
         margin-bottom: 20px;
-    }
-
-    #responsive-menu.btn  {
-        position: relative;
-        width: 100px;
-        color: white;
-        text-align: center;
     }
 
     #navbar {
@@ -1899,6 +1905,7 @@ audio {
         -webkit-column-rule:1px outset #fff; /* Safari and Chrome */
         column-rule:1px outset #fff;
         padding-right: 90px;
+        padding-top: 10px;
     }
 
     #logo {
@@ -1906,14 +1913,30 @@ audio {
         margin-top: -50px;
     }
 
-    #nav-primary ul li, #responsive-menu.btn   {
-        -webkit-user-select: none;
+    #nav-primary ul li  {
         font-size: .8em;
         font-family: "OpenSans", sans-serif;
         font-weight: 100;
         padding: 0 0 10px 50px;
         float: none;
         text-align: left;
+    }
+
+    #nav-primary ul {
+        display: none;
+    }
+
+    #nav-primary ul.expanded {
+        display: block;
+    }
+
+    #responsive-menu.btn {
+        font-size: .8em;
+        font-family: "OpenSans", sans-serif;
+        font-weight: 100;
+        padding: 10px;
+        float: none;
+        text-align: center;
     }
 
 

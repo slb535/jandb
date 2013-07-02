@@ -196,10 +196,10 @@
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?><br />
-                                                <span class="source"><?php echo types_render_field("award-source", array('raw' => 'true')); ?></span>
+                                        <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a><br />
+                                            <span class="source"><?php echo types_render_field("award-source", array('raw' => 'true')); ?></span>
 
-                                                <div class="readmore">read more</a></div>
+                                            <div class="readmore"><a href="<?php the_permalink(); ?>" >read more</a></div>
                                         </li>
 
 
