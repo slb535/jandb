@@ -4,7 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="practice-page">
+<div id="content" class="practice-page grid_9">
     <div class="column front-left">
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
@@ -64,7 +64,7 @@
                 <ul>
                     <?php
                     foreach ($tax_terms as $tax_term) {
-                        echo '<li>' . '<a href="' . $site_url . 'practices-home/' . $tax_term->slug . '" title="' . sprintf(__("View all posts in %s"), $tax_term->name) . '" ' . '>' . $tax_term->name . '</a></li>';
+                        echo '<li>' . '<a href="' . $site_url . 'practices-home/' . $tax_term->slug . '" title="' . sprintf(__("Practice Area %s"), $tax_term->name) . '" ' . '>' . $tax_term->name . '</a></li>';
                     }
                     ?>
                 </ul>

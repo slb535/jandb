@@ -10,7 +10,16 @@
                     the_post_thumbnail();
                     echo '</div>';
                 }
-                ?>
+                ?><span data-picture data-alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+			<span data-src="external/imgs/small.jpg"></span>
+			<span data-src="external/imgs/medium.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="external/imgs/large.jpg" data-media="(min-width: 800px)"></span>
+			<span data-src="external/imgs/extralarge.jpg" data-media="(min-width: 1000px)"></span>
+
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="external/imgs/small.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia"></noscript>
+		</span>
+	</body>
                 <div id="lawyer-left"  class="grid_7">
 
                     <h2 class="lawyer-name"><?php the_title(); ?>

@@ -14,7 +14,9 @@
                             <h1><?php the_title(); ?></h1>
 
                             <div class="practice-body">
-                                <?php $practice = get_the_title(); ?>
+                                <?php 
+        $practice = strip_tags(get_the_term_list($post->ID, 'practice-area'));
+                                        ?>
                                 <h3><?php echo $practice; ?> Attorneys</h3>
 
 
@@ -25,7 +27,7 @@
                                     'orderby' => 'wpcf-last-name',
                                     'order' => 'ASC',
                                     'post_type' => 'lawyer_profile',
-                                    'practice-area' => sanitize_title($practice),
+                                    'practice-area' => $practice ,
                                     'post_status' => 'publish'
                                 );
 

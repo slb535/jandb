@@ -22,7 +22,6 @@
                 if (have_posts())
                     while (have_posts()) : the_post();
                         ?>
-
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                         <?php
                     endwhile;
@@ -62,9 +61,9 @@
             }
             wp_reset_query();
             ?>
-            <div style='clear:both;'></div>
+            <div class="clearfix"></div>
         </div> <!-- end photo-row-->
-        <div style='clear:both;'></div>
+            <div class="clearfix"></div>
     </div> <!-- end column front-left-->
     <div class="column front-right omega" >
         <!--  <div class="sidebar"> -->

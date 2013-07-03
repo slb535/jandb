@@ -184,8 +184,13 @@ blockquote:first-line {
 
 
 a[href $='.pdf'] {
-    display: block;
-    background: transparent url(images/pdf.gif) no-repeat right;
+    padding-right: 25px;
+    background: transparent url(images/pdf.gif) no-repeat  right;
+}
+
+
+.readmore a[href $='.pdf'], .newer-older a[href $='.pdf']  {
+    background: none;
 }
 
 
@@ -260,7 +265,7 @@ blockquote {
 }
 
 #content.practice-page h1 {
-    width: 655px; /*655px*/
+    width: 100%; /*655px*/
     margin-bottom: 27px;
     padding: 26px 40px 26px 20px;
     color: #FFF;
@@ -1196,12 +1201,12 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     border-top: 1px solid #D21532
 }
 
-.firm-news .headlines {
+.firm-news .headlines, .awards .headlines {
     /*  width: 100%; */
     padding-bottom: 30px
 }
 
-.firm-news .headlines .readmore {
+.firm-news .headlines .readmore, .awards .headlines .readmore {
     text-align: right;
     padding: 5px 10px 5px 0
 }
@@ -1274,9 +1279,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     line-height: 30px;
 }
 
-.awards .headlines {
-    margin-left: 80px
-}
+
 
 .community .featured-thumbnail {
     margin-bottom: 5px;
@@ -1442,7 +1445,6 @@ table.contact {
 /* ===[ Practice Pages ]=== */
 
 #content.practice-page .sidebar {
-    width: 278px;
     height: 95%;
     background-color: #E9E5D9;
 }
@@ -1850,10 +1852,18 @@ audio {
         width: 100%;
     }
 
-    #responsive-menu {
+    #responsive-menu.btn {
         display: block;
+        width: 50px;
+        text-align: center;
+        position: relative;
+        padding: 10px;
     }
 
+
+    #responsive-menu a {
+        color: white;
+    }
 
 
     .home #content h1 {
@@ -1865,16 +1875,9 @@ audio {
         max-width: 60%;
     }
 
-    #navbar, #responsive-menu.btn  {
+    .menu-top-navigation-menu-container, #responsive-menu.btn  {
         background-color: #9a938a;
         margin-bottom: 20px;
-    }
-
-    #responsive-menu.btn  {
-        position: relative;
-        width: 100px;
-        color: white;
-        text-align: center;
     }
 
     #navbar {
@@ -1899,6 +1902,7 @@ audio {
         -webkit-column-rule:1px outset #fff; /* Safari and Chrome */
         column-rule:1px outset #fff;
         padding-right: 90px;
+        padding-top: 10px;
     }
 
     #logo {
@@ -1906,14 +1910,30 @@ audio {
         margin-top: -50px;
     }
 
-    #nav-primary ul li, #responsive-menu.btn   {
-        -webkit-user-select: none;
-        font-size: .8em;
+    #nav-primary ul li  {
+        font-size: .75em;
         font-family: "OpenSans", sans-serif;
         font-weight: 100;
         padding: 0 0 10px 50px;
         float: none;
         text-align: left;
+    }
+
+/*    #nav-primary ul {
+        display: none;
+    } 
+
+    #nav-primary ul.expanded {
+        display: block;
+    } */
+
+    #responsive-menu.btn {
+        font-size: .8em;
+        font-family: "OpenSans", sans-serif;
+        font-weight: 100;
+        padding: 10px;
+        float: none;
+        text-align: center;
     }
 
 
@@ -2001,9 +2021,11 @@ audio {
         padding-right: 20px;
     }
 
-    .firm-news .headlines {
+    .firm-news .headlines,  .awards .headlines {
         /*  width: 100%; */
-        padding-bottom: 0
+        padding-bottom: 0;
+        margin-left: 0;
+            
     }
 
     .firm-news .headlines li, .publications .headlines li, .awards .headlines li {
@@ -2014,10 +2036,58 @@ audio {
         border-top: none;
     }
 
-    .firm-news .headlines .readmore {
+    .headlines .readmore {
         display: none;
     }
+    
+    
+    .home:after, .page-id-109:after, .page-id-157:after, .page-id-75:after, .page-id-66:after, .page-id-545:after, .page-id-595:after, .page-id-555:after, .page-id-592:after, .page-id-60:after {
+    top: 120px;
+}
 
+.home:after {
+    /* positioning is above */
+    content: url(images/bg_home_m.jpg);
+}
 
+.page-id-595:after {
+    /* positioning is above */
+    content: url(images/bg_practiceareas_m.jpg);
+}
+
+.page-id-157:after {
+    /* positioning is above */
+    content: url(images/bg_attorneys_m.jpg);
+}
+
+.page-id-75:after {
+    /* positioning is above */
+    content: url(images/bg_firmnews_m.jpg);
+}
+
+.page-id-66:after {
+    /* positioning is above */
+    content: url(images/bg_awards_m.jpg);
+}
+
+.page-id-545:after {
+    /* positioning is above */
+    content: url(images/bg_community_m.jpg);
+}
+
+.page-id-555:after {
+    /* positioning is above */
+    content: url(images/bg_publications_m.jpg);
+}
+
+.page-id-592:after {
+    /* positioning is above */
+    content: url(images/bg_indiana_m.jpg);
+}
+
+.page-id-60:after {
+    /* positioning is above */
+    content: url(images/bg_contact_m.jpg);
+}
 }
 

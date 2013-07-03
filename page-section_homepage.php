@@ -161,7 +161,8 @@
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?><br /><div class="readmore">read more</div></a>
+                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
+                                                <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
                                         </li>
                                         <?php
                                     endwhile;
@@ -179,8 +180,6 @@
 
                     <div class="awards">
                         <div class="headlines">
-
-
                             <ul>
                                 <?php
                                 $args = array(
@@ -190,19 +189,15 @@
                                     'ignore_sticky_posts' => 1
                                 );
 
-                                query_posts($args);
+                                  query_posts($args);
 
                                 if (have_posts())
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?><br />
-                                                <span class="source"><?php echo types_render_field("award-source", array('raw' => 'true')); ?></span>
-
-                                                <div class="readmore">read more</a></div>
+                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
+                                                <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
                                         </li>
-
-
                                         <?php
                                     endwhile;
                                 wp_reset_query();

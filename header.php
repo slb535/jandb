@@ -59,8 +59,8 @@
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
         <link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('template_url'); ?>/css/print.css" />
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="picturefill.js"></script>
 
 
             <?php /* The HTML5 Shim is required for older browsers, mainly older versions IE */ ?>
@@ -102,7 +102,7 @@
 
             </script>
 
-            <?php if ('lawyer_profile' == get_post_type()) { ?>
+            <?php /* if ('lawyer_profile' == get_post_type()) { */?>
 
                 <script>
 
@@ -132,7 +132,7 @@
                             });
                     });
                 </script>
-            <?php } ?>
+            <?php /* } */?>
 
 
     </head>
@@ -145,18 +145,23 @@
 
         <div class="container">
 
-            <div id="header">                <div id="responsive-menu" class="btn">MENU</div>
+            <div id="header">                
+                <div id="responsive-menu" class="btn">
+                    <a href="javascript:toggleDiv('ResponsiveMenu');">MENU</a>
+                </div>
 
                 <div id="logo" class="theta">
                     <h1><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/jandb_logo.png" alt="<?php bloginfo('name'); ?>" title="Click to return to <?php bloginfo('name'); ?> homepage" width="278" height="45" class="screen" /></a><img src="<?php bloginfo('template_url'); ?>/images/logo_print.png"  width="278" height="50" alt="" class="print"/> </h1>
                 </div>
+<div class="toggleBox" id="ResponsiveMenu">
 
                 <div id="navbar" class="grid_9">
-
                     <div id="nav-primary" class="nav">
                         <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
                     </div><!--#nav-primary-->
                     <?php if (!dynamic_sidebar('Header')) : ?><!-- Wigitized Header --><?php endif ?>
                 </div> <!--end navbar -->
+                </div>
+
                 <div class="clear"></div>
             </div><!--#header-->
