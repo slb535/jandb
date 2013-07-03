@@ -121,10 +121,14 @@ blockquote:first-line {
 }
 
 a[href $='.pdf'] {
-    display: block;
+    padding-right: 25px;
     background: transparent url(images/pdf.gif) no-repeat  right;
 }
 
+
+.readmore + a[href $='.pdf'], .newer-older a[href $='.pdf']  {
+    background: none;
+}
 
 
 

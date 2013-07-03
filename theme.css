@@ -189,7 +189,11 @@ a[href $='.pdf'] {
 }
 
 
+<<<<<<< HEAD
 .readmore a[href $='.pdf'], .newer-older a[href $='.pdf']  {
+=======
+.readmore + a[href $='.pdf'], .newer-older a[href $='.pdf']  {
+>>>>>>> d21ef09aa6640918e523a22f2e985755836223a6
     background: none;
 }
 
@@ -1911,7 +1915,11 @@ audio {
     }
 
     #nav-primary ul li  {
+<<<<<<< HEAD
         font-size: .75em;
+=======
+        font-size: .8em;
+>>>>>>> d21ef09aa6640918e523a22f2e985755836223a6
         font-family: "OpenSans", sans-serif;
         font-weight: 100;
         padding: 0 0 10px 50px;
@@ -1919,6 +1927,7 @@ audio {
         text-align: left;
     }
 
+<<<<<<< HEAD
 /*    #nav-primary ul {
         display: none;
     } 
@@ -1926,6 +1935,15 @@ audio {
     #nav-primary ul.expanded {
         display: block;
     } */
+=======
+    #nav-primary ul {
+        display: none;
+    }
+
+    #nav-primary ul.expanded {
+        display: block;
+    }
+>>>>>>> d21ef09aa6640918e523a22f2e985755836223a6
 
     #responsive-menu.btn {
         font-size: .8em;

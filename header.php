@@ -147,7 +147,11 @@
 
             <div id="header">                
                 <div id="responsive-menu" class="btn">
+<<<<<<< HEAD
                     <a href="javascript:toggleDiv('ResponsiveMenu');">MENU</a>
+=======
+                    <a href="#" onclick="toggleNav(); return false;">MENU</a>
+>>>>>>> d21ef09aa6640918e523a22f2e985755836223a6
                 </div>
 
                 <div id="logo" class="theta">
