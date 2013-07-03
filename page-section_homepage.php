@@ -44,16 +44,6 @@
                                     echo '<span><a href="' . home_url() . '/practices-home/' . sanitize_title($practice_area_select) . '">' . $practice_area_select . '</a></span>';
                                     echo '</h4>';
                                     ?>
-
-
-
-
-
-
-
-
-
-
                                 </div>
                                 <?php
                             }
@@ -162,7 +152,7 @@
                                         ?>
 
                                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
-                                                <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
+                                            <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
                                         </li>
                                         <?php
                                     endwhile;
@@ -189,14 +179,14 @@
                                     'ignore_sticky_posts' => 1
                                 );
 
-                                  query_posts($args);
+                                query_posts($args);
 
                                 if (have_posts())
                                     while (have_posts()) : the_post();
                                         ?>
 
                                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
-                                                <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
+                                            <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
                                         </li>
                                         <?php
                                     endwhile;

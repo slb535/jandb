@@ -862,7 +862,6 @@ textarea {
     letter-spacing: .25px;
     /*PRACTICE NAME */
     font: 10px/11px 'FranklinGothic',  'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-    /*    height: 24px; removed by PMH */
 }
 
 .transparent {
@@ -966,6 +965,10 @@ width: 570px;
 
 .lawyer_profile .featured-thumbnail {
     float: right;
+}
+
+.smaller {
+    display: none
 }
 
 .lawyer-list {
@@ -1919,13 +1922,13 @@ audio {
         text-align: left;
     }
 
-/*    #nav-primary ul {
+    #nav-primary ul {
         display: none;
-    } 
-
-    #nav-primary ul.expanded {
-        display: block;
-    } */
+    }
+    /*
+           #nav-primary ul.expanded {
+               display: block;
+           } */
 
     #responsive-menu.btn {
         font-size: .8em;
@@ -2025,7 +2028,7 @@ audio {
         /*  width: 100%; */
         padding-bottom: 0;
         margin-left: 0;
-            
+
     }
 
     .firm-news .headlines li, .publications .headlines li, .awards .headlines li {
@@ -2039,55 +2042,89 @@ audio {
     .headlines .readmore {
         display: none;
     }
-    
-    
+
+
     .home:after, .page-id-109:after, .page-id-157:after, .page-id-75:after, .page-id-66:after, .page-id-545:after, .page-id-595:after, .page-id-555:after, .page-id-592:after, .page-id-60:after {
-    top: 120px;
-}
+        top: 120px;
+    }
 
-.home:after {
-    /* positioning is above */
-    content: url(images/bg_home_m.jpg);
-}
+    .home:after {
+        /* positioning is above */
+        content: url(images/bg_home_m.jpg);
+    }
 
-.page-id-595:after {
-    /* positioning is above */
-    content: url(images/bg_practiceareas_m.jpg);
-}
+    .page-id-595:after {
+        /* positioning is above */
+        content: url(images/bg_practiceareas_m.jpg);
+    }
 
-.page-id-157:after {
-    /* positioning is above */
-    content: url(images/bg_attorneys_m.jpg);
-}
+    .page-id-157:after {
+        /* positioning is above */
+        content: url(images/bg_attorneys_m.jpg);
+    }
 
-.page-id-75:after {
-    /* positioning is above */
-    content: url(images/bg_firmnews_m.jpg);
-}
+    .page-id-75:after {
+        /* positioning is above */
+        content: url(images/bg_firmnews_m.jpg);
+    }
 
-.page-id-66:after {
-    /* positioning is above */
-    content: url(images/bg_awards_m.jpg);
-}
+    .page-id-66:after {
+        /* positioning is above */
+        content: url(images/bg_awards_m.jpg);
+    }
 
-.page-id-545:after {
-    /* positioning is above */
-    content: url(images/bg_community_m.jpg);
-}
+    .page-id-545:after {
+        /* positioning is above */
+        content: url(images/bg_community_m.jpg);
+    }
 
-.page-id-555:after {
-    /* positioning is above */
-    content: url(images/bg_publications_m.jpg);
-}
+    .page-id-555:after {
+        /* positioning is above */
+        content: url(images/bg_publications_m.jpg);
+    }
 
-.page-id-592:after {
-    /* positioning is above */
-    content: url(images/bg_indiana_m.jpg);
-}
+    .page-id-592:after {
+        /* positioning is above */
+        content: url(images/bg_indiana_m.jpg);
+    }
 
-.page-id-60:after {
-    /* positioning is above */
-    content: url(images/bg_contact_m.jpg);
-}
+    .page-id-60:after {
+        /* positioning is above */
+        content: url(images/bg_contact_m.jpg);
+    }
+
+
+    .smaller {
+        display: block;
+    }
+
+    .larger {
+        display: none;
+    }
+
+    h2.lawyer-name {
+        text-align: right;
+    }
+    .lawyer_profile .wp-post-image {
+        display: none
+    }
+
+    .icons {
+        float: right;
+        text-align: right;
+        padding-top: 10px;
+    }
+
+
+    .lawyer_profile .smaller {
+        float: right;
+    }
+
+
+
+    .grid_7.name {
+        width: 70%
+
+    }
 }
 
