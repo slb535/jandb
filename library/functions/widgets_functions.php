@@ -241,7 +241,7 @@ class PracticeSidebar_widget extends WP_Widget {
                      
                  }
                  
-      if ( $alerts_link ) echo '<h2><a href="' .  $alerts_link . '" target="new">Publications &amp; Alerts </h2></a>';  
+      if ( $alerts_link ) echo '<h2><a href="' .  $alerts_link . '">Publications &amp; Alerts </h2></a>';  
       
                     $args = array(  
 				'post_type' => 'post',

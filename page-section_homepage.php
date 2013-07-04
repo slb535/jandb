@@ -276,7 +276,7 @@
         ?>
     </div>
 
-    <div style='clear:both;'></div>
+    <div class="clearfix"></div>
     <?php
     $quote = types_render_field("quote", array('raw' => 'true'));
     $quotesource = types_render_field("quote-source", array('raw' => 'true'));

@@ -100,6 +100,28 @@ body {
     display: block;
 }
 
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11 {
+  position: relative;
+}
+
+.push_1 {
+    right: 50px;
+}
+
+.pull_1 {
+    right: -50px;
+}
+
 .alpha{margin-left:0px;}
 .omega{margin-right:0px;}
 .theta {margin: 0;}
@@ -1345,7 +1367,7 @@ p.byline {
 }
 
 
-table.contact {
+.contact {
     padding-top: 5px
 }
 
@@ -1854,6 +1876,14 @@ audio {
     .front-left, .front-right {
         width: 100%;
     }
+    
+    .push_1 {
+    right: 0;
+}
+
+.pull_1 {
+    right: 0;
+}
 
     #responsive-menu.btn {
         display: block;
@@ -2120,11 +2150,31 @@ audio {
         float: right;
     }
 
-
-
     .grid_7.name {
         width: 70%
-
     }
+   .contact .grid_6 {
+    width: 75%;
+    margin-bottom: 20px;
+}
+    
+    .page-contact .post-content {
+display: none;
+}
+    
+    .front-left {
+        width: 55%
+    }
+    
+    .page-contact .front-right {
+        width: 40%;
+            margin-top: 63px;
+    }
+    
+    #sidebar.border {
+padding-left: 10px;
+}
+
+
 }
 
