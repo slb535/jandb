@@ -258,7 +258,7 @@ a:hover, a:active {
 }
 
 hr {
-    width: 700px; /*700px*/
+    width: 100%; /*700px*/
     height: 2px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -581,7 +581,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     padding-left: 13px;
 }
 
-.practice-areas-list-small {
+.practices-footer, .practice-areas-list-small {
     width: 100%
 }
 
@@ -1257,10 +1257,10 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 }
 
 
-#sidebar .news {
+/* #sidebar .news {
     margin-top: 26px
 }
-
+*/
 
 .pagination {
     float: right
@@ -2175,6 +2175,31 @@ display: none;
 padding-left: 10px;
 }
 
-
+.practice-body h3, .practice-body ul {
+margin-left: 0
 }
 
+
+.practice-page .front-left {
+width: 100%
+}
+
+.practice .sidebar img {
+    display: none
+}
+
+
+.practices-footer {
+    width: 60%;
+    float: left
+}
+
+ .four-columns  { 
+ -webkit-column-count: 0; 
+-webkit-column-gap: 0;
+-webkit-column-rule: 0;
+}
+
+
+
+}

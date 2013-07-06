@@ -4,11 +4,11 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="practice-page grid_9">
+<div id="content" class="practice-page">
     <div class="column front-left">
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-                    <article>
+                    
                         <h1><?php the_title(); ?></h1>
 
                         <div class="practice-body">
@@ -16,7 +16,7 @@
                         </div>
 
                         <hr />
-
+ 
                 </div>
 
             <?php endwhile; /* end loop */ ?>
@@ -64,20 +64,19 @@
                 <ul>
                     <?php
                     foreach ($tax_terms as $tax_term) {
-                        echo '<li>' . '<a href="' . $site_url . 'practices-home/' . $tax_term->slug . '" title="' . sprintf(__("Practice Area %s"), $tax_term->name) . '" ' . '>' . $tax_term->name . '</a></li>';
+                        echo '<li>' . '<a href="' . $site_url . 'practices-home/' . $tax_term->slug . '" title="' . sprintf(__("View all posts in %s"), $tax_term->name) . '" ' . '>' . $tax_term->name . '</a></li>';
                     }
                     ?>
                 </ul>
 
 
                 <!--[if lt IE 10]>  </div><![endif]-->
+            </div> <!--end columns section -->
+            <div class="clearfix"></div>
 
-
-            </div>
         </div>
 
     </div> <!-- end column front-left-->
-
 
     <div class="column front-right" >
 
@@ -87,9 +86,11 @@
         ?>
 
     </div>
+    <div class="clearfix"></div>
+
 </div><!--#content-->
 
-<div style='clear:both;'></div>
+<div class="clearfix"></div>
 
 
 
