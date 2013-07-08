@@ -148,7 +148,7 @@
 
             <div id="header">
 
-                <div id="responsive-menu"><a href="javascript:toggleDiv(\'nav-primary-mobile\');">MENU</a></div>
+                <div id="responsive-menu"><a href="javascript:toggleDiv('nav-primary-mobile');">MENU</a></div>
 
                 <div id="logo" class="theta larger">
                     <h1><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/jandb_logo.png" alt="<?php bloginfo('name'); ?>" title="Click to return to <?php bloginfo('name'); ?> homepage" width="278" height="45" class="screen" /></a><img src="<?php bloginfo('template_url'); ?>/images/logo_print.png"  width="278" height="50" alt="" class="print"/> </h1>
@@ -162,7 +162,7 @@
                     <div id="nav-primary" class="nav">
                         <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
                     </div><!--#nav-primary-->
-                    <div id="nav-primary-mobile" class="toggleBox">
+                    <div class="toggleBox" id="nav-primary-mobile" >
                         <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
                     </div><!--#nav-primary-mobile-->
                     <?php if (!dynamic_sidebar('Header')) : ?><!-- Wigitized Header --><?php endif ?>

@@ -1864,6 +1864,12 @@ audio {
 
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
+
+    body {
+        background-color: #FFF;
+        background-image: none;
+    }
+
     .grid_1,
     .grid_2,
     .grid_3,
@@ -1887,6 +1893,16 @@ audio {
 
     .pull_1 {
         right: 0;
+    }
+
+    p {
+        padding-bottom: 8px;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    #content {
+        margin-top: 140px;
     }
 
     #responsive-menu {
@@ -1923,7 +1939,8 @@ audio {
         padding-top: 10px;
     }
 
-    #nav-primary {
+    #nav-primary
+    {
         display: none;
         border-top: none
 
@@ -1976,8 +1993,9 @@ audio {
     }
 
 
-    #nav-primary ul li a {
+    #nav-primary-mobile ul li a {
         color: white;
+        text-transform: uppercase;
     }
 
 
@@ -2141,6 +2159,11 @@ audio {
     h2.lawyer-name {
         text-align: right;
     }
+
+    .full-bio h2.lawyer-name {
+        text-align: left;
+    }
+
     .lawyer_profile .wp-post-image {
         display: none
     }
@@ -2158,6 +2181,7 @@ audio {
     h2.lawyer_profile {
         padding-top: 20px;
     }
+
 
     .lawyer_profile .featured-thumbnail {
         width: 25%
@@ -2178,13 +2202,19 @@ audio {
         padding-right: 10px;
     }
 
-    .practice-areas .grid_5 {
-        width: 40%;
+    .practice-areas.grid_5 {
+        width: 30%;
         float: left;
     }
 
-    .details .lawyer-list .grid_6 {
-        width: 40%;
+    .practice-areas {
+        margin-top: 15px;
+        margin-right: 0;
+        padding: 3px 3px 15px 20px;
+    }
+
+    .lawyer-list.grid_6 {
+        width: 50%;
         float: left;
     }
 
@@ -2196,7 +2226,7 @@ audio {
         margin-bottom: 20px;
     }
 
-    .page-firm-news .front-left {
+    .page-industry-awards .front-left, .page-firm-news .front-left {
         width: 100%;
     }
 
@@ -2217,30 +2247,30 @@ audio {
         padding-left: 10px;
     }
 
-.practice-body h3, .practice-body ul {
-margin-left: 0
-}
+    .practice-body h3, .practice-body ul {
+        margin-left: 0
+    }
 
 
-.practice-page .front-left {
-width: 100%
-}
+    .practice-page .front-left {
+        width: 100%
+    }
 
-.practice .sidebar img {
-    display: none
-}
+    .practice .sidebar img {
+        display: none
+    }
 
 
-.practices-footer {
-    width: 60%;
-    float: left
-}
+    .practices-footer {
+        width: 60%;
+        float: left
+    }
 
- .four-columns  { 
- -webkit-column-count: 0; 
--webkit-column-gap: 0;
--webkit-column-rule: 0;
-}
+    .four-columns  {
+        -webkit-column-count: 0;
+        -webkit-column-gap: 0;
+        -webkit-column-rule: 0;
+    }
 
 
 
