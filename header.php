@@ -102,38 +102,39 @@
 
             </script>
 
-            <?php if ('lawyer_profile' == get_post_type()) { ?>
+            <?php /* if ('lawyer_profile' == get_post_type()) { */ ?>
 
-                <script>
+            <script>
 
-                    function slideonlyone(thechosenone) {
-                        $('.newboxes').each(function(index) {
-                            if ($(this).attr("id") == thechosenone) {
-                                $(this).slideDown(200);
-                            }
-                            else {
-                                $(this).slideUp(600);
-                            }
-                        });
-                    }
-                    function toggleDiv(divId) {
-                        $("#" + divId).toggle();
-                    }
-                </script>
-
-                <script>
-                    jQuery(document).ready(function($) {
-                            jQuery('a.popup').live('click', function() {
-                                    newwindow = window.open($(this).attr('href'), '', 'height=800,width=600,scrollbars=1');
-                                    if (window.focus) {
-                                newwindow.focus();
-                            }
-                                    return false;
-                            });
+                function slideonlyone(thechosenone) {
+                    $('.newboxes').each(function(index) {
+                        if ($(this).attr("id") == thechosenone) {
+                            $(this).slideDown(200);
+                        }
+                        else {
+                            $(this).slideUp(600);
+                        }
                     });
-                </script>
-            <?php } ?>
+                }
+                function toggleDiv(divId) {
+                    $("#" + divId).toggle();
+                }
+            </script>
 
+            <script>
+                jQuery(document).ready(function($) {
+                        jQuery('a.popup').live('click', function() {
+                                newwindow = window.open($(this).attr('href'), '', 'height=800,width=600,scrollbars=1');
+                                if (window.focus) {
+                            newwindow.focus();
+                        }
+                                return false;
+                        });
+                });
+            </script>
+            <?php /* } */ ?>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script> -->
 
     </head>
 
@@ -146,7 +147,8 @@
         <div class="container">
 
             <div id="header">
-                <div id="responsive-menu" class="btn">MENU</div>
+
+                <div id="responsive-menu"><a href="javascript:toggleDiv(\'nav-primary-mobile\');">MENU</a></div>
 
                 <div id="logo" class="theta larger">
                     <h1><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/jandb_logo.png" alt="<?php bloginfo('name'); ?>" title="Click to return to <?php bloginfo('name'); ?> homepage" width="278" height="45" class="screen" /></a><img src="<?php bloginfo('template_url'); ?>/images/logo_print.png"  width="278" height="50" alt="" class="print"/> </h1>
@@ -160,7 +162,14 @@
                     <div id="nav-primary" class="nav">
                         <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
                     </div><!--#nav-primary-->
+                    <div id="nav-primary-mobile" class="toggleBox">
+                        <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
+                    </div><!--#nav-primary-mobile-->
                     <?php if (!dynamic_sidebar('Header')) : ?><!-- Wigitized Header --><?php endif ?>
+                    <div class="clearfix"></div>
+
                 </div> <!--end navbar -->
-                <div class="clear"></div>
+
+                <div class="clearfix"></div>
+
             </div><!--#header-->

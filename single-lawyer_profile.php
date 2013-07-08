@@ -1,12 +1,11 @@
 <?php get_header(); ?>
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script> -->
 
 <div id="content">
     <?php if (have_posts()) while (have_posts()) : the_post(); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?> >
                 <?php
                 if (has_post_thumbnail()) {
-                    echo '<div class="featured-thumbnail">';
+                    echo '<div class="featured-thumbnail grid_5">';
                     the_post_thumbnail();
 
                     if (class_exists('MultiPostThumbnails')) :
@@ -19,8 +18,6 @@
                 ?>
             </div>
             <div  class="grid_7 name">
-
-                <h2 class="lawyer-name"><?php the_title(); ?>   </h2>
                 <span class="icons screen grid_3">
                     <?php
                     $email = types_render_field("email", array('raw' => 'true'));
@@ -43,22 +40,26 @@
 
 
 
-                    <?php } ?>
-                    <?php
-                    $title = types_render_field("title", array("raw" => "true"));
+                    <?php } ?>  </span>
+                <h2 class="lawyer-name"><?php the_title(); ?>   </h2>
 
 
-                    echo '<div class="title">' . $title;
-                    if (in_category('Indiana')) {
-                        echo '<br /><a href="/crown-point-indiana/">Crown Point, Indiana</a>';
-                    }
-                    echo '</div>';
-                    ?>
+                <?php
+                $title = types_render_field("title", array("raw" => "true"));
 
-                    <div class="phone screen">Direct <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
-                    <div class="phone print">Direct: <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
 
-                </span>
+                echo '<div class="title">' . $title;
+                if (in_category('Indiana')) {
+                    echo '<br /><a href="/crown-point-indiana/">Crown Point, Indiana</a>';
+                }
+                echo '</div>';
+                ?>
+
+                <div class="phone screen">Direct <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
+                <div class="phone print">Direct: <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
+
+
+                <div class="clearfix"></div>
 
             </div>
             <div id="lawyer-left"  class="grid_7">
@@ -76,12 +77,12 @@
                         <p><?php the_content(); ?>
 
                     </div>
-                    <div class="clear"></div>
+                    <div class="clearfix"></div>
 
                 </div><!--.post-content-->
             </div> <!-- lawyer left -->
 
-            <div id="lawyer-right" class="grid_6">
+            <div id="lawyer-right" class="grid_5">
                 <div class="details">
 
 

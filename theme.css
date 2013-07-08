@@ -111,7 +111,7 @@ body {
 .push_9, .pull_9,
 .push_10, .pull_10,
 .push_11, .pull_11 {
-  position: relative;
+    position: relative;
 }
 
 .push_1 {
@@ -149,6 +149,8 @@ h2, h3, h4, h5, h6, .archive h2, .archive h2 a, .h2, .h3, p.alerts-blog-author {
 .news_headlines_home li, .searchLabel, .headlines ul, .headlines li, .pagination, .headlines .readmore, .newsletter-list, .newsletter-list a, .read-more, .byline {
     font-family: 'FranklinGothic', Arial, 'Helvetica Neue', Helvetica, sans-serif
 }
+
+
 
 #nav-primary ul li {
     font-family: "OpenSansSemibold", sans-serif;
@@ -522,8 +524,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 /*===[ General Main Area ]=== */
 
 #content {
-    margin-top: 40px;
-    padding-top: 24px
+    margin-top: 80px;
 }
 
 #widget-alert {
@@ -974,7 +975,8 @@ width: 570px;
 }
 
 .details {
-    float: right
+    float: right;
+    width: 100%;
 }
 
 
@@ -1179,7 +1181,9 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     display: none
 }
 
-
+#nav-primary {
+    display: block;
+}
 
 
 /*===[   News, Publications, Community, Awards Pages]=== */
@@ -1876,16 +1880,16 @@ audio {
     .front-left, .front-right {
         width: 100%;
     }
-    
+
     .push_1 {
-    right: 0;
-}
+        right: 0;
+    }
 
-.pull_1 {
-    right: 0;
-}
+    .pull_1 {
+        right: 0;
+    }
 
-    #responsive-menu.btn {
+    #responsive-menu {
         display: block;
         width: 50px;
         text-align: center;
@@ -1908,7 +1912,7 @@ audio {
         max-width: 60%;
     }
 
-    .menu-top-navigation-menu-container, #responsive-menu.btn  {
+    .menu-top-navigation-menu-container, #responsive-menu  {
         background-color: #9a938a;
         margin-bottom: 20px;
     }
@@ -1920,7 +1924,9 @@ audio {
     }
 
     #nav-primary {
+        display: none;
         border-top: none
+
     }
 
 
@@ -1943,7 +1949,7 @@ audio {
         margin-top: -50px;
     }
 
-    #nav-primary ul li  {
+    #nav-primary-mobile ul li  {
         font-size: .75em;
         font-family: "OpenSans", sans-serif;
         font-weight: 100;
@@ -1952,15 +1958,15 @@ audio {
         text-align: left;
     }
 
-    #nav-primary ul {
+    /* #nav-primary ul {
         display: none;
-    }
+    }*/
     /*
            #nav-primary ul.expanded {
                display: block;
            } */
 
-    #responsive-menu.btn {
+    #responsive-menu {
         font-size: .8em;
         font-family: "OpenSans", sans-serif;
         font-weight: 100;
@@ -2142,38 +2148,74 @@ audio {
     .icons {
         float: right;
         text-align: right;
-        padding-top: 10px;
+        padding-bottom: 20px;
     }
 
+    .icons a {
+        padding-left: 10px
+    }
+
+    h2.lawyer_profile {
+        padding-top: 20px;
+    }
+
+    .lawyer_profile .featured-thumbnail {
+        width: 25%
+    }
+
+    .title, .phone.screen {
+        margin-bottom: 0;
+        font-size: .9em;
+        line-height: 1.2em;
+        text-align: right;
+    }
 
     .lawyer_profile .smaller {
         float: right;
     }
 
+    .lawyer_profile .featured-thumbnail {
+        padding-right: 10px;
+    }
+
+    .practice-areas .grid_5 {
+        width: 40%;
+        float: left;
+    }
+
+    .details .lawyer-list .grid_6 {
+        width: 40%;
+        float: left;
+    }
+
     .grid_7.name {
         width: 70%
     }
-   .contact .grid_6 {
-    width: 75%;
-    margin-bottom: 20px;
-}
-    
+    .contact .grid_6 {
+        width: 75%;
+        margin-bottom: 20px;
+    }
+
+    .page-firm-news .front-left {
+        width: 100%;
+    }
+
     .page-contact .post-content {
-display: none;
-}
-    
+        display: none;
+    }
+
     .front-left {
         width: 55%
     }
-    
+
     .page-contact .front-right {
         width: 40%;
-            margin-top: 63px;
+        margin-top: 63px;
     }
-    
+
     #sidebar.border {
-padding-left: 10px;
-}
+        padding-left: 10px;
+    }
 
 .practice-body h3, .practice-body ul {
 margin-left: 0
