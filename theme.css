@@ -349,6 +349,7 @@ h2.lawyer-name {
     border-bottom: 1px solid #D21532;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* .post h2, .h2 */
@@ -527,6 +528,10 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     margin-top: 80px;
 }
 
+.home #content {
+    margin-top: 40px;
+}
+
 #widget-alert {
     margin-bottom: 24px;
     padding: 24px;
@@ -556,7 +561,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 
 
 .post-single {
-    width: 650px; /*650px*/
+    /* width: 650px; /*650px*/
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -866,7 +871,7 @@ textarea {
     float: left;
     width: 90px;
     min-height: 100px;
-    padding-right: 7px;
+    padding-right: 5px;
 }
 
 .photo-block h4 {
@@ -1862,14 +1867,27 @@ audio {
 #responsive-menu { display: none}
 
 
+body:after {
+    display: none;
+}
+
+
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
+
+    body:after {
+        content: "smallscreen";
+    }
+
 
     body {
         background-color: #FFF;
         background-image: none;
     }
 
+    .container {
+        width: 98%;
+    }
     .grid_1,
     .grid_2,
     .grid_3,
@@ -1901,6 +1919,10 @@ audio {
         line-height: 1.5em;
     }
 
+    .home #content {
+        margin-top: 40px;
+    }
+
     #content {
         margin-top: 140px;
     }
@@ -1922,6 +1944,13 @@ audio {
     .home #content h1 {
         line-height: 1em;
         font-size: 3.375em;
+    }
+
+
+    .news_headlines_home h2, .headlines h2 {
+        display: block;
+        text-align: center;
+        vertical-align: middle;
     }
 
     #logo object {
@@ -2098,8 +2127,13 @@ audio {
     }
 
 
-    .home:after, .page-id-109:after, .page-id-157:after, .page-id-75:after, .page-id-66:after, .page-id-545:after, .page-id-595:after, .page-id-555:after, .page-id-592:after, .page-id-60:after {
-        top: 120px;
+    .home:after {
+        top:0;
+    }
+
+
+    .page-id-109:after, .page-id-157:after, .page-id-75:after, .page-id-66:after, .page-id-545:after, .page-id-595:after, .page-id-555:after, .page-id-592:after, .page-id-60:after, .page-id-6040:after {
+        top: 80px;
     }
 
     .home:after {
@@ -2137,6 +2171,12 @@ audio {
         content: url(images/bg_publications_m.jpg);
     }
 
+
+    .page-id-6040:after {
+        /* positioning is above */
+        content: url(images/bg_articles_m.jpg);
+    }
+
     .page-id-592:after {
         /* positioning is above */
         content: url(images/bg_indiana_m.jpg);
@@ -2154,6 +2194,48 @@ audio {
 
     .larger {
         display: none;
+    }
+
+    .news_headlines_home h2, .headlines h2 {
+        display: block;
+        width: 100%;
+        text-align: left;
+        vertical-align: text-top;
+    }
+
+    .news_headlines_home {
+        display: block;
+        top: 0;
+        padding-left: 0;
+        float: right;
+        width: 55%;
+    }
+
+    .news_headlines_home ul, .headlines ul {
+        padding-left: 0;
+    }
+
+    .home .front-right {
+        width: 45%;
+    }
+
+    #photo-row h3 {
+        display: none;
+    }
+
+    .photo-block {
+        padding-bottom: 7px;
+    }
+
+    #photo-row {
+        margin-top: 0;
+        margin-left: 0;
+        width: 45%
+    }
+
+    .home #sidebar.border  {
+        border: none;
+        padding: 0;
     }
 
     h2.lawyer-name {
@@ -2202,6 +2284,10 @@ audio {
         padding-right: 10px;
     }
 
+    .single-lawyer_profile #content, .page-employment #content {
+        margin-top: 50px
+    }
+
     .practice-areas.grid_5 {
         width: 30%;
         float: left;
@@ -2226,22 +2312,30 @@ audio {
         margin-bottom: 20px;
     }
 
-    .page-industry-awards .front-left, .page-firm-news .front-left {
-        width: 100%;
-    }
+
 
     .page-contact .post-content {
         display: none;
     }
 
-    .front-left {
+    .page-contact  .front-left {
         width: 55%
+    }
+
+    .page-blog-articles .front-left {
+        width: 60%
     }
 
     .page-contact .front-right {
         width: 40%;
         margin-top: 63px;
     }
+
+    .page-blog-articles .front-right {
+        width: 36%;
+        margin-top: 63px;
+    }
+
 
     #sidebar.border {
         padding-left: 10px;
@@ -2252,9 +2346,6 @@ audio {
     }
 
 
-    .practice-page .front-left {
-        width: 100%
-    }
 
     .practice .sidebar img {
         display: none
@@ -2273,5 +2364,27 @@ audio {
     }
 
 
+    .alert-blog-post p {
+        font-size: 12px;
+        font-size: .8rem;
+        line-height: 18px;
+        line-height: 1.1rem;
+    }
+
+
+    p.byline {
+        font-size: 11px;
+        font-size: .7rem;
+    }
+
+    article h1, h2 {
+        font-size: 1em;
+    }
+
+    .page-blog-articles .nav-search {
+        display: none;
+    }
 
 }
+
+

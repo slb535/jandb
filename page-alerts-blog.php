@@ -129,6 +129,7 @@
             <?php endwhile; ?>
 
         <?php wp_reset_query(); ?>
+        <div class="clearfix"></div>
 
     </div> <!-- end front-left -->
 
@@ -144,7 +145,7 @@
         ?>
 
     </div>
-    <div style='clear:both;'></div>
+    <div class="clearfix"></div>
 </div><!--#content-->
 
 <?php get_footer(); ?>

@@ -29,6 +29,11 @@
                 ?>
 
             </ul>
+
+            <script> if (windowsize == 'smallscreen') {
+                    SIDEBAR
+                }</script>
+
         </div><!--end news headlines -->
         <div ID="photo-row">
             <h3>Our Varied Practices Meet Your Needs</h3>
@@ -63,7 +68,7 @@
             ?>
             <div class="clearfix"></div>
         </div> <!-- end photo-row-->
-            <div class="clearfix"></div>
+        <div class="clearfix"></div>
     </div> <!-- end column front-left-->
     <div class="column front-right omega" >
         <!--  <div class="sidebar"> -->

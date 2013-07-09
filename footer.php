@@ -52,19 +52,23 @@ if (function_exists('memory_get_usage')) {
         } // Function: Close callback
     });
 </script>
+<script src="responsive-enhance.js"></script>
+<script>
+    responsiveEnhance(document.getElementById('img1'), 400);
+    responsiveEnhance(document.getElementById('img2'), 240);
+</script>
+<script>
+    var originalNavClasses;
 
-   <script>
-    	var originalNavClasses;
-
-		function toggleNav() {
-			var elem = document.getElementById('navigation_list');
-			var classes = elem.className;
-			if (originalNavClasses === undefined) {
-				originalNavClasses = classes;
-			}
-			elem.className = /expanded/.test(classes) ? originalNavClasses : originalNavClasses + ' expanded';
-		}
-    </script>
+    function toggleNav() {
+        var elem = document.getElementById('navigation_list');
+        var classes = elem.className;
+        if (originalNavClasses === undefined) {
+            originalNavClasses = classes;
+        }
+        elem.className = /expanded/.test(classes) ? originalNavClasses : originalNavClasses + ' expanded';
+    }
+</script>
 
 </body>
 </html>
