@@ -8,14 +8,14 @@
     <div class="column front-left">
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+                    <article>
+                        <h1><?php the_title(); ?></h1>
 
-                    <h1><?php the_title(); ?></h1>
+                        <div class="practice-body">
+                            <?php the_content(); ?>
+                        </div>
 
-                    <div class="practice-body">
-                        <?php the_content(); ?>
-                    </div>
-
-                    <hr />
+                        <hr />
 
                 </div>
 
@@ -71,12 +71,13 @@
 
 
                 <!--[if lt IE 10]>  </div><![endif]-->
-            </div> <!--end columns section -->
-            <div class="clearfix"></div>
 
+
+            </div>
         </div>
 
     </div> <!-- end column front-left-->
+
 
     <div class="column front-right" >
 
@@ -86,10 +87,9 @@
         ?>
 
     </div>
-    <div class="clearfix"></div>
-
 </div><!--#content-->
 
+<div style='clear:both;'></div>
 
 
 

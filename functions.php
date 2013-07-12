@@ -629,4 +629,13 @@ function practice_area_permalink($permalink, $post_id, $leavename) {
     return str_replace('%practice-area%', $taxonomy_slug, $permalink);
 }
 
+// get rid of dimensions in images
+add_filter('post_thumbnail_html', 'remove_width_attribute', 10);
+add_filter('image_send_to_editor', 'remove_width_attribute', 10);
+
+function remove_width_attribute($html) {
+    $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+    return $html;
+}
+
 ?>

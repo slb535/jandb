@@ -14,8 +14,9 @@
                             <h1><?php the_title(); ?></h1>
 
                             <div class="practice-body">
-                                <?php $practice = get_the_title(); ?>
-                                <h3><?php echo $practice; ?> Attorneys</h3>
+                                <?php
+                                $practice = strip_tags(get_the_term_list($post->ID, 'practice-area'));
+                                ?>
 
 
                                 <?php
@@ -34,14 +35,14 @@
                                 if ($count_posts > 10) {
                                     ?>
                                     <div class="two-columns wide">
-                                    <?php
-                                    echo '<ul id="entry" >';
-                                }
-                                else
-                                    echo '<div class="one-column"><ul>';
-                                if (have_posts())
-                                    while (have_posts()) : the_post();
-                                        ?>
+                                        <?php
+                                        echo '<ul id="entry" >';
+                                    }
+                                    else
+                                        echo '<div class="one-column"><ul>';
+                                    if (have_posts())
+                                        while (have_posts()) : the_post();
+                                            ?>
                                             <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></li>
                                             <?php
                                         endwhile;
@@ -52,7 +53,7 @@
 
                             </div>
 
-    <?php endwhile; /* end loop */ ?>
+                        <?php endwhile; /* end loop */ ?>
                     <hr />
 
                     <div class="practices-footer">

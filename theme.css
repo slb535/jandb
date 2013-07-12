@@ -373,6 +373,10 @@ h2.lawyer-name {
     letter-spacing: 2px;
 }
 
+.practices-footer h3 {
+    padding-bottom: 5px;
+}
+
 #lawyer-right h3 {
     padding-bottom: 0;
     font-size: 1.07em;
@@ -581,10 +585,8 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 }
 
 .front-right {
-    /* display: inline-block; */
     float: left; /*changed from right */
-    /* width: 290px; */
-    padding-left: 13px;
+    /*  padding-left: 13px; removed four Our Attorneys */
 }
 
 .practices-footer, .practice-areas-list-small {
@@ -603,6 +605,11 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     margin-left: 10px;
     font-size: .8125em; /* 13px */
     line-height: 15px;
+}
+
+#sidebar-search {
+    /* width: 100%; */
+    width: auto;
 }
 
 #sidebar-search.solo {
@@ -1395,7 +1402,8 @@ p.byline {
 }
 
 .affiliation-logo-footer {
-    margin-top: -50px
+    margin-top: -60px
+
 }
 
 .youtube-player {
@@ -1470,7 +1478,6 @@ p.byline {
 
 .footer-right {
     float: right;
-    margin-top: -20px;
     padding-right: 10px;
 }
 
@@ -1481,11 +1488,7 @@ p.byline {
 #content.practice-page .sidebar {
     height: 95%;
     background-color: #E9E5D9;
-}
-
-#content.practice-page aside {
-    margin-top: 0;
-    margin-left: -10px;
+    max-width: 278px;
 }
 
 .practice-body {
@@ -1867,17 +1870,33 @@ audio {
 #responsive-menu { display: none}
 
 
-body:after {
-    display: none;
+
+/* Menu Issues ----------- */
+@media screen and (max-width : 1040px) {
+    #nav-primary ul li {
+        padding-right: 2.3em;
+    }
+
 }
+
+@media screen and (max-width : 980px) {
+    #nav-primary ul li {
+        padding-right: 1.9em;
+    }
+
+    .page-template-page-practice img.attachment-post-thumbnail {
+        width: 100%;
+    }
+
+
+}
+
 
 
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
 
-    body:after {
-        content: "smallscreen";
-    }
+
 
 
     body {
@@ -1886,7 +1905,7 @@ body:after {
     }
 
     .container {
-        width: 98%;
+        width: 95%;
     }
     .grid_1,
     .grid_2,
@@ -2029,9 +2048,12 @@ body:after {
 
 
 
-    #sidebar-search {
-        float: right;
-        margin-right:20px;
+
+
+    img.affiliation-logo-footer {
+        margin-top: 0;
+        width: 75%;
+        height: auto;
     }
 
     .intro  {
@@ -2233,10 +2255,8 @@ body:after {
         width: 45%
     }
 
-    .home #sidebar.border  {
-        border: none;
-        padding: 0;
-    }
+
+
 
     h2.lawyer-name {
         text-align: right;
@@ -2304,6 +2324,43 @@ body:after {
         float: left;
     }
 
+    .sidebar p {
+        font-size: .775em;
+        line-height: 15px;
+    }
+    .page-giving-back .front-right {
+        width: 55%;
+        float: left
+    }
+
+
+
+
+    .community h2, .h2 {
+        font-size: .9em;
+    }
+
+    .community h2 {
+        color: #817566;
+        border-bottom: #D21532 4px double;
+        padding-bottom: 0
+
+    }
+
+    .page-id-545 #content {
+        padding-top: 0;
+    }
+
+    #post-545 {
+        padding-top: 0;
+    }
+
+    .community_logos {
+        width: 25%;
+        float: left
+    }
+
+
     .grid_7.name {
         width: 70%
     }
@@ -2337,9 +2394,6 @@ body:after {
     }
 
 
-    #sidebar.border {
-        padding-left: 10px;
-    }
 
     .practice-body h3, .practice-body ul {
         margin-left: 0
@@ -2381,10 +2435,118 @@ body:after {
         font-size: 1em;
     }
 
-    .page-blog-articles .nav-search {
-        display: none;
+    /*   .page-blog-articles .nav-search {
+           display: none;
+       }
+    */
+
+
+    #sidebar {
+        padding-top: 30px;
     }
+    .home #sidebar.border  {
+        border: none;
+        padding: 0;
+    }
+
+
+    .page-giving-back #sidebar.border {
+        border: 0;
+        padding-left: 30px;
+    }
+
+    #sidebar .community_projects {
+        border-bottom: #D21532 1px solid;
+        margin-top: 10px;
+    }
+
+
+    #sidebar.border {
+        margin-left: 20px;
+    }
+
+    #sidebar {
+        padding-top: 30px;
+    }
+
+    .page-contact-us #sidebar, .page-blog-articles #sidebar {
+        padding-top: 0;
+    }
+    /*    Practice Pages
+    */
+
 
 }
 
+/* Smallest ----------- */
+@media screen and (max-width : 480px) {
 
+    #nav-primary-mobile ul li {
+
+        padding-right: 20px;
+    }
+
+
+    .news_headlines_home li {
+        padding-top: 1px;
+        padding-bottom: 5px;
+        font-size: 9px;
+        font-size: .675rem;
+        line-height: 12px;
+        line-height: 1rem;
+    }
+
+    .photo-block {
+        width: 67px;
+        min-height: 60px;
+        padding-right: 5px;
+    }
+
+    .photo-block img {
+        width: 100%;
+        height: auto
+    }
+
+    h5.lawyer-name {
+        font: 8px/10px 'FranklinGothic', 'Helvetica Neue', Helvetica, sans-serif;
+        width: 82%;
+        height:20px;
+        margin-top: -23px;
+    }
+
+    h4.practice-name {
+        margin-top: 0;
+    }
+
+    .photo-block h4 {
+        height: 25px;
+        width: 98%;
+    }
+
+    .photo-block h4 span {
+        font: 8px/9px 'FranklinGothic', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    }
+
+    .page-blog-articles .front-left {
+        width: 100%;
+    }
+
+    .page-blog-articles .front-right {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #sidebar.border {
+        margin-left: 0;
+        border-left: none;
+    }
+
+    #sidebar.alerts-blog {
+        padding-left: 0;
+    }
+
+    .page-blog-articles .front-right {
+        width: 100%;
+
+    }
+}

@@ -1,6 +1,6 @@
 
 
-<div class="clear"></div>
+<div class="clearfix"></div>
 </div><!--.container-->
 <div id="footer"><footer>
         <div class="container">
@@ -10,7 +10,8 @@
                 Chicago, Illinois 60603-5404  |  <?php _e('All Rights Reserved.'); ?>  |  <a href="http://johnsonandbell.com/web-site-disclaimer-information/">Disclaimer</a></p>
 
             <?php if (is_home() || is_front_page()) { ?>
-                <div class="footer-right" ><a href="http://www.alfainternational.com/" target="new"><img src="<?php bloginfo('template_url'); ?>/images/logo_alfa.png" width="200" height="45" class="affiliation-logo-footer" /></a></div>
+                <div class="footer-right" ><a href="http://www.alfainternational.com/" target="new"><img src="<?php bloginfo('template_url'); ?>/images/logo_alfa.png" width="200" height="45" class="affiliation-logo-footer" /></a>            <div class="clearfix"></div>
+                </div>
             <?php } ?>
 
             <?php if (is_page(60)) { ?>
@@ -52,11 +53,7 @@ if (function_exists('memory_get_usage')) {
         } // Function: Close callback
     });
 </script>
-<script src="responsive-enhance.js"></script>
-<script>
-    responsiveEnhance(document.getElementById('img1'), 400);
-    responsiveEnhance(document.getElementById('img2'), 240);
-</script>
+
 <script>
     var originalNavClasses;
 

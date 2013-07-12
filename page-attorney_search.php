@@ -227,12 +227,9 @@ if (isset($_REQUEST['skey']))
     <!-- end column front-left-->
 
     <div class="column front-right" >
-        <aside>
-            <?php get_sidebar('search'); ?>
-        </aside>
-
+        <?php get_sidebar('search'); ?>
     </div>
-    <div style='clear:both;'></div>
+    <div class="clearfix"></div>
 
     <?php
     $quote = types_render_field("quote", array('raw' => 'true'));

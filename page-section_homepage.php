@@ -224,7 +224,7 @@
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a><br />
+                                        <li class="headlines"><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a><br />
                                             <span class="source"><?php echo types_render_field("award-source", array('raw' => 'true')); ?></span>
 
                                             <span class="readmore"><a href="<?php the_permalink(); ?>" >read more</a></span>
@@ -239,8 +239,11 @@
 
                         </div>
 
+                        <?php if (!is_mobile()) { ?>
 
-                        <div style="padding-top: 55px;"> <img src="<?php bloginfo('template_url'); ?>/images/community_logos.png" /></div>
+                            <div class=" larger community_logos"> <img src="<?php bloginfo('template_url'); ?>/images/community_logos.png" /></div>
+                        <?php } ?>
+
                     </div> <!-- end community -->
 
                 <?php } ?>    <!-- end Community content (MORE IN SIDEBAR) -->

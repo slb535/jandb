@@ -30,9 +30,11 @@
 
             </ul>
 
-            <script> if (windowsize == 'smallscreen') {
-                    SIDEBAR
-                }</script>
+            <?php
+            if (is_mobile()) {
+                get_sidebar('home');
+            }
+            ?>
 
         </div><!--end news headlines -->
         <div ID="photo-row">
@@ -72,9 +74,13 @@
     </div> <!-- end column front-left-->
     <div class="column front-right omega" >
         <!--  <div class="sidebar"> -->
-        <?php get_sidebar('home'); ?>
+        <?php
+        if (!is_mobile()) {
+            get_sidebar('home');
+        }
+        ?>
         <!--  </div> -->
     </div>
-    <div style='clear:both;'></div>
+    <div class="clearfix"></div>
 </div><!--#content-home-->
 <?php get_footer(); ?>
