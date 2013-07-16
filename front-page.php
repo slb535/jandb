@@ -29,12 +29,13 @@
                 ?>
 
             </ul>
-
-            <?php
-            if (is_mobile()) {
+            <div class="smaller">
+                <?php
+//                if (is_mobile()) {
                 get_sidebar('home');
-            }
-            ?>
+//                }
+                ?>
+            </div>
 
         </div><!--end news headlines -->
         <div ID="photo-row">
@@ -72,12 +73,12 @@
         </div> <!-- end photo-row-->
         <div class="clearfix"></div>
     </div> <!-- end column front-left-->
-    <div class="column front-right omega" >
+    <div class="column front-right omega larger" >
         <!--  <div class="sidebar"> -->
         <?php
-        if (!is_mobile()) {
-            get_sidebar('home');
-        }
+//        if (!is_mobile()) {
+        get_sidebar('home');
+//        }
         ?>
         <!--  </div> -->
     </div>

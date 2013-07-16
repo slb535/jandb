@@ -3,18 +3,18 @@
     <h2> William V. Johnson <span class="amp">&</span> John W. Bell</h2>
 
 
-    <div class="video"> <?php dynamic_sidebar('Sidebar'); ?></div>
+    <div class="video"> <?php // dynamic_sidebar('Sidebar');    ?>
 
 
-    <?php if (!is_mobile()) { ?>
+        <div class="larger">
+            <iframe name="video" class='video-player' frameborder="0" type='text/html' width='278'  height='187' scrolling="no" src='<?php bloginfo('template_url'); ?>/video.html' frameborder='0'></iframe>
+        </div>
 
-        <iframe name="video" class='video-player' frameborder="0" type='text/html' width='278'  height='187' scrolling="no" src='<?php bloginfo('template_url'); ?>/video.html' frameborder='0'></iframe>
-    <?php } else { ?>
-        <iframe name="video" class='video-player' frameborder="0" type='text/html' width='130'  height='75' scrolling="no" src='<?php bloginfo('template_url'); ?>/video_m.html' frameborder='0'></iframe>
+        <div class="smaller">
+            <iframe name="video" class='video-player' frameborder="0" type='text/html' width='130'  height='75' scrolling="no" src='<?php bloginfo('template_url'); ?>/video.html' frameborder='0'></iframe>
+        </div>
 
-    <?php } ?>
-
-
+    </div>
 
 
     <h2><a href="<?php echo site_url(); ?>/crown-point-indiana/">Our Indiana Office</a></h2>

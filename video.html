@@ -1,16 +1,38 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
+
 <!DOCTYPE html>
 <html>
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <style>
+            .smaller {
+                display: none
+            }
+
+            .larger {
+                display: block
+            }
+
+            /* Smaller ----------- */
+            @media screen and (max-width : 650px) {
+                .smaller {
+                    display: block
+                }
+                .larger {
+                    display: none
+                }
+
+            }
+
+        </style>
+
     </head>
     <body>
-        
-        
-        <a href="http://johnsonandbell.net/wp-content/uploads/video/JohnsonandBell.mp4" target="video"><img src="images/video-thumb.jpg" alt="Johnson and Bell, Premier Defense Firm"></a>
+
+
+        <div class="larger">   <a href="http://johnsonandbell.net/wp-content/uploads/video/JohnsonandBell.mp4" target="video"><img src="images/video-thumb.jpg" alt="Johnson and Bell, Premier Defense Firm"></a></div>
+        <div class="smaller">      <a href="http://johnsonandbell.net/wp-content/uploads/video/JohnsonandBell.mp4" target="video"><img src="images/video-thumb_m.jpg" alt="Johnson and Bell, Premier Defense Firm"></a></div>
+
     </body>
 </html>

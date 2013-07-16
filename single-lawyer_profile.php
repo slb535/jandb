@@ -4,17 +4,13 @@
     <?php if (have_posts()) while (have_posts()) : the_post(); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?> >
                 <?php
-                if (has_post_thumbnail()) {
-                    echo '<div class="featured-thumbnail grid_5">';
+                if (has_post_thumbnail()) :
+                    echo '<div class="featured-thumbnail grid_5 larger">';
                     the_post_thumbnail();
-
-                    if (class_exists('MultiPostThumbnails')) :
-                        echo '<div class="smaller">';
-                        MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
-                        echo '</div>';
-                    endif;
-                    echo '</div>';
-                }
+                    echo '</div><div class="smaller">';
+                    the_post_thumbnail('mobile-thumb');
+                    echo '</div></div>';
+                endif;
                 ?>
             </div>
             <div  class="grid_7 name">

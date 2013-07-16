@@ -1266,6 +1266,12 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 }
 
 
+.community_logos img {
+    width: 95%;
+    max-width: 559px;
+}
+
+
 .post-excerpt {
     padding-bottom: 5px;
     font-size: 1em;
@@ -1493,6 +1499,7 @@ p.byline {
 
 .practice-body {
     padding-left: 20px;
+
 }
 
 .practice-body .three-columns ul li, .practice-body .two-columns ul li, .practice-body .four-columns ul li {
@@ -1905,7 +1912,7 @@ audio {
     }
 
     .container {
-        width: 95%;
+        margin: 0;
     }
     .grid_1,
     .grid_2,
@@ -1978,7 +1985,8 @@ audio {
 
     .menu-top-navigation-menu-container, #responsive-menu  {
         background-color: #9a938a;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
     }
 
     #navbar {
@@ -1999,14 +2007,18 @@ audio {
         -moz-column-count:2; /* Firefox */
         -webkit-column-count:2; /* Safari and Chrome */
         column-count:2;
-        -moz-column-gap:0; /* Firefox */
-        -webkit-column-gap:0; /* Safari and Chrome */
-        column-gap:0;
+        -moz-column-gap:30px; /* Firefox */
+        -webkit-column-gap:30px; /* Safari and Chrome */
+        column-gap:30px;
         -moz-column-rule:1px outset #fff; /* Firefox */
         -webkit-column-rule:1px outset #fff; /* Safari and Chrome */
         column-rule:1px outset #fff;
         padding-right: 90px;
         padding-top: 10px;
+    }
+
+    .menu-top-navigation-menu-container ul {
+        max-width: 100%;
     }
 
     #logo {
@@ -2018,7 +2030,7 @@ audio {
         font-size: .75em;
         font-family: "OpenSans", sans-serif;
         font-weight: 100;
-        padding: 0 0 10px 50px;
+        padding: 5px 5px;
         float: none;
         text-align: left;
     }
@@ -2230,7 +2242,7 @@ audio {
         top: 0;
         padding-left: 0;
         float: right;
-        width: 55%;
+        width: 48%;
     }
 
     .news_headlines_home ul, .headlines ul {
@@ -2252,7 +2264,6 @@ audio {
     #photo-row {
         margin-top: 0;
         margin-left: 0;
-        width: 45%
     }
 
 
@@ -2266,14 +2277,11 @@ audio {
         text-align: left;
     }
 
-    .lawyer_profile .wp-post-image {
-        display: none
-    }
 
     .icons {
         float: right;
         text-align: right;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .icons a {
@@ -2285,9 +2293,9 @@ audio {
     }
 
 
-    .lawyer_profile .featured-thumbnail {
-        width: 25%
-    }
+    /*  .lawyer_profile .featured-thumbnail {
+         width: 25%
+     } */
 
     .title, .phone.screen {
         margin-bottom: 0;
@@ -2298,6 +2306,8 @@ audio {
 
     .lawyer_profile .smaller {
         float: right;
+        padding-right: 35px;
+        padding-left: 12px;
     }
 
     .lawyer_profile .featured-thumbnail {
@@ -2324,12 +2334,17 @@ audio {
         float: left;
     }
 
+    .icons img {
+        width: 18px;
+        height: 18px;
+    }
+
     .sidebar p {
         font-size: .775em;
         line-height: 15px;
     }
     .page-giving-back .front-right {
-        width: 55%;
+        width: 100%;
         float: left
     }
 
@@ -2362,7 +2377,7 @@ audio {
 
 
     .grid_7.name {
-        width: 70%
+        width: 60%
     }
     .contact .grid_6 {
         width: 75%;
@@ -2407,14 +2422,28 @@ audio {
 
 
     .practices-footer {
-        width: 60%;
+        width: 50%;
         float: left
     }
 
+    #sidebar.practice {
+        min-height: 360px;
+        height: 95%;
+        width:  50%;
+        float: right
+    }
+
+    #sidebar.practice ul {
+        padding-top: 0;
+        padding-left: 5px;
+        padding-bottom: 5px
+    }
+
     .four-columns  {
-        -webkit-column-count: 0;
-        -webkit-column-gap: 0;
-        -webkit-column-rule: 0;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -ms-column-count: 1;
     }
 
 
@@ -2450,9 +2479,10 @@ audio {
     }
 
 
-    .page-giving-back #sidebar.border {
+    .page-giving-back #sidebar.border, #sidebar-search.community.sidebar {
         border: 0;
-        padding-left: 30px;
+        width: 65%;
+        float: right;
     }
 
     #sidebar .community_projects {
@@ -2463,6 +2493,7 @@ audio {
 
     #sidebar.border {
         margin-left: 20px;
+        padding-left: 10px;
     }
 
     #sidebar {
@@ -2481,11 +2512,9 @@ audio {
 /* Smallest ----------- */
 @media screen and (max-width : 480px) {
 
-    #nav-primary-mobile ul li {
-
-        padding-right: 20px;
+    .menu-top-navigation-menu-container {
+        max-width: 280px;
     }
-
 
     .news_headlines_home li {
         padding-top: 1px;
@@ -2507,11 +2536,16 @@ audio {
         height: auto
     }
 
+    .bar {
+        height: 30px;
+        margin-top: -30px;
+    }
+
     h5.lawyer-name {
-        font: 8px/10px 'FranklinGothic', 'Helvetica Neue', Helvetica, sans-serif;
+        font: 8px/9px 'FranklinGothic', 'Helvetica Neue', Helvetica, sans-serif;
         width: 82%;
-        height:20px;
-        margin-top: -23px;
+        height: 25px;
+        margin-top: -28px;
     }
 
     h4.practice-name {
@@ -2520,11 +2554,11 @@ audio {
 
     .photo-block h4 {
         height: 25px;
-        width: 98%;
     }
 
     .photo-block h4 span {
         font: 8px/9px 'FranklinGothic', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+        width: auto;
     }
 
     .page-blog-articles .front-left {
@@ -2547,6 +2581,35 @@ audio {
 
     .page-blog-articles .front-right {
         width: 100%;
+
+    }
+
+    .title, .phone.screen {
+        margin-bottom: 0;
+        font-size: .75em;
+        line-height: 1em;
+        text-align: right;
+    }
+
+    .grid_7.name {
+        width: 50%;
+    }
+
+    .practice-body {
+        padding-right:10px;
+    }
+
+
+    #content.practice-page h1 {
+        width: 93%;
+        padding: 10px 5px 10px 20px;
+        margin-bottom: 14px;
+        font-size: 18px;
+
+    }
+
+    #content.practice-page   {
+        margin-top: 0;
 
     }
 }

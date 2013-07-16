@@ -20,7 +20,11 @@
                 </div>
 
             <?php endwhile; /* end loop */ ?>
-
+        <div class="smaller">
+            <?php
+            get_sidebar("practice");
+            ?>
+        </div>
         <div class="practices-footer">
             <h3>Johnson &amp; Bell Practices</h3>
 
@@ -35,7 +39,6 @@
             $tax_terms = get_terms($taxonomy, $term_args);
             $site_url = network_site_url('/');
             ?>
-
 
 
 
@@ -71,22 +74,25 @@
 
 
                 <!--[if lt IE 10]>  </div><![endif]-->
-            </div> <!--end columns section -->
-            <div class="clearfix"></div>
-
+            </div>
         </div>
-
-    </div> <!-- end column front-left-->
-
-    <div class="column front-right" >
-
-
-        <?php
-        get_sidebar("practice");
-        ?>
+        <!--end columns section -->
+        <div class="clearfix"></div>
 
     </div>
-    <div class="clearfix"></div>
+
+</div> <!-- end column front-left-->
+
+<div class="column front-right larger" >
+
+    <?php
+    get_sidebar("practice");
+    ?>
+
+
+
+</div>
+<div class="clearfix"></div>
 
 </div><!--#content-->
 

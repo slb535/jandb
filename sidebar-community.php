@@ -1,3 +1,4 @@
+<div class="smaller community_logos"> <img src="<?php bloginfo('template_url'); ?>/images/community_logos_m.png" /></div>
 <div id="sidebar" class="border">
 
     <div class="community sidebar">
@@ -37,7 +38,8 @@
     </div>
 
 </div><!--sidebar-->
-<div id="sidebar-search">
+<div class="clearfix"></div>
+<div id="sidebar-search" class="community sidebar">
     <?php get_search_form(); /* outputs the default Wordpress search form */ ?>
 </div>
 

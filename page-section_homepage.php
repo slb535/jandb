@@ -239,10 +239,8 @@
 
                         </div>
 
-                        <?php if (!is_mobile()) { ?>
 
-                            <div class=" larger community_logos"> <img src="<?php bloginfo('template_url'); ?>/images/community_logos.png" /></div>
-                        <?php } ?>
+                        <div class=" larger community_logos"> <img src="<?php bloginfo('template_url'); ?>/images/community_logos.png" /></div>
 
                     </div> <!-- end community -->
 
