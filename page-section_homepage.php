@@ -21,7 +21,8 @@
 
                 <?php if (is_page(592)) { ?>
 
-                    <div class="indiana">
+                    <div ID="indiana">
+
                         <div class="photo-row">
 
 
@@ -49,7 +50,7 @@
                             }
                             wp_reset_query();
                             ?>
-                            <div style='clear:both;'></div>
+                            <div class="clearfix";'></div>
                         </div> <!-- end photo-row-->
                     </div> <!-- end indiana -->
                 <?php } ?>    <!-- end INDIANA Page content -->

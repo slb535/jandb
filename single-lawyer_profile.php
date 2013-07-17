@@ -9,7 +9,7 @@
                     the_post_thumbnail();
                     echo '</div><div class="smaller">';
                     the_post_thumbnail('mobile-thumb');
-                    echo '</div></div>';
+                    echo '</div> </div>';
                 endif;
                 ?>
             </div>

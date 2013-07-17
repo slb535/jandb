@@ -167,7 +167,7 @@ if (function_exists('add_image_size'))
 if (function_exists('add_image_size')) {
     add_image_size('post-thumb', 396, 225);
     add_image_size('cat-thumb', 396, 225);
-    add_image_size('mobile-thumb', 129, 89, true);
+    add_image_size('mobile-thumb', 158, 119, true);
 }
 
 // Removes Trackbacks from the comment cout
