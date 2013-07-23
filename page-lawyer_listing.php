@@ -79,29 +79,33 @@ get_header();
 
                             <div class="listing">
                                 <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-                    <?php the_excerpt(); ?>
+                                <?php the_excerpt(); ?>
                             </div>
 
 
-                <?php endwhile;
-            else: ?>
+                        <?php endwhile;
+                    else:
+                        ?>
 
                         <p>Sorry, no profiles matched your criteria.</p>
 
-                    <?php endif; ?>
+            <?php endif; ?>
 
                 </div> <!-- end post -->
 
                 <div class="navigation">
 
-                    <?php if (function_exists('wp_pagenavi')) {
+                    <?php
+                    if (function_exists('wp_pagenavi')) {
                         wp_pagenavi();
-                    } else { ?>
+                    } else {
+                        ?>
 
                         <div class="floatleft"><?php next_posts_link(__('&laquo; Older Entries', '')); ?></div>
                         <div class="floatright"><?php previous_posts_link(__('Newer Entries &raquo;', '')); ?></div>
 
-                    <?php }
+                    <?php
+                    }
                 }
                 ?>
 
@@ -116,9 +120,9 @@ get_header();
         <aside>
 
 
-            <?php
-            get_sidebar('search');
-            ?>
+<?php
+get_sidebar('other');
+?>
         </aside>
 
     </div>

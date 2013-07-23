@@ -21,8 +21,7 @@
 
                 <?php if (is_page(592)) { ?>
 
-                    <div ID="indiana">
-
+                    <div class="indiana">
                         <div class="photo-row">
 
 
@@ -45,12 +44,22 @@
                                     echo '<span><a href="' . home_url() . '/practices-home/' . sanitize_title($practice_area_select) . '">' . $practice_area_select . '</a></span>';
                                     echo '</h4>';
                                     ?>
+
+
+
+
+
+
+
+
+
+
                                 </div>
                                 <?php
                             }
                             wp_reset_query();
                             ?>
-                            <div class="clearfix";'></div>
+                            <div style='clear:both;'></div>
                         </div> <!-- end photo-row-->
                     </div> <!-- end indiana -->
                 <?php } ?>    <!-- end INDIANA Page content -->
@@ -152,8 +161,7 @@
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
-                                            <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
+                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?><br /><div class="readmore">read more</div></a>
                                         </li>
                                         <?php
                                     endwhile;
@@ -171,6 +179,8 @@
 
                     <div class="awards">
                         <div class="headlines">
+
+
                             <ul>
                                 <?php
                                 $args = array(
@@ -186,9 +196,13 @@
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
-                                            <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
+                                        <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a><br />
+                                            <span class="source"><?php echo types_render_field("award-source", array('raw' => 'true')); ?></span>
+
+                                            <div class="readmore"><a href="<?php the_permalink(); ?>" >read more</a></div>
                                         </li>
+
+
                                         <?php
                                     endwhile;
                                 wp_reset_query();
@@ -225,7 +239,7 @@
                                     while (have_posts()) : the_post();
                                         ?>
 
-                                        <li class="headlines"><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a><br />
+                                        <li><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a><br />
                                             <span class="source"><?php echo types_render_field("award-source", array('raw' => 'true')); ?></span>
 
                                             <span class="readmore"><a href="<?php the_permalink(); ?>" >read more</a></span>
@@ -241,8 +255,7 @@
                         </div>
 
 
-                        <div class=" larger community_logos"> <img src="<?php bloginfo('template_url'); ?>/images/community_logos.png" /></div>
-
+                        <div style="padding-top: 55px;"> <img src="<?php bloginfo('template_url'); ?>/images/community_logos.png" /></div>
                     </div> <!-- end community -->
 
                 <?php } ?>    <!-- end Community content (MORE IN SIDEBAR) -->
@@ -274,11 +287,11 @@
         elseif (is_tree(66))
             get_sidebar('awards');
         else
-            get_sidebar('other');
+            get_sidebar('search');
         ?>
     </div>
 
-    <div class="clearfix"></div>
+    <div style='clear:both;'></div>
     <?php
     $quote = types_render_field("quote", array('raw' => 'true'));
     $quotesource = types_render_field("quote-source", array('raw' => 'true'));

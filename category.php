@@ -68,7 +68,7 @@
         elseif (is_category('Awards')) : /* if the news archive is loaded */
             get_sidebar('awards');
         else : /* if anything else is loaded, ex. if the tags or categories template is missing this page will load */
-            get_sidebar('search');
+            get_sidebar('other');
         endif;
         ?>
 

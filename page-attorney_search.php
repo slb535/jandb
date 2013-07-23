@@ -227,7 +227,7 @@ if (isset($_REQUEST['skey']))
     <!-- end column front-left-->
 
     <div class="column front-right" >
-        <?php get_sidebar('search'); ?>
+        <?php get_sidebar('other'); ?>
     </div>
     <div class="clearfix"></div>
 

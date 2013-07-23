@@ -31,9 +31,9 @@
             </ul>
             <div class="smaller">
                 <?php
-//                if (is_mobile()) {
-                get_sidebar('home');
-//                }
+                if (is_mobile()) {
+                    get_sidebar('home');
+                }
                 ?>
             </div>
 
@@ -76,9 +76,9 @@
     <div class="column front-right omega larger" >
         <!--  <div class="sidebar"> -->
         <?php
-//        if (!is_mobile()) {
-        get_sidebar('home');
-//        }
+        if (!is_mobile()) {
+            get_sidebar('home');
+        }
         ?>
         <!--  </div> -->
     </div>

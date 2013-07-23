@@ -3,8 +3,7 @@
     <h2> William V. Johnson <span class="amp">&</span> John W. Bell</h2>
 
 
-    <div class="video"> <?php // dynamic_sidebar('Sidebar');    ?>
-
+    <div class="video"> <?php dynamic_sidebar('Sidebar'); ?>
 
         <div class="larger">
             <iframe name="video" class='video-player' frameborder="0" type='text/html' width='278'  height='187' scrolling="no" src='<?php bloginfo('template_url'); ?>/video.html' frameborder='0'></iframe>

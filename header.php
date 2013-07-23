@@ -41,6 +41,8 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
         <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+
         <?php wp_enqueue_script("jquery"); /* Loads jQuery if it hasn't been loaded already */ ?>
 
         <?php wp_head(); ?> <?php /* this is used by many Wordpress features and for plugins to work proporly */ ?>
@@ -52,9 +54,7 @@
         <link href='http://fonts.googleapis.com/css?family=EB+Garamond|Archivo+Narrow:700|Open+Sans:600,700' rel='stylesheet' type='text/css' />
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fonts/stylesheet.css" />
-
         <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/theme.css" media="screen"/>
-        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/css/menubar.css" media="screen" />
 
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
@@ -69,11 +69,10 @@
             <![endif]-->
 
 
-            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
             <?php
             global $is_IE;
             if ($is_IE) {
-                ?>     <script src="<?php bloginfo('template_url'); ?>/library/js/jquery.columnizer.js"  type="text/javascript" charset="utf-8"></script>
+                ?>     <script src="<?php bloginfo('template_url'); ?>/library/js/jquery.columnizer.min.js"  type="text/javascript" charset="utf-8"></script>
                 <script>
                     $(function() {
                         $('h1').addClass("dontend");
@@ -86,7 +85,7 @@
             <script>
                 $(document).ready(function() {
                     var pageWidth = $(window).width();
-                    if (pageWidth > 1024) {
+                    if (pageWidth > 650) {
 
                         var leftHeight = $(".front-left").height();
                         var rightHeight = $(".front-right").height();
@@ -134,7 +133,6 @@
             </script>
             <?php /* } */ ?>
 
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script> -->
 
     </head>
 

@@ -25,8 +25,10 @@
 
 
 
-                        <?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image', NULL, 'add-news-image-thumbnail', array('class' => 'post-thumbnail'), true);
-                        endif; ?>
+                        <?php
+                        if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image', NULL, 'add-news-image-thumbnail', array('class' => 'post-thumbnail'), true);
+                        endif;
+                        ?>
 
 
 
@@ -38,7 +40,8 @@
 
 
                 </div><!-- #post-## -->
-                <?php $post = $wp_query->post;
+                <?php
+                $post = $wp_query->post;
                 if (!in_category('Full Bio')) {
                     ?>
 
@@ -46,7 +49,7 @@
                     <div class="newer-older">
                         <p class="newer-older"><?php previous_post_link('%link', '&laquo; previous') ?> | <?php next_post_link('%link', 'next  &raquo;') ?></p>
                     </div><!--.newer-older-->
-                <?php } ?>
+        <?php } ?>
 
 
         <?php edit_post_link('<small>Edit this entry</small>', '', ''); ?>
@@ -61,22 +64,20 @@
 
 
     <div class="column front-right" >
-        <aside>
-            <?php
-            $post = $wp_query->post;
-            if (in_category('News')) {
+        <?php
+        $post = $wp_query->post;
+        if (in_category('News')) {
 
-                get_sidebar('news');
-            } elseif (in_category('Awards')) {
+            get_sidebar('news');
+        } elseif (in_category('Awards')) {
 
-                get_sidebar('awards');
-            } else {
-                get_sidebar('search');
-            }
-            ?>
+            get_sidebar('awards');
+        } else {
+            get_sidebar('other');
+        }
+        ?>
 
 
-        </aside>
 
     </div>
     <div style='clear:both;'></div>

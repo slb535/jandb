@@ -20,11 +20,14 @@
                 </div>
 
             <?php endwhile; /* end loop */ ?>
-        <div class="smaller">
-            <?php
+
+
+        <?php
+        if (is_mobile()) {
             get_sidebar("practice");
-            ?>
-        </div>
+        }
+        ?>
+
         <div class="practices-footer">
             <h3>Johnson &amp; Bell Practices</h3>
 
@@ -79,20 +82,19 @@
         <!--end columns section -->
         <div class="clearfix"></div>
 
+
+    </div> <!-- end column front-left-->
+
+    <div class="column front-right larger" >
+
+        <?php
+        if (!is_mobile()) {
+            get_sidebar("practice");
+        }
+        ?>
+
     </div>
-
-</div> <!-- end column front-left-->
-
-<div class="column front-right larger" >
-
-    <?php
-    get_sidebar("practice");
-    ?>
-
-
-
-</div>
-<div class="clearfix"></div>
+    <div class="clearfix"></div>
 
 </div><!--#content-->
 
