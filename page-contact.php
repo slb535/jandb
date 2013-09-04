@@ -27,7 +27,8 @@
                             <h4> Chicago Office: </h4>
                             <div class="address-text">33 West Monroe St. Suite 2700<br />
                                 Chicago, IL 60603-5404<br />
-                                312.372.0770
+                                tel 312.372.0770<br />
+                                fax 312.372.9818
                             </div>
                             <a href="https://maps.google.com/maps/ms?msid=202963780411458165446.0004ce16cf8a9f041866e&msa=0&ll=41.880681,-87.628927&spn=0.018165,0.021672" target="new">
                                 <img alt="Map, Chicago Location" src="<?php bloginfo('template_url'); ?>/images/map_chicago.jpg" width="250px" height="250px" class="map" \></a>
@@ -40,7 +41,8 @@
                             <div class="address-text">
                                 11051 Broadway St. Suite B<br />
                                 Crown Point, IN 46307<br />
-                                219.791.1900
+                                tel 219.791.1900<br />
+                                fax 219.791.1901
                             </div>
 
 

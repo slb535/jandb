@@ -820,8 +820,7 @@ textarea {
     text-transform: uppercase;
     letter-spacing: .25px;
     /*PRACTICE NAME */
-    font: 10px/11px 'FranklinGothic',  'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-    /*    height: 24px; removed by PMH */
+    font: 9px/10px 'FranklinGothic',  'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .transparent {
@@ -1742,6 +1741,7 @@ table.contact {
 .ie #nav-primary ul li {
     padding-right: 28px
 }
+
 
 .news-thumbnail {
     padding-top: 12px;

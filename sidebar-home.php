@@ -4,15 +4,18 @@
 
 
     <div class="video"> <?php dynamic_sidebar('Sidebar'); ?>
+        <?php if (!is_mobile()) { ?>
+            <div class="larger">
+                <iframe name="video" class='video-player' frameborder="0" type='text/html' width='278'  height='187' scrolling="no" src='<?php bloginfo('template_url'); ?>/video.html' frameborder='0'></iframe>
+            </div>
+        <?php } ?>
 
-        <div class="larger">
-            <iframe name="video" class='video-player' frameborder="0" type='text/html' width='278'  height='187' scrolling="no" src='<?php bloginfo('template_url'); ?>/video.html' frameborder='0'></iframe>
-        </div>
-
-        <div class="smaller">
-            <iframe name="video" class='video-player' frameborder="0" type='text/html' width='130'  height='75' scrolling="no" src='<?php bloginfo('template_url'); ?>/video.html' frameborder='0'></iframe>
-        </div>
-
+        <?php if (is_mobile()) { ?>
+            <div class="smaller">
+                <iframe name="video" class='video-player' frameborder="0" type='text/html' width='130'  height='75' scrolling="no" src='<?php bloginfo('template_url'); ?>/video_smaller.html' frameborder='0'></iframe>
+            </div>
+        <?php }
+        ?>
     </div>
 
 

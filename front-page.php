@@ -13,7 +13,7 @@
                 <?php
                 $args = array(
                     'cat' => 24, -33,
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 5,
                     'order' => 'ASC',
                     'post__in' => get_option('sticky_posts'),
                     'ignore_sticky_posts' => 1

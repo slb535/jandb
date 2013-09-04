@@ -742,6 +742,7 @@ textarea {
     top: 10px;
     display: table;
     padding-left: 50px;
+    padding-right: 40px;
 }
 
 .news_headlines_home ul, .news_headlines_home li {
@@ -1890,7 +1891,7 @@ audio {
 
 
 /* Menu Issues ----------- */
-@media screen and (max-width : 1040px) {
+@media only screen and (max-width : 1040px) {
     #nav-primary ul li {
         padding-right: 2.3em;
     }
@@ -1898,42 +1899,12 @@ audio {
 }
 
 
-.photo-block {
-    padding-right: 5px;
-    min-height: 92px;
-    width: 75px;
-}
-
-.photo-block img {
-    width: 100%;
-    height: auto;
-}
-
-.bar {
-    margin-top: -30px;
-    height: 30px;
-}
-
-h5.lawyer-name {
-    margin-top: -25px;
-    width: 89%;
-    height: 21px;
-}
-
-h4.practice-name {
-    margin-top: 4px;
-}
-
-.photo-block h4 {
-    height: 35px;
-}
-
-.photo-block h4 span {
-    width: auto;
-}
 
 
-@media screen and (max-width : 980px) {
+
+@media only screen
+and (min-width : 649px)
+and (max-width : 980px)  {
     #nav-primary ul li {
         padding-right: 1.9em;
     }
@@ -1993,13 +1964,7 @@ h4.practice-name {
         font-family: "OpenSans", sans-serif;
     }
 
-    /* #nav-primary ul {
-        display: none;
-    }*/
-    /*
-           #nav-primary ul.expanded {
-               display: block;
-           } */
+
 
     #responsive-menu {
         float: none;
@@ -2019,6 +1984,40 @@ h4.practice-name {
         text-transform: uppercase;
     }
 
+    .photo-block {
+        padding-right: 5px;
+        min-height: 92px;
+        width: 75px;
+    }
+
+    .photo-block img {
+        width: 100%;
+        height: auto;
+    }
+
+    .bar {
+        margin-top: -30px;
+        height: 30px;
+    }
+
+    h5.lawyer-name {
+        margin-top: -25px;
+        width: 89%;
+        height: 21px;
+    }
+
+    h4.practice-name {
+        margin-top: 4px;
+    }
+
+    .photo-block h4 {
+        height: 35px;
+    }
+
+    .photo-block h4 span {
+        width: auto;
+    }
+
 }
 
 
@@ -2028,10 +2027,9 @@ h4.practice-name {
 
 
 /* Smaller ----------- */
-@media screen and (max-width : 650px) {
-
-
-
+@media only screen
+and (min-width : 200px)
+and (max-width : 650px) {
 
     body {
         background-color: #FFF;
@@ -2088,8 +2086,6 @@ h4.practice-name {
         color: #212121;
         background: url(images/searchbar_m.png) no-repeat;
     }
-
-
 
 
 
@@ -2556,16 +2552,18 @@ h4.practice-name {
         padding-top: 0;
     }
 
-
-
-    /*    Practice Pages
-    */
-
-
 }
 
+/*    Practice Pages
+*/
+
+
+
+
 /* Smallest ----------- */
-@media screen and (max-width : 480px) {
+@media only screen
+and (min-width: 200px)
+and (max-width : 480px) {
 
 
     h3 {
@@ -2591,6 +2589,13 @@ h4.practice-name {
         padding-right: 5px;
         min-height: 60px;
         width: 67px;
+    }
+
+    .photo-block h4 span {
+        letter-spacing: 0;
+        /*PRACTICE NAME */
+        font: 9px/11px 'FranklinGothic',  'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 500;
     }
 
     .photo-block img {
