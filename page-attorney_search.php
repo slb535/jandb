@@ -12,12 +12,12 @@ if (isset($_REQUEST['skey']))
     $skey = esc_attr($_REQUEST['skey']);
 ?>
 <div id="content">
-    <div class="column front-left">
+    <div class="column front-left ">
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
                     <h1><?php the_title(); ?></h1>
                     <div class="intro"><?php the_content(); ?></div>
-                    <div id="alphaList" class="grid_13 omega" align="center">
+                    <div id="alphaList"align="center">
                         <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=a">A</a>
                         <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=b">B</a>
                         <a href="<?php echo home_url(); ?>/our-attorneys/?alpha=c">C</a>
@@ -65,6 +65,7 @@ if (isset($_REQUEST['skey']))
                     </tr>
                 </table>
             </form>
+
             <form name="practice">
                 <table >
                     <tr>
@@ -104,7 +105,14 @@ if (isset($_REQUEST['skey']))
 
                         </td></tr></table>
             </form>
-
+            <table >
+                <tr>
+                    <td class="searchLabel"></td>
+                    <td class="alphabetical"><div class="view-alpha"><a href="<?php bloginfo('url'); ?>/lawyer_profile/">View alphabetical list of attorneys</a></div>
+                    </td>
+                </tr>
+            </table>
+            <div class="clearfix"></div>
         </div> <!-- end Lawyer Search form -->
 
 

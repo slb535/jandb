@@ -282,6 +282,19 @@ function custom_search_form($form) {
 
 add_filter('get_search_form', 'custom_search_form');
 
+// Fix for WP 3.6 update searchform.php problem
+
+function search_form_no_filters() {
+    // look for local searchform template
+    $search_form_template = locate_template('searchform.php');
+    if ('' !== $search_form_template) {
+        // searchform.php exists, remove all filters
+        remove_all_filters('get_search_form');
+    }
+}
+
+add_action('pre_get_search_form', 'search_form_no_filters');
+
 // Tests for a page and its children
 function is_tree($pid) {      // $pid = The ID of the page we're looking for pages underneath
     global $post;         // load details about this page
