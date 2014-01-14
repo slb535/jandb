@@ -23,7 +23,7 @@
 
 
         <?php
-        if (is_mobile()) {
+        if (wp_is_mobile()) {
             get_sidebar("practice");
         }
         ?>
@@ -88,7 +88,7 @@
     <div class="column front-right larger" >
 
         <?php
-        if (!is_mobile()) {
+        if (!wp_is_mobile()) {
             get_sidebar("practice");
         }
         ?>

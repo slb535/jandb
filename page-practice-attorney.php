@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Practice Page Template
+  Template Name: Practice Page Attorney
  */
 ?>
 <?php get_header(); ?>
@@ -46,7 +46,7 @@
                                 endwhile;
                             wp_reset_query();
                             ?>
-                            </div>
+                        </div>
 
 
                     </div>
@@ -56,11 +56,11 @@
                 </div>
 
             <?php endwhile; /* end loop */ ?>
-        <div class="smaller">
-            <?php
+        <?php
+        if (wp_is_mobile()) {
             get_sidebar("practice");
-            ?>
-        </div>
+        }
+        ?>
         <div class="practices-footer">
             <h3>Johnson &amp; Bell Practices</h3>
 
@@ -108,7 +108,7 @@
                     ?>
                 </ul>
 
-
+                <br /><br /><br /><br />
                 <!--[if lt IE 10]>  </div><![endif]-->
             </div>
         </div>
@@ -122,10 +122,10 @@
 <div class="column front-right larger" >
 
     <?php
-    get_sidebar("practice");
+    if (!wp_is_mobile()) {
+        get_sidebar("practice");
+    }
     ?>
-
-
 
 </div>
 <div class="clearfix"></div>

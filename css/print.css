@@ -2,13 +2,17 @@ body {
     color: #000;
     font-size: 120%;
     line-height: 130%;
-        
+
 }
 
 header nav, footer { display: none; }
 
-#navbar, .practices-footer, .screen { 
+#navbar, .practices-footer, .screen, .smaller {
     display: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 img { max-width: 100%; }
@@ -22,8 +26,8 @@ img { max-width: 100%; }
 
 
 .header .container {
-margin: 0px auto;
-width: auto;
+    margin: 0px auto;
+    width: auto;
 }
 
 p a:after { content: "(" attr(href) ")"; font-size: 80%; }
@@ -36,39 +40,38 @@ p a { word-wrap: break-word; }
 a, .sidebar h2, .sidebar h2 a,   #content.practice-page h1 { color: #000; font-size: 1.05em;}
 
 .print, .toggleBox {
-display: block;
+    display: block;
 
-    }
-    
+}
+
 .lawyer-list li {
     font-size: 12pt;
     line-height: 14pt;
-    }
+}
 
-    #lawyer-right h3, #lawyer-right h3 a {
-        color: #574F4D;
-        font-size: 15pt;
-    }
-    
-    
-    .phone {
-       margin-bottom: 0;
-    }
-    
-    
-    #content.practice-page h1 {
-        background-color: transparent; 
-    }
-    
-   
-    #content.practice-page .sidebar {
-        background-color: #FFF;
-    }
+#lawyer-right h3, #lawyer-right h3 a {
+    color: #574F4D;
+    font-size: 15pt;
+}
+
+
+.phone {
+    margin-bottom: 0;
+}
+
+
+#content.practice-page h1 {
+    background-color: transparent;
+}
+
+
+#content.practice-page .sidebar {
+    background-color: #FFF;
+}
 
 .full-bio {
-        width: 650px;
-        top: 20px;
-    }
- 
-    
- 
+    width: 650px;
+    top: 20px;
+}
+
+

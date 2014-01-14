@@ -165,6 +165,41 @@
                     </div> <!--end firm-news-->
                 <?php } ?>    <!-- end Firm News Page content -->
 
+                <!--FIRM Results -->
+
+                <?php if (is_page(7029)) { ?>
+
+                    <div class="results">
+                        <div class="headlines">
+
+                            <ul>
+                                <?php
+                                $args = array(
+                                    'cat' => 59,
+                                    'posts_per_page' => 5,
+//                                    'post__in' => get_option('sticky_posts'),
+//                                    'ignore_sticky_posts' => 1
+                                );
+
+                                query_posts($args);
+
+                                if (have_posts())
+                                    while (have_posts()) : the_post();
+                                        ?>
+
+                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
+                                            <div class="readmore"><a href="<?php the_permalink(); ?>">read more</a></div>
+                                        </li>
+                                        <?php
+                                    endwhile;
+                                wp_reset_query();
+                                ?>
+                            </ul>
+
+                        </div> <!--end headlines-->
+                    </div> <!--end results-->
+                <?php } ?>    <!-- end Results Page content -->
+
 
                 <!--AWARDS PAGE -->
                 <?php if (is_page(66)) { ?>
@@ -270,6 +305,9 @@
 
         elseif (is_tree(75))
             get_sidebar('news');
+
+        elseif (is_tree(7029))
+            get_sidebar('results');
 
         elseif (is_tree(66))
             get_sidebar('awards');

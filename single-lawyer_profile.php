@@ -50,7 +50,8 @@
                 }
                 echo '</div>';
                 ?>
-
+                <div class="email screen"> <a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></div>
+                <div class="email print"> <?php echo $email; ?></div>
                 <div class="phone screen">Direct <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
                 <div class="phone print">Direct: <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
 
@@ -64,9 +65,6 @@
                 <div class="post-content grid_11">
 
 
-                    <?php if (!empty($email)) { ?>
-                        <div class="phone print">Email: <span class="lowercase print"><?php echo $email; ?></span></div>
-                    <?php } ?>
 
                     <div class="lawyer-bio">
 
@@ -80,8 +78,6 @@
 
             <div id="lawyer-right" class="grid_5">
                 <div class="details">
-
-
                     <div class="practice-areas grid_5">
 
                         <h3>Practice Areas</h3>

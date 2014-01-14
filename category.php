@@ -9,6 +9,8 @@
         <h1>
             <?php if (is_category('News')) : /* if the news archive is loaded */ ?>
                 <?php printf(__('Firm News')); ?>
+            <?php elseif (is_category('Results')) : /* if the news archive is loaded */ ?>
+                <?php printf(__('Our Results')); ?>
             <?php elseif (is_category('Awards')) : /* if the news archive is loaded */ ?>
                 <?php printf(__('Industry Awards')); ?>
 

@@ -55,6 +55,11 @@
             if (strpos($url, "municipal") !== false) {
                 dynamic_sidebar('Municipal');
             }
+
+            if (strpos($url, "private-security") !== false) {
+                dynamic_sidebar('PrivateSecurity');
+            }
+
             if (strpos($url, "product-liability") !== false) {
                 dynamic_sidebar('ProductLiability');
             }
@@ -77,12 +82,9 @@
     </div>
 
     <div id="sidebar-search" class="widget" >
-<?php get_search_form(); /* outputs the default Wordpress search form */ ?>
+        <?php get_search_form(); /* outputs the default Wordpress search form */ ?>
     </div>
 
 
 </div><!--sidebar-->
-
-
-
 
