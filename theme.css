@@ -352,6 +352,7 @@ h2.lawyer-name {
     border-bottom: 1px solid #D21532;
 }
 
+
 /* .post h2, .h2 */
 .post h3, .post h4, .post h5, .post h6 {
     margin-top: 24px;
@@ -484,46 +485,6 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     text-decoration: underline;
 }
 
-/* #nav-primary ul ul {
-    position: absolute;
-    display: none;
-    top: 20px;
-    left: 0;
-    width: 100px;
-    padding-bottom: 10px; /* how far below the menu the dropdown shows up */
-/*    z-index: 999;
-}
-
-#nav-primary ul ul li {
-    display: block;
-    padding: 0;
-    font-weight: 400 !important;
-    text-align: left;
-    text-transform: none;
-}
-
-#nav-primary ul ul li a:hover, #nav-primary ul ul li a:active {
-    color: #00529C !important;
-    background: none repeat scroll 0 0 transparent !important;
-}
-
-#nav-primary ul ul li, #nav-primary ul ul li a:link, #nav-primary ul ul li a:visited {
-    color: #333 !important
-}
-
-
-#menu ul ul li.last {
-    border: 0 none
-}
-
-#menu ul ul li a {
-    display: block;
-    float: none;
-    height: auto;
-    padding: 10px 0;
-    text-align: left;
-}
-*/
 
 
 /*===[ General Main Area ]=== */
@@ -630,6 +591,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 #sidebar li {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 #sidebar ul {
@@ -962,6 +924,10 @@ h5.lawyer-name {
     clear: both;
 }
 
+#ssba {
+    border-top: 1px solid #817566;
+}
+
 
 
 
@@ -1006,7 +972,7 @@ width: 570px;
     float: right;
 }
 
-.smaller {
+.smaller, .og-image {
     display: none;
 }
 
@@ -1105,6 +1071,10 @@ width: 570px;
 
 img.full-page {
     float:right;
+}
+
+.social-thumbnail {
+    display: none;
 }
 
 .full-bio #header {
@@ -1361,6 +1331,11 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     padding-left:13px;
 }
 
+#sidebar.alerts-blog #ssba {
+    display: none;
+}
+
+
 .alerts-blog .read-more {
     /*    padding-top: 10px;*/
     padding-right: 10px;
@@ -1535,6 +1510,11 @@ p.byline {
 
 .practice-body ul {
     margin-left: 50px;
+    list-style-type: none;
+}
+
+#black-studio-tinymce-2 li
+{
     list-style-type: none;
 }
 

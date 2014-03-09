@@ -89,7 +89,13 @@
                     <h3><a href="<?php echo $child_permalink_side; ?>"><?php the_title(); ?></a></h3>
 
                     <?php echo pippin_excerpt_by_id($child_id_side, 20, '<a><em><p>', ' . . .<p class="read-more"><a href="' . $child_permalink_side . '">read more</a></p>'); ?>
-                </div><!--end recent post -->
+                    <?php echo do_shortcode("[ssba_hide]"); ?>
+
+                </div>
+
+                <!--end recent x post -->
+
+
                 <?php
             endwhile;
 
@@ -105,7 +111,12 @@
         <?php dynamic_sidebar('Publications'); ?>
     <!-- create sidebar widget for speaking engagements -->
 
-    <li class="sidebar-text">If you are interested in receiving our law alerts and/or newsletters, please <a href="mailto:info@jbltd.com">send us an email</a> and we’d be happy to include you on our next electronic alert.</li>
+    <li class="sidebar-text">
+
+
+
+
+    </li>
 </div>	<!--sidebar-->
 <div class="sidebar-search">
     <?php get_search_form(); /* outputs the default Wordpress search form */ ?>

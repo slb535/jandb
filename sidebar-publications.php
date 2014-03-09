@@ -6,7 +6,13 @@
 
             <?php dynamic_sidebar('Publications'); ?>
 
-            <p class="sidebar-text">If you are interested in receiving our law alerts and/or newsletters, please <a href="mailto:info@jbltd.com">send us an email</a> and we’d be happy to include you on our next electronic alert.</p>
+            <p class="sidebar-text">
+
+                Let us know what updates you'd like to receive.
+                <iframe width="270px" height="400px" src="<?php bloginfo('template_url'); ?>/blogalerts-form.html"></iframe>
+
+
+            </p>
 
             <!-- create sidebar widget for speaking engagements -->
 

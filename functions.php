@@ -149,6 +149,14 @@ if (function_exists('register_nav_menus')) {
     );
 }
 
+register_sidebar(array(
+    'name' => __('News Sidebar'),
+    'id' => 'news-sidebar',
+    'description' => __('Widgets in this area will be shown on the news page.'),
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+));
+
 
 // removes detailed login error information for security
 add_filter('login_errors', create_function('$a', "return null;"));
@@ -651,4 +659,9 @@ function remove_width_attribute($html) {
     return $html;
 }
 
+//prepare phone numbers for skype callto
+function clean($string) {
+    $string = str_replace("-", "", $string); // Replaces all spaces with hyphens.
+    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+}
 ?>

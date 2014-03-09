@@ -42,6 +42,7 @@
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
         <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/event-tracking.js"></script>
 
         <?php wp_enqueue_script("jquery"); /* Loads jQuery if it hasn't been loaded already */ ?>
 
@@ -132,7 +133,24 @@
                 });
             </script>
             <?php /* } */ ?>
+            <script>
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+                ga('create', 'UA-47346901-1', 'johnsonandbell.com');
+                ga('require', 'linkid', 'linkid.js'); // added for enhanced link attribution
+                ga('send', 'pageview');
+
+            </script>
 
     </head>
 

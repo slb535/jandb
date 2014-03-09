@@ -10,13 +10,14 @@
                 Chicago, Illinois 60603-5404  |  <?php _e('All Rights Reserved.'); ?>  |  <a href="http://johnsonandbell.com/web-site-disclaimer-information/">Disclaimer</a></p>
 
             <?php if (is_home() || is_front_page()) { ?>
-                <div class="footer-right" ><a href="http://www.alfainternational.com/" target="new"><img src="<?php bloginfo('template_url'); ?>/images/logo_alfa.png" width="200" height="45" class="affiliation-logo-footer" /></a>            <div class="clearfix"></div>
+                <div class="footer-right" ><a href="http://www.alfainternational.com/" target="new"><img src="<?php bloginfo('template_url'); ?>/images/logo_alfa.png" width="225" height="95" class="affiliation-logo-footer" /></a>            <div class="clearfix"></div>
                 </div>
             <?php } ?>
 
             <?php if (is_page(60)) { ?>
 
-                <div class="footer-right" ><p class="employee"><a href="https://owa.jbltd.com/owa" target="new">Employee Log-in</a> | <a href="https://remote.jbltd.com/vpn/index.html" target="new">Citrix Log-in</a>  |
+                <div class="footer-right" >
+                    <p class="employee"><a href="https://owa.jbltd.com/owa" target="new">Employee Log-in</a> | <a href="https://remote.jbltd.com/vpn/index.html" target="new">Citrix Log-in</a>  |
                         <a href="https://webtime.jbltd.com/LMS" target="new">Webtime Log-in</a></p>
                 </div>
 
@@ -53,6 +54,7 @@ if (function_exists('memory_get_usage')) {
         } // Function: Close callback
     });
 </script>
+
 
 <script>
     var originalNavClasses;

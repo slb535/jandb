@@ -5,6 +5,8 @@
 ?>
 <?php get_header(); ?>
 <div id="content" class="practice-page">
+
+
     <div class="column front-left">
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
@@ -32,7 +34,7 @@
             <h3>Johnson &amp; Bell Practices</h3>
 
             <?php
-            //list terms in a given taxonomy
+//list terms in a given taxonomy
             $taxonomy = 'practice-area';
             $term_args = array(
                 'hide_empty' => false,
