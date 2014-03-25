@@ -76,7 +76,7 @@ body {
 .grid_6 { width: 45.4%; }  /* 454px */
 .grid_7 { width: 53.2%; }  /* 532px */
 .grid_8 { width: 61.0%; }  /* 610px */
-.grid_9, .front-left { width: 68.8%; }  /* 688px */
+.grid_9, .front-left { width: 70.2%; }  /* 702px changed from 688 */
 .grid_10 { width: 76.6%; }  /* 766px */
 .grid_11 { width: 84.4%; }  /* 844px */
 .grid_12 { width: 92.2%; }  /* 922px */
@@ -146,7 +146,7 @@ h2, h3, h4, h5, h6, .archive h2, .archive h2 a, .h2, .h3, p.alerts-blog-author {
 
 #sidebar p, .sidebar-text, .address-text,  .phone, .email, .title, .practice-areas-list ul, .practice-areas-list-small ul, #alphaList, .practice-areas ul,
 .lawyer-list ul, .practice-body ul li, .post-content.fullbio  ul li, .quote-source, .quote-source-title, .source, .author, #footer p, .bonus, .disclaimer,
-.news_headlines_home li, .searchLabel, .headlines ul, .headlines li, .pagination, .headlines .readmore, .newsletter-list, .newsletter-list a, .read-more, .byline, .view-alpha {
+.news_headlines_home li, .searchLabel, .headlines ul, .headlines li, .pagination, .headlines .readmore, .newsletter-list, .newsletter-list a, .read-more, .byline, .view-alpha, .gform_heading {
     font-family: 'FranklinGothic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
@@ -400,6 +400,10 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     line-height: 72px; /*72px*/
 }
 
+.page-template-page-practice-php #logo {
+    margin-right: 8px;
+}
+
 #navbar {
     /* float: left; */
     padding-top: 23px;
@@ -490,7 +494,7 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
 /*===[ General Main Area ]=== */
 
 #content {
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .home #content {
@@ -568,6 +572,12 @@ h2, h2 a, h2 a:visited, #sidebar h2 a, #lawyer-right h3 a, .office-sidebar h4, .
     font-size: .8125em; /* 13px */
     line-height: 15px;
 }
+
+.gform_description  {
+    font-size: .8125em; /* 13px */
+    line-height: 15px;
+}
+
 
 #sidebar-search {
     /* width: 100%; */
@@ -652,9 +662,7 @@ input:hover, textarea:hover, input:focus, textarea:focus {
     border: 1px #444 solid;
 }
 
-input[type=text], [type=image] {
-    margin-left: 10px;
-}
+
 
 textarea {
     min-height: 150px;
@@ -672,6 +680,63 @@ textarea {
 
 .video {
     padding-bottom: 10px;
+}
+
+
+
+
+/*Gravity Forms Styling*/
+
+input[type=text], input [type=image] {
+    margin-left: 10px;
+}
+
+input[type=image] {
+    height: 20px;
+}
+
+.gform_wrapper .top_label input[type=text]{
+    background-color: #eae7dd;
+    outline: #c9cacb solid 1px;
+}
+
+#sidebar .gform_wrapper ul.gfield_checkbox, #sidebar .gform_wrapper ul.gfield_radio {
+    padding-left: 10px;
+}
+
+#sidebar .gform_wrapper .gform_footer {
+    padding: 0;
+    margin: 0;
+}
+
+
+#sidebar .gform_wrapper .gform_heading {
+    margin-bottom: 5px;
+    border-top: 1px solid #D21532;
+    padding-top: 5px;
+}
+
+#sidebar .gform_description {
+    font-weight: 500;
+}
+
+#sidebar .gform_confirmation_message {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#sidebar .gform_widget {
+    padding-top: 20px;
+}
+
+/* End Gravity Forms Styling*/
+
+/* Print Friendly - Block URL in body */
+a[href^="http://"]:after {
+    content: none;
+    display: none !important;
+
 }
 
 
@@ -743,7 +808,7 @@ textarea {
 }
 
 .page-id-545 #content {
-    padding-top: 75px;
+    padding-top: 25px;
 }
 
 #post-545 {
@@ -828,7 +893,16 @@ textarea {
 
 /* Specific Sections */
 
+.printfriendly{
+    padding-top: 10px;
+    text-align: right;
+}
 
+.printandpdf {
+    background-color: #eae7dd;
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 /* ===[ Photo Row ]=== */
 
@@ -926,8 +1000,13 @@ h5.lawyer-name {
 
 #ssba {
     border-top: 1px solid #817566;
+    margin-top: 20px;
+    padding-top: 5px;
 }
 
+.community_projects #ssba {
+    display: none;
+}
 
 
 
@@ -1234,12 +1313,12 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
     border-top: 1px solid #D21532;
 }
 
-.firm-news .headlines, .awards .headlines, .results .headlines {
+.firm-news .headlines, .awards .headlines, .results .headlines, .community .headlines {
     width: 100%;
     padding-bottom: 30px;
 }
 
-.firm-news .headlines .readmore, .awards .headlines .readmore,  .results .headlines .readmore {
+.firm-news .headlines .readmore, .awards .headlines .readmore,  .results .headlines .readmore, .community .headlines .readmore {
     padding: 5px 10px 5px 0;
     text-align: right;
 }
@@ -1253,7 +1332,7 @@ input.textInput, input.textInput:hover, textarea.textInput:hover, input.textInpu
 }
 
 
-.firm-news .headlines li, .publications .headlines li, .awards .headlines li {
+.firm-news .headlines li, .publications .headlines li, .awards .headlines li, .community .headlines li {
     padding: 5px 0 5px 7px;
 }
 
@@ -1413,6 +1492,11 @@ p.byline {
     margin-left: -5px;
 }
 
+
+.gform_body {
+    font-family: sans-serif;
+    font-size: .7rem;
+}
 
 /*===[ Quotes at Bottom of Pages ]=== */
 

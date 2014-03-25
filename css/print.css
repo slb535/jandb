@@ -30,10 +30,10 @@ img { max-width: 100%; }
     width: auto;
 }
 
-p a:after { content: "(" attr(href) ")"; font-size: 80%; }
+/*p a:after { content: "(" attr(href) ")"; font-size: 80%; }
 
 
-p a[href^="http://"]:after { content: " (" attr(href) ")"; font-size: 90%; }
+p a[href^="http://"]:after { content: " (" attr(href) ")"; font-size: 90%; }*/
 
 p a { word-wrap: break-word; }
 

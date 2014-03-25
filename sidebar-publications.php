@@ -2,17 +2,10 @@
     <ul>
 
 
-        <div id="sidebar" class="alerts-blog">
+        <div id="sidebar" class="alerts-blog sidebar-text">
 
             <?php dynamic_sidebar('Publications'); ?>
 
-            <p class="sidebar-text">
-
-                Let us know what updates you'd like to receive.
-                <iframe width="270px" height="400px" src="<?php bloginfo('template_url'); ?>/blogalerts-form.html"></iframe>
-
-
-            </p>
 
             <!-- create sidebar widget for speaking engagements -->
 

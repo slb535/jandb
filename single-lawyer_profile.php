@@ -39,27 +39,27 @@
                     <?php } ?>  </span>
                 <h2 class="lawyer-name"><?php the_title(); ?>   </h2>
 
-
-                <?php
-                $title = types_render_field("title", array("raw" => "true"));
-
-
-                echo '<div class="title">' . $title;
-                if (in_category('Indiana')) {
-                    echo '<br /><a href="/crown-point-indiana/">Crown Point, Indiana</a>';
-                }
-                echo '</div>';
-                ?>
-                <div class="email screen"> <a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></div>
-                <div class="email print"> <?php echo $email; ?></div>
-
-                <?php
-                $phone = types_render_field("phone", array('raw' => 'true'));
-                ?>
-                <div class="phone screen"><a href="callto://+1<?php echo clean($phone); ?>">Direct <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></a></div>
-                <div class="phone print">Direct: <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
+                <div class="pf-content">
+                    <?php
+                    $title = types_render_field("title", array("raw" => "true"));
 
 
+                    echo '<div class="title">' . $title;
+                    if (in_category('Indiana')) {
+                        echo '<br /><a href="/crown-point-indiana/">Crown Point, Indiana</a>';
+                    }
+                    echo '</div>';
+                    ?>
+                    <div class="email screen"> <a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></div>
+                    <div class="email print"> <?php echo $email; ?></div>
+
+                    <?php
+                    $phone = types_render_field("phone", array('raw' => 'true'));
+                    ?>
+                    <div class="phone screen"><a href="callto://+1<?php echo clean($phone); ?>">Direct <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></a></div>
+                    <div class="phone print">Direct: <?php echo(types_render_field("phone", array('raw' => 'true'))); ?></div>
+
+                </div><!-- end pf-content -- extra content that should print -->
                 <div class="clearfix"></div>
 
             </div>

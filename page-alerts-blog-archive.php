@@ -66,7 +66,7 @@
                                         ?>
 
                                     </p>
-                                    <h2 class="archive"><a href="<?php echo $child_permalink; ?>"><?php the_title(); ?></a></h2>
+                                    <h2 class="archive pf-title"><a href="<?php echo $child_permalink; ?>"><?php the_title(); ?></a></h2>
 
 
                                     <p class="post-excerpt"> <?php

@@ -12,11 +12,11 @@
 
 
     <div class="column front-left">
+        <h1>J&amp;B Blog</h1>
+
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
 
                 <div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
-
-                    <h1>J&amp;B Blog</h1>
 
                     <?php
                     $child_id = $post->ID;
@@ -30,14 +30,13 @@
 
                         <?php
                         if ($parent_id)
-                            echo '<span class="divider">|</span>   <span class="author"><a href="' . $parent_permalink . '" target="_blank">' . $parent_title . '</a></span>';
+                            echo '<span class="divider">|</span>   <span class="author pf-author"><a href="' . $parent_permalink . '" target="_blank">' . $parent_title . '</a></span>';
                         if ($second_author)
-                            echo '  <span class="divider">|</span>  <span class="author">' . $second_author . '</span>';
+                            echo '  <span class="divider">|</span>  <span class="author pf-author">' . $second_author . '</span>';
                         ?>
                     </p>
-                        <!--                        <span class="divider">|</span>   <span class="author"><a href="<?php echo $parent_permalink; ?>" target="_blank"><?php echo $parent_title; ?></a></span>-->
 
-                    <h2><?php the_title(); ?></h2>
+                    <h2 class="pf-title"><?php the_title(); ?></h2>
 
                     <div class="post-content page-content alerts-blog">
                         <?php the_content(); ?>
