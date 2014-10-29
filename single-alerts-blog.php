@@ -58,15 +58,34 @@
 
 
 
-    <div class="column front-right" >
+
+    <div class="column front-right print-no" >
+        <div id="sidebar" class="border">
+            <ul>
 
 
-        <?php
-        get_sidebar('blog');
-        ?>
+                <div id="sidebar" class="alerts-blog sidebar-text">
 
-    </div>
-    <div style='clear:both;'></div>
+
+                    <?php
+                    get_sidebar('recentposts');
+
+                    dynamic_sidebar('Publications');
+                    get_sidebar('alertsblogarchive');
+                    ?>
+                    <div id="sidebar-search" class="widget">
+                        <?php get_search_form(); /* outputs the default Wordpress search form */ ?>
+                    </div>
+
+                </div>
+                <div style='clear:both;'></div>
+            </ul>
+
+        </div> <!--end sidebar-->
+    </div> <!-- end column front right -->
 </div><!--#content-->
 
 <?php get_footer(); ?>
+
+
+

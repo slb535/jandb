@@ -14,7 +14,7 @@
                 $args = array(
                     'cat' => 24, -33,
                     'posts_per_page' => 5,
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'post__in' => get_option('sticky_posts'),
                     'ignore_sticky_posts' => 1
                 );

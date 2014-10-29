@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Alerts-Blog Front Page
+  Template Name: Alerts-Blog Front Page - One from Each Practice
  */
 ?>
 
@@ -453,16 +453,31 @@
 
 
 
-
     <div class="column front-right" >
+        <div id="sidebar" class="border">
+            <ul>
 
 
-        <?php
-        get_sidebar('publications');
-        ?>
+                <div id="sidebar" class="alerts-blog sidebar-text">
 
-    </div>
-    <div style="clear:both;"></div>
+
+                    <?php
+                    dynamic_sidebar('Publications');
+
+                    get_sidebar('recentposts');
+
+                    get_sidebar('alertsblogarchive');
+                    ?>
+                    <div id="sidebar-search" class="widget">
+                        <?php get_search_form(); /* outputs the default Wordpress search form */ ?>
+                    </div>
+
+                </div>
+                <div style='clear:both;'></div>
+            </ul>
+
+        </div> <!--end sidebar-->
+    </div> <!-- end column front right -->
 </div><!--#content-->
 
 <?php get_footer(); ?>

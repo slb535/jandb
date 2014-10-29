@@ -12,7 +12,7 @@
                     echo '</div> </div>';
                 endif;
                 ?>
-            </div>
+            </div> <!--end post-->
             <div  class="grid_7 name">
                 <span class="icons screen grid_3">
                     <?php
@@ -116,6 +116,11 @@
                         $fullbar = types_render_field("full-bar", array('raw' => 'true'));
                         if ($fullbar) {
                             echo '<h3><a href="' . $url . '/full-page/fullbar-' . $lastname . '/" class="popup">Bar Admissions</a></h3>';
+                        } elseif ($slug == 'h-patrick-morris') {
+                            echo '<h3><a href="javascript:toggleDiv(\'BarAdmissions\');">Bar Admissions</a></h3>' . '<div class="toggleBox" id="BarAdmissions"><ul><li>Illinois Supreme Court</li><li>Missouri Supreme Court</li><li>U.S. Court of Appeals, Seventh Circuit</li><li>Federal Trial Bar, Northern District of Illinois</li><li>U.S. District Court, Northern District of Illinois</li>
+                                <li>U.S. District Court, Central District of Illinois</li><li>U.S. District Court, Southern District of Illinois</li><li>U.S. District Court, Northern District of Indiana</li>
+                                <li>U.S. District Court, Southern District of Indiana</li><li>U.S. District Court, Western District of Michigan</li><li>U.S. District Court, Eastern District of Missouri</li><li>U.S. District Court, Western District of Missouri</li>';
+                            echo '</ul></div>';
                         } else {
                             $bar_admissions = get_post_meta($post->ID, 'wpcf-bar_admissions', false);
                             if (!empty($bar_admissions) && is_array($bar_admissions))
@@ -143,7 +148,6 @@
                         if ($education)
                             echo '<h3><a href="javascript:toggleDiv(\'Education\');">Education</a></h3>' . '<div class="toggleBox" id="Education"><ul><li>' . $education . '</ul></div>';
                         ?>
-
 
 
                         <?php
@@ -231,7 +235,6 @@
 
 
         <?php endwhile; /* end loop */ ?>
-</div><!--end post -->
 </div><!--#content-->
 <?php get_footer(); ?>
 

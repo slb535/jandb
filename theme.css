@@ -315,7 +315,8 @@ article h1, h2 {
 }
 
 #sidebar.alerts-blog h3 {
-    font-size: 1em;
+    font-size: 1.3em;
+    line-height: 1.3em;
 }
 
 .headlines h2 {
@@ -718,6 +719,8 @@ input[type=image] {
 
 #sidebar .gform_description {
     font-weight: 500;
+    font-size: 1.1em;
+    line-height: 1.12em;
 }
 
 #sidebar .gform_confirmation_message {
@@ -738,6 +741,12 @@ a[href^="http://"]:after {
     display: none !important;
 
 }
+
+.pf-content {
+    padding-bottom: 10px;
+}
+
+
 
 
 
@@ -896,6 +905,7 @@ a[href^="http://"]:after {
 .printfriendly{
     padding-top: 10px;
     text-align: right;
+    padding-bottom: 10px;
 }
 
 .printandpdf {
@@ -903,6 +913,23 @@ a[href^="http://"]:after {
     padding-right: 10px;
     padding-left: 10px;
 }
+
+.newer-older {
+    padding-top: 20px;
+}
+
+/* social sharing */
+
+.ssba {
+    border-top: 1px solid #817566;
+    border-bottom: 1px solid #817566;
+}
+
+.community_projects .ssba {
+    display: none;
+}
+
+
 
 /* ===[ Photo Row ]=== */
 
@@ -998,15 +1025,6 @@ h5.lawyer-name {
     clear: both;
 }
 
-#ssba {
-    border-top: 1px solid #817566;
-    margin-top: 20px;
-    padding-top: 5px;
-}
-
-.community_projects #ssba {
-    display: none;
-}
 
 
 

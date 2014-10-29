@@ -664,4 +664,13 @@ function clean($string) {
     $string = str_replace("-", "", $string); // Replaces all spaces with hyphens.
     return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 }
+
+// http://wordpress.org/support/topic/media-library-error-saving-media-attachment
+// Allow vcf cards to be uploaded through the Wordpress Dashboard
+add_filter('upload_mimes', 'custom_upload_mimes');
+function custom_upload_mimes ( $existing_mimes=array() ) {
+	// add your extension to the array
+	$existing_mimes['vcf'] = 'text/x-vcard';
+	return $existing_mimes;
+}
 ?>
