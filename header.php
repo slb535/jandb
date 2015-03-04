@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes();
+?>>
     <head>
         <title><?php
             if (is_category()) {
@@ -35,45 +36,25 @@
             }
             ?></title>
 
-        <meta charset="<?php bloginfo('charset'); ?>" />
+        <meta charset="UTF-8" />
+
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
         <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>" />
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/event-tracking.js"></script>
-
-        <?php wp_enqueue_script("jquery"); /* Loads jQuery if it hasn't been loaded already */ ?>
-
-        <?php wp_head(); ?> <?php /* this is used by many Wordpress features and for plugins to work proporly */ ?>
-
-        <?php if (is_page(4886)) { ?>
-            <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/timeline.css" type="text/css" media="screen"></link>
-        <?php } ?>
-
-        <link href='http://fonts.googleapis.com/css?family=EB+Garamond|Archivo+Narrow:700|Open+Sans:600,700' rel='stylesheet' type='text/css' />
-
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/fonts/stylesheet.css" />
-        <link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_url'); ?>/theme.css" media="screen"/>
 
 
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
-        <link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('template_url'); ?>/css/print.css" />
+        <?php wp_head(); ?> 
+
+
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-
-
-
-            <?php /* The HTML5 Shim is required for older browsers, mainly older versions IE */ ?>
-            <!--[if lt IE 9]>
-                    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-            <![endif]-->
 
 
             <?php
             global $is_IE;
             if ($is_IE) {
-                ?>     <script src="<?php bloginfo('template_url'); ?>/library/js/jquery.columnizer.min.js"  type="text/javascript" charset="utf-8"></script>
+                ?>  <script src="<?php bloginfo('template_url'); ?>/library/js/jquery.columnizer.min.js"  type="text/javascript" charset="utf-8"></script> 
                 <script>
                     $(function() {
                         $('h1').addClass("dontend");
@@ -102,59 +83,45 @@
 
             </script>
 
-            <?php /* if ('lawyer_profile' == get_post_type()) { */ ?>
+            <?php if ('lawyer_profile' == get_post_type()) { ?>
 
-            <script>
+                <script>
 
-                function slideonlyone(thechosenone) {
-                    $('.newboxes').each(function(index) {
-                        if ($(this).attr("id") == thechosenone) {
-                            $(this).slideDown(200);
-                        }
-                        else {
-                            $(this).slideUp(600);
-                        }
+                    function slideonlyone(thechosenone) {
+                        $('.newboxes').each(function(index) {
+                            if ($(this).attr("id") == thechosenone) {
+                                $(this).slideDown(200);
+                            }
+                            else {
+                                $(this).slideUp(600);
+                            }
+                        });
+                    }
+                    function toggleDiv(divId) {
+                        $("#" + divId).toggle();
+                    }
+                </script>
+
+                <script>
+                    jQuery(document).ready(function($) {
+                            jQuery('a.popup').live('click', function() {
+                                    newwindow = window.open($(this).attr('href'), '', 'height=800,width=600,scrollbars=1');
+                                    if (window.focus) {
+                                newwindow.focus();
+                            }
+                                    return false;
+                            });
                     });
-                }
-                function toggleDiv(divId) {
-                    $("#" + divId).toggle();
-                }
-            </script>
+                </script>
+            <?php }  // end if lawyer post type ?>
 
-            <script>
-                jQuery(document).ready(function($) {
-                        jQuery('a.popup').live('click', function() {
-                                newwindow = window.open($(this).attr('href'), '', 'height=800,width=600,scrollbars=1');
-                                if (window.focus) {
-                            newwindow.focus();
-                        }
-                                return false;
-                        });
-                });
-            </script>
-            <?php /* } */ ?>
-            <script>
-                (function(i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function() {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                            m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-                ga('create', 'UA-47346901-1', 'johnsonandbell.com');
-                ga('require', 'linkid', 'linkid.js'); // added for enhanced link attribution
-                ga('send', 'pageview');
-
-            </script>
 
     </head>
 
     <body <?php body_class(); ?>>
+
+        <?php include_once("analyticstracking.php") ?>
+
         <div class="none">
             <p><a href="#content"><?php _e('Skip to Content'); ?></a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
         </div><!--.none-->

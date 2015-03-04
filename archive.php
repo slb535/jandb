@@ -19,7 +19,7 @@
     <?php
     if (is_tax()) : /* if it's a taxonomy archive */
         $term = get_the_terms($post->ID, 'practice-area');
-        ?> <p>Blog Articles here</p>
+        ?><p>Blog Articles here</p>
 
 
 

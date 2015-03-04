@@ -63,7 +63,7 @@ if ($the_query->have_posts()) {
 
         <h2>Recent Articles</h2>
 
-        <div class="print-no">
+        <div class="no-print">
 
             <?php
             while ($the_query->have_posts()) :

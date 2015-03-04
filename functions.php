@@ -7,8 +7,39 @@ function wpc_url_login() {
 
 add_filter('login_headerurl', 'wpc_url_login');
 
+function jandb_theme_styles() {
+    wp_enqueue_style('theme_css', get_template_directory_uri() . '/theme.css');
+    wp_enqueue_style('style_css', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('font_css', get_template_directory_uri() . '/fonts/stylesheet.css');
+    wp_enqueue_style('print_css', get_template_directory_uri() . '/css/print.css', '', '', 'print');
+    wp_enqueue_style('google_fonts', 'http://fonts.googleapis.com/css?family=EB+Garamond|Archivo+Narrow:700|Open+Sans:600,700');
+    if (is_page(4886)) {
+        wp_enqueue_style('google_fonts', get_template_directory_uri() . '/css/timeline.css');
+    }
+}
+
+add_action('wp_enqueue_scripts', 'jandb_theme_styles');
+
+function jandb_theme_js() {
+
+    wp_enqueue_script('event_tracking_js', get_template_directory_uri() . '/js/event-tracking.js', '', '', true);
+    wp_enqueue_script('columnizer_js', get_template_directory_uri() . '/library/js/jquery.columnizer.min.js', array('jquery'), '', false);
+    wp_deregister_script('jquery'); // Remove WordPress core's jQuery
+    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', false, null, false);
+}
+
+add_action('wp_enqueue_scripts', 'jandb_theme_js');
+
+function add_ie_html5_shim() {
+    echo '<!--[if lt IE 9]>';
+    echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+    echo '<![endif]-->';
+}
+
+add_action('wp_head', 'add_ie_html5_shim');
+
 // Custom WordPress Login Logo
-function login_css() {
+function jandb_login_css() {
     wp_enqueue_style('login_css', get_template_directory_uri() . '/css/login.css');
 }
 
@@ -16,10 +47,10 @@ add_action('login_head', 'login_css');
 
 // Custom Corner Logo
 function custom_logo() {
-    echo '<style type="text/css">
+    echo '<style type = "text/css">
     #wp-admin-bar-wp-logo > .ab-item .ab-icon { background-image: url(' . get_bloginfo('template_directory') . '/images/JB_rev.png) !important; background-position: 0; }
 
-    </style>';
+</style>';
 }
 
 add_action('admin_head', 'custom_logo');
@@ -90,15 +121,15 @@ add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets');
 function wpc_dashboard_widget_function() {
 // Entering the text between the quotes
     echo "<table width=400>
-        <tr><td><strong>Content Type</strong></td><td><strong>Where to Find/Enter</strong></td></tr>
-        <tr><td colspan=2 height=5><div style=\"border-top: double #D21532 3px\">&nbsp;</div>
-       <tr><td><strong>Lawyer Profiles<br />Pop Up Bio (etc) Pages</strong></td><td>Lawyer Profiles<br />Full Pages</td></tr>
-        <tr><td><strong>News Articles</strong></td><td>Posts</td></tr>
-       <tr><td><strong>Awards</strong></td><td>Posts</td></tr>
-        <tr><td><strong>Practice Pages main copy</strong></td><td>Pages</td></tr>
-        <tr><td><strong>Practice Pages Sidebar copy</strong></td><td>Widgets</td></tr>
+    <tr><td><strong>Content Type</strong></td><td><strong>Where to Find/Enter</strong></td></tr>
+    <tr><td colspan=2 height=5><div style=\"border-top: double #D21532 3px\">&nbsp;</div>
+    <tr><td><strong>Lawyer Profiles<br />Pop Up Bio (etc) Pages</strong></td><td>Lawyer Profiles<br />Full Pages</td></tr>
+    <tr><td><strong>News Articles</strong></td><td>Posts</td></tr>
+    <tr><td><strong>Awards</strong></td><td>Posts</td></tr>
+    <tr><td><strong>Practice Pages main copy</strong></td><td>Pages</td></tr>
+    <tr><td><strong>Practice Pages Sidebar copy</strong></td><td>Widgets</td></tr>
 
-	</table>";
+</table>";
 }
 
 function wpc_add_dashboard_widgets() {
@@ -184,7 +215,7 @@ add_filter('get_comments_number', 'comment_count', 0);
 function comment_count($count) {
     if (!is_admin()) {
         global $id;
-        $comments_by_type = &separate_comments(get_comments('status=approve&post_id=' . $id));
+        $comments_by_type = &separate_comments(get_comments('status = approve&post_id = ' . $id));
         return count($comments_by_type['comment']);
     } else {
         return $count;
@@ -195,7 +226,7 @@ function comment_count($count) {
 function rss_comment_footer($content) {
     if (is_feed()) {
         if (comments_open()) {
-            $content .= 'Comments are open! <a href="' . get_permalink() . '">Add yours!</a>';
+            $content .= 'Comments are open!<a href = "' . get_permalink() . '">Add yours!</a>';
         }
     }
     return $content;
@@ -203,14 +234,17 @@ function rss_comment_footer($content) {
 
 // custom excerpt ellipses for 2.9+
 function custom_excerpt_more($more) {
-    return 'Read More &raquo;';
+    return 'Read More & raquo;
+';
 }
 
 add_filter('excerpt_more', 'custom_excerpt_more');
 
 // no more jumping for read more link
 function no_more_jumping($post) {
-    return '<a href="' . get_permalink($post->ID) . '" class="read-more">' . '&nbsp; Continue Reading &raquo;' . '</a>';
+    return '<a href = "' . get_permalink($post->ID) . '" class = "read-more" > ' . ' & nbsp;
+    Continue Reading & raquo;
+    ' . '</a>';
 }
 
 add_filter('excerpt_more', 'no_more_jumping');
@@ -252,7 +286,7 @@ function filter_ptags_on_images($content) {
 // <p>maybe some white space<img all stuff up to /> then maybe whitespace </p>
 // replace it with just the image tag...
     $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-// now pass that through and do the same for iframes...
+    // now pass that through and do the same for iframes...
     return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
 }
 
@@ -333,14 +367,14 @@ add_image_size('add-news-image-thumbnail', 200, 200, true); // Used for extra ne
 
 function custom_taxonomies_terms_links() {
     global $post, $post_id;
-// get post by post id
+    // get post by post id
     $post = &get_post($post->ID);
-// get post type by post
+    // get post type by post
     $post_type = $post->post_type;
-// get post type taxonomies
+    // get post type taxonomies
     $taxonomies = get_object_taxonomies($post_type);
     foreach ($taxonomies as $taxonomy) {
-// get the terms related to post
+        // get the terms related to post
         $terms = get_the_terms($post->ID, $taxonomy);
         if (!empty($terms)) {
             $out = array();
@@ -398,7 +432,7 @@ function easel_body_class($classes = '') {
         $classes[] = 'iphone';
 
 
-// Hijacked from the hybrid theme, http://themehybrid.com/
+    // Hijacked from the hybrid theme, http://themehybrid.com/
     if (is_single()) {
         foreach ((array) get_the_category($wp_query->post->ID) as $cat) :
             $classes[] = 'single-category-' . sanitize_html_class($cat->slug, $cat->term_id);
@@ -415,12 +449,12 @@ function easel_body_class($classes = '') {
         $classes[] = 'sticky-post';
     }
 
-// NOT hijacked from anything, doi! people should do this.
+    // NOT hijacked from anything, doi! people should do this.
     $timestamp = current_time('timestamp');
     $rightnow = (int) date('Gi', $timestamp);
     $ampm = date('a', $timestamp);
     $classes[] = $ampm;
-//	$classes[] = 'time-'.$rightnow;
+    //	$classes[] = 'time-'.$rightnow;
     if ($rightnow > 559 && (int) $rightnow < 1800)
         $classes[] = 'day';
     if ($rightnow < 600 || (int) $rightnow > 1759)
@@ -474,7 +508,7 @@ remove_filter('wp_title', 'wptexturize');
 if (!function_exists('base_extended_editor_mce_buttons')) {
 
     function base_extended_editor_mce_buttons($buttons) {
-// The settings are returned in this array. Customize to suite your needs.
+        // The settings are returned in this array. Customize to suite your needs.
         return array(
             'formatselect', 'bold', 'italic', 'sub', 'sup', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'outdent', 'indent', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
         );
@@ -495,7 +529,7 @@ if (!function_exists('base_extended_editor_mce_buttons')) {
 if (!function_exists('base_extended_editor_mce_buttons_2')) {
 
     function base_extended_editor_mce_buttons_2($buttons) {
-// The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
+        // The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
         return array();
         /* WordPress Default
           return array(
@@ -514,10 +548,10 @@ if (!function_exists('base_extended_editor_mce_buttons_2')) {
 if (!function_exists('base_custom_mce_format')) {
 
     function base_custom_mce_format($init) {
-// Add block format elements you want to show in dropdown
+        // Add block format elements you want to show in dropdown
         $init['theme_advanced_blockformats'] = 'p,h2,h3,h4,h5,h6,pre';
-// Add elements not included in standard tinyMCE dropdown p,h1,h2,h3,h4,h5,h6
-//$init['extended_valid_elements'] = 'code[*]';
+        // Add elements not included in standard tinyMCE dropdown p,h1,h2,h3,h4,h5,h6
+        //$init['extended_valid_elements'] = 'code[*]';
         return $init;
     }
 
@@ -535,7 +569,7 @@ if (!function_exists('base_custom_mce_format')) {
 function pippin_excerpt_by_id($post, $length = 10, $tags = '<a><em><strong><p>', $extra = ' . . .') {
 
     if (is_int($post)) {
-// get the post object of the passed ID
+        // get the post object of the passed ID
         $post = get_post($post);
     } elseif (!is_object($post)) {
         return false;
@@ -635,12 +669,12 @@ function practice_area_permalink($permalink, $post_id, $leavename) {
     if (strpos($permalink, '%practice-area%') === FALSE)
         return $permalink;
 
-// Get post
+    // Get post
     $post = get_post($post_id);
     if (!$post)
         return $permalink;
 
-// Get taxonomy terms
+    // Get taxonomy terms
     $terms = wp_get_object_terms($post->ID, 'practice-area');
     if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0]))
         $taxonomy_slug = $terms[0]->slug;
@@ -668,9 +702,10 @@ function clean($string) {
 // http://wordpress.org/support/topic/media-library-error-saving-media-attachment
 // Allow vcf cards to be uploaded through the Wordpress Dashboard
 add_filter('upload_mimes', 'custom_upload_mimes');
-function custom_upload_mimes ( $existing_mimes=array() ) {
-	// add your extension to the array
-	$existing_mimes['vcf'] = 'text/x-vcard';
-	return $existing_mimes;
+
+function custom_upload_mimes($existing_mimes = array()) {
+    // add your extension to the array
+    $existing_mimes['vcf'] = 'text/x-vcard';
+    return $existing_mimes;
 }
 ?>

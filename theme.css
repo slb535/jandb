@@ -828,6 +828,8 @@ a[href^="http://"]:after {
 
 /* ===[ Different background images for Different pages ]=== */
 
+/* positioning is above */
+
 .home:after, .page-id-109:after, .page-id-157:after, .page-id-75:after, .page-id-66:after, .page-id-545:after, .page-id-595:after, .page-id-555:after, .page-id-592:after, .page-id-60:after {
     position: absolute;
     top: 0;
@@ -840,47 +842,38 @@ a[href^="http://"]:after {
 }
 
 .home:after {
-    /* positioning is above */
     content: url(images/bg_home.jpg);
 }
 
 .page-id-595:after {
-    /* positioning is above */
     content: url(images/bg_practiceareas.jpg);
 }
 
 .page-id-157:after {
-    /* positioning is above */
     content: url(images/bg_attorneys.jpg);
 }
 
 .page-id-75:after {
-    /* positioning is above */
     content: url(images/bg_firmnews.jpg);
 }
 
 .page-id-66:after {
-    /* positioning is above */
     content: url(images/bg_awards.jpg);
 }
 
 .page-id-545:after {
-    /* positioning is above */
     content: url(images/bg_community.jpg);
 }
 
 .page-id-555:after {
-    /* positioning is above */
     content: url(images/bg_publications.jpg);
 }
 
 .page-id-592:after {
-    /* positioning is above */
     content: url(images/bg_indiana.jpg);
 }
 
 .page-id-60:after {
-    /* positioning is above */
     content: url(images/bg_contact.jpg);
 }
 
@@ -891,13 +884,6 @@ a[href^="http://"]:after {
 #widget-header {
     clear: both;
 }
-
-
-
-
-
-
-
 
 
 /* Specific Sections */
@@ -962,7 +948,7 @@ a[href^="http://"]:after {
     letter-spacing: .25px;
     /*PRACTICE NAME */
     font: 10px/11px 'FranklinGothic',  'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .transparent {
@@ -977,8 +963,7 @@ a[href^="http://"]:after {
     display: block;
     margin-top: -30px;
     height: 30px;
-    background-image: url(images/bg_photobar_feather.png);
-    /* bar behind LAWYER NAME */
+    background-image: url(images/bg_photobar_feather.png);     /* bar behind LAWYER NAME */
     zoom: 1;
 }
 
@@ -1603,7 +1588,6 @@ p.byline {
 
 .practice-body {
     padding-left: 20px;
-
 }
 
 .practice-body .three-columns ul li, .practice-body .two-columns ul li, .practice-body .four-columns ul li {
@@ -1923,12 +1907,13 @@ p.byline {
 }
 
 .ie .bonus {
-    font-size: .6875em /* 11px */
+    font-size: 11px;
+    font-size: .6875em  
 }
 .ie .disclaimer {
-    font-size: .625em; /* 10px */
+    font-size: 10px;
+    font-size: .625em; 
 }
-
 
 .ie .two, .ie .four, .ie #wrapper, .ie #two-col {
     /*for columns js */
@@ -1995,7 +1980,15 @@ audio {
 
 #responsive-menu { display: none;}
 
+#fancybox-title-over {
+    display: none;
+}
 
+.wp-caption-text {
+    text-align: center;
+    font-size: .75rem;
+    padding-top: 10px;
+}
 
 /* Menu Issues ----------- */
 /*@media only screen and (max-width : 1041px) and (max-width : 941px) {
@@ -2066,9 +2059,7 @@ and (max-width : 800px)  {
     {
         display: none;
         border-top: none;
-
     }
-
 
 
     .menu {
@@ -2091,10 +2082,6 @@ and (max-width : 800px)  {
         padding-left: 10px;
     }
 
-
-
-
-
 }
 
 
@@ -2110,14 +2097,6 @@ and (max-width : 1044px)  {
     .page-template-page-practice img.attachment-post-thumbnail {
         width: 100%;
     }
-
-
-
-    /*    #logo {
-            margin-top: -40px;
-        }*/
-
-
 
     .photo-block {
         padding-right: 5px;
@@ -2154,12 +2133,7 @@ and (max-width : 1044px)  {
         letter-spacing: 0;
         font: 9px/11px 'FranklinGothic', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
     }
-
 }
-
-
-
-
 
 
 
@@ -2224,20 +2198,16 @@ and (max-width : 650px) {
         background: url(images/searchbar_m.png) no-repeat;
     }
 
-
-
     .home #content h1 {
         font-size: 3.375em;
         line-height: 1em;
     }
-
 
     .news_headlines_home h2, .headlines h2 {
         display: block;
         vertical-align: middle;
         text-align: center;
     }
-
 
 
     img.affiliation-logo-footer {
@@ -2256,16 +2226,11 @@ and (max-width : 650px) {
     .quote-source {
         padding-top: 3px;
         font-size: .8em;
-
     }
 
     #sidebar {
         margin-top: 0;
-        /*
-         height: auto;
-         padding-left: 0; */
     }
-
 
     .page-practices-home .front-right {
         height: auto
@@ -2331,9 +2296,7 @@ and (max-width : 650px) {
 
     .firm-news .headlines,  .awards .headlines {
         margin-left: 0;
-        /*  width: 100%; */
         padding-bottom: 0;
-
     }
 
     .firm-news .headlines li, .publications .headlines li, .awards .headlines li {
@@ -2355,59 +2318,49 @@ and (max-width : 650px) {
         top:0;
     }
 
-
+        /* positioning */
     .page-id-109:after, .page-id-157:after, .page-id-75:after, .page-id-66:after, .page-id-545:after, .page-id-595:after, .page-id-555:after, .page-id-592:after, .page-id-60:after, .page-id-6040:after {
         top: 80px;
     }
 
     .home:after {
-        /* positioning is above */
         content: url(images/bg_home_m.jpg);
     }
 
     .page-id-595:after {
-        /* positioning is above */
         content: url(images/bg_practiceareas_m.jpg);
     }
 
     .page-id-157:after {
-        /* positioning is above */
         content: url(images/bg_attorneys_m.jpg);
     }
 
     .page-id-75:after {
-        /* positioning is above */
         content: url(images/bg_firmnews_m.jpg);
     }
 
     .page-id-66:after {
-        /* positioning is above */
         content: url(images/bg_awards_m.jpg);
     }
 
     .page-id-545:after {
-        /* positioning is above */
         content: url(images/bg_community_m.jpg);
     }
 
     .page-id-555:after {
-        /* positioning is above */
         content: url(images/bg_publications_m.jpg);
     }
 
 
     .page-id-6040:after {
-        /* positioning is above */
         content: url(images/bg_articles_m.jpg);
     }
 
     .page-id-592:after {
-        /* positioning is above */
         content: url(images/bg_indiana_m.jpg);
     }
 
     .page-id-60:after {
-        /* positioning is above */
         content: url(images/bg_contact_m.jpg);
     }
 
@@ -2457,8 +2410,6 @@ and (max-width : 650px) {
     }
 
 
-
-
     h2.lawyer-name {
         text-align: right;
         line-height: 1em;
@@ -2467,7 +2418,6 @@ and (max-width : 650px) {
     .full-bio h2.lawyer-name {
         text-align: left;
     }
-
 
     .icons {
         float: right;
@@ -2482,8 +2432,6 @@ and (max-width : 650px) {
     h2.lawyer_profile {
         padding-top: 20px;
     }
-
-
 
     .title, .phone.screen {
         margin-bottom: 0;
@@ -2530,13 +2478,11 @@ and (max-width : 650px) {
         font-size: .775em;
         line-height: 15px;
     }
+    
     .page-giving-back .front-right {
         float: left;
         width: 100%;
     }
-
-
-
 
     .community h2, .h2 {
         font-size: .9em;
@@ -2673,13 +2619,10 @@ and (max-width : 650px) {
         border-bottom: #D21532 1px solid;
     }
 
-
     #sidebar.border {
         margin-left: 20px;
         padding-left: 10px;
     }
-
-
 
     .page-contact-us #sidebar, .page-blog-articles #sidebar {
         padding-top: 0;
@@ -2689,8 +2632,6 @@ and (max-width : 650px) {
 
 /*    Practice Pages
 */
-
-
 
 
 /* Smallest ----------- */
@@ -2744,14 +2685,14 @@ and (max-width : 480px) {
     h5.lawyer-name {
         margin-top: -28px;
         width: 82%;
-        font: 8px/9px 'FranklinGothic', 'Helvetica Neue', Helvetica, sans-serif;
+        font: 8px/9px 'FranklinGothic', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
     }
 
     h4.practice-name, .page-blog-articles .front-right,  #content.practice-page {
         margin-top: 0;
     }
 
-    .photo-block h4,   h5.lawyer-name  {
+    .photo-block h4, h5.lawyer-name  {
         height: 25px;
     }
 
@@ -2852,8 +2793,6 @@ and (max-width : 480px) {
     .full-bio #header {
         padding-bottom: 20px
     }
-
-
 
 }
 

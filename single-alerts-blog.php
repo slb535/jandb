@@ -59,8 +59,8 @@
 
 
 
-    <div class="column front-right print-no" >
-        <div id="sidebar" class="border">
+    <div class="column front-right" >
+        <div id="sidebar" class="border print-no">
             <ul>
 
 

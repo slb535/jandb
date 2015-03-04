@@ -1,0 +1,76 @@
+.agenda {
+  font-family: Agenda;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.agendabold {
+  font-family: Agenda;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.agendaitalic {
+  font-family: Agenda;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.agendalight {
+  font-family: "Agenda Light";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.agendamedium {
+  font-family: "Agenda Medium";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.agendasemibold {
+  font-family: "Agenda Semibold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: 'EBGaramondRegular';
+    src: url('fonts/EBGaramond-webfont.eot');
+    src: url('fonts/EBGaramond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EBGaramond-webfont.woff') format('woff'),
+         url('fonts/EBGaramond-webfont.ttf') format('truetype'),
+         url('fonts/EBGaramond-webfont.svg#EBGaramondRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'franklin_gothic_fs_medbold';
+    src: url('fonts/FranklinGothic-Hvy-webfont.eot');
+    src: url('fonts/FranklinGothic-Hvy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FranklinGothic-Hvy-webfont.woff') format('woff'),
+         url('fonts/FranklinGothic-Hvy-webfont.ttf') format('truetype'),
+         url('fonts/FranklinGothic-Hvy-webfont.svg#franklin_gothic_fs_medbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'franklin_gothic_fs_medbold';
+    src: url('fonts/FranklinGothic-Hvy-webfont.eot');
+    src: url('fonts/FranklinGothic-Hvy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FranklinGothic-Hvy-webfont.woff') format('woff'),
+         url('fonts/FranklinGothic-Hvy-webfont.ttf') format('truetype'),
+         url('fonts/FranklinGothic-Hvy-webfont.svg#franklin_gothic_fs_medbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

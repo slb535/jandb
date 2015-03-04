@@ -24,8 +24,6 @@
                     <div ID="indiana">
 
                         <div class="photo-row">
-
-
                             <h2> Our Specialized Practices Meet Your Needs</h2>
                             <?php
                             $posts = get_posts('post_type=lawyer_profile&orderby=rand&numberposts=7&cat=-46,47');
@@ -41,7 +39,6 @@
                                     <?php
                                     $practice_area_select = types_render_field("practice-area-select", array("raw" => "true"));
                                     echo '<h4 class="practice-name ' . $practice_area_select . '">';
-                                    //	$practice_area_term = get_term_by('name', $practice_area_select, 'practice-area');
                                     echo '<span><a href="' . home_url() . '/practices-home/' . sanitize_title($practice_area_select) . '">' . $practice_area_select . '</a></span>';
                                     echo '</h4>';
                                     ?>
@@ -52,14 +49,13 @@
                             ?>
                             <div class="clearfix";'></div>
                         </div> <!-- end photo-row-->
-                    </div> <!-- end indiana -->
-                <?php } ?>    <!-- end INDIANA Page content -->
+                    </div> <!-- end INDIANA Page content -->
+                    <?php
+                }
 
-
-
-                <!--PUBLICATIONS PAGE -->
-
-                <?php if (is_page(555)) { ?>
+//               PUBLICATIONS PAGE 
+                elseif (is_page(555)) {
+                    ?>
 
                     <div class="publications">
                         <div class="headlines">
@@ -93,12 +89,12 @@
                             </ul>
 
                         </div> <!-- end headlines -->
-                    </div><!-- end publications -->
-                <?php } ?>    <!-- end Publications Page content -->
+                    </div><!-- end Publications Page content -->
+                    <?php
+                }
+//              PRACTICES PAGE  
 
-                <!--PRACTICES PAGE -->
-                <?php
-                if (is_page(595)) {
+                elseif (is_page(595)) {
                     //list terms in a given taxonomy
                     $taxonomy = 'practice-area';
                     $term_args = array(
@@ -114,9 +110,6 @@
                         <!--[if lt IE 10]><div id="wrapper">  <div class="three">
             <![endif]-->
 
-
-
-
                         <ul>
                             <?php
                             foreach ($tax_terms as $tax_term) {
@@ -126,13 +119,13 @@
                         </ul>
 
                         <!--[if lt IE 10]> </div>       </div> <![endif]-->
-                    </div>
-                <?php } ?> <!-- end Practices Page content -->
+                    </div><!-- end Practices Page content -->
 
-
-                <!--FIRM NEWSPAGE -->
-
-                <?php if (is_page(75)) { ?>
+                    <?php
+                }
+//                FIRM NEWSPAGE 
+                elseif (is_page(75)) {
+                    ?>
 
                     <div class="firm-news">
                         <div class="headlines">
@@ -162,12 +155,12 @@
                             </ul>
 
                         </div> <!--end headlines-->
-                    </div> <!--end firm-news-->
-                <?php } ?>    <!-- end Firm News Page content -->
-
-                <!--FIRM Results -->
-
-                <?php if (is_page(7029)) { ?>
+                    </div> <!-- end Firm News Page content -->
+                    <?php
+                }
+//                FIRM Results 
+                elseif (is_page(7029)) {
+                    ?>
 
                     <div class="results">
                         <div class="headlines">
@@ -176,9 +169,7 @@
                                 <?php
                                 $args = array(
                                     'cat' => 59,
-                                    'posts_per_page' => 5,
-//                                    'post__in' => get_option('sticky_posts'),
-//                                    'ignore_sticky_posts' => 1
+                                    'posts_per_page' => 5
                                 );
 
                                 query_posts($args);
@@ -197,12 +188,12 @@
                             </ul>
 
                         </div> <!--end headlines-->
-                    </div> <!--end results-->
-                <?php } ?>    <!-- end Results Page content -->
-
-
-                <!--AWARDS PAGE -->
-                <?php if (is_page(66)) { ?>
+                    </div>  <!-- end Results Page content -->
+                    <?php
+                }
+//                AWARDS PAGE  
+                elseif (is_page(66)) {
+                    ?>
 
                     <div class="awards">
                         <div class="headlines">
@@ -231,20 +222,16 @@
                             </ul>
 
                         </div>
-                    </div>
+                    </div> <!-- end Awards Page content -->
 
-                <?php } ?> <!-- end Awards Page content -->
-
-
-
-                <!--COMMUNITY -->
-
-                <?php if (is_page(545)) { ?>
+                    <?php
+                }
+//                COMMUNITY  
+                elseif (is_page(545)) {
+                    ?>
 
                     <div class="community">
                         <div class="headlines">
-
-
                             <ul>
                                 <?php
                                 $args = array(

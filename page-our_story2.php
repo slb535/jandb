@@ -16,7 +16,7 @@
 
                 <article>
                     <h1><?php the_title(); ?></h1>
-                    <p class="timeline-intro"><?php the_content(); ?></p>
+                    <p><?php the_content(); ?></p>
                 </article>
 
                 <!-- http://timeline.verite.co/ -->

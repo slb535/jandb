@@ -235,8 +235,8 @@ class PracticeSidebar_widget extends WP_Widget {
         <h2><a href="<?php echo $practice_link; ?>-attorneys"><?php echo $practice; ?> Attorneys</a></h2>
 
         <?php
-        //Links to Representative Cases Pages, only for those groups that have them   also in hidden in css for private security, energy and mediation 
-        if ((strripos($practice, "energy") === false) || (strripos($practice, "mediation") === false) || (strripos($practice, "security") === false) || (strripos($practice, "hospitality") === false)) {
+        //Links to Representative Cases Pages, only for those groups that have them   also somewhere else for energy and mediation // hid security in the css file as quickfix
+        if ((strpos($practice, "energy") === false) || (strpos($practice, "mediation") === false) || (strpos($practice, "private") === false) || (strpos($practice, "hospitality") === false)) {
 
             $practice_rep_link = $practice_link . "-rep/";
             echo '<h2 class="repcases ' . $practice . '"><a href="' . $practice_rep_link . '"> Representative Cases' . '</a></h2>';

@@ -150,6 +150,7 @@
                         ?>
 
 
+
                         <?php
                         $fullhonors = types_render_field("full-honors", array('raw' => 'true'));
                         if ($fullhonors) {

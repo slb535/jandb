@@ -1,6 +1,3 @@
-
-
-<div class="clearfix"></div>
 </div><!--.container-->
 <div id="footer"><footer>
         <div class="container">
@@ -10,7 +7,12 @@
                 Chicago, Illinois 60603-5404  |  <?php _e('All Rights Reserved.'); ?>  |  <a href="http://johnsonandbell.com/web-site-disclaimer-information/">Disclaimer</a></p>
 
             <?php if (is_home() || is_front_page()) { ?>
-                <div class="footer-right" ><a href="http://www.alfainternational.com/" target="new"><img src="<?php bloginfo('template_url'); ?>/images/logo_alfa.png" width="225" height="95" class="affiliation-logo-footer" /></a>            <div class="clearfix"></div>
+                <div class="footer-right" >
+
+                    <a href="http://www.alfainternational.com/" target="new"><img src="<?php bloginfo('template_url'); ?>/images/logo_alfa.png" width="225" height="95" class="affiliation-logo-footer" /></a>
+                    <img src="<?php bloginfo('template_url'); ?>/images/2015_BLF_Silver_Standard1.gif" width="105" height="95" class="" />
+
+                    <div class="clearfix"></div>
                 </div>
             <?php } ?>
 
@@ -23,10 +25,6 @@
 
             <?php }
             ?>
-
-
-
-
         </div><!--.container-->
     </footer></div><!--#footer-->
 </div><!--#main-->

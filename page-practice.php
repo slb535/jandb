@@ -6,22 +6,24 @@
 <?php get_header(); ?>
 <div id="content" class="practice-page">
 
-
+    <?php
+    print apply_filters('taxonomy-images-queried-term-image', '');
+    ?>
     <div class="column front-left">
-        <?php if (have_posts()) while (have_posts()) : the_post(); ?>
+    <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 
                     <h1><?php the_title(); ?></h1>
 
                     <div class="practice-body">
-                        <?php the_content(); ?>
+        <?php the_content(); ?>
                     </div>
 
                     <hr />
 
                 </div>
 
-            <?php endwhile; /* end loop */ ?>
+    <?php endwhile; /* end loop */ ?>
 
 
         <?php
@@ -33,17 +35,17 @@
         <div class="practices-footer">
             <h3>Johnson &amp; Bell Practices</h3>
 
-            <?php
+<?php
 //list terms in a given taxonomy
-            $taxonomy = 'practice-area';
-            $term_args = array(
-                'hide_empty' => false,
-                'orderby' => 'name',
-                'order' => 'ASC'
-            );
-            $tax_terms = get_terms($taxonomy, $term_args);
-            $site_url = network_site_url('/');
-            ?>
+$taxonomy = 'practice-area';
+$term_args = array(
+    'hide_empty' => false,
+    'orderby' => 'name',
+    'order' => 'ASC'
+);
+$tax_terms = get_terms($taxonomy, $term_args);
+$site_url = network_site_url('/');
+?>
 
 
 
@@ -70,11 +72,11 @@
 
 
                 <ul>
-                    <?php
-                    foreach ($tax_terms as $tax_term) {
-                        echo '<li>' . '<a href="' . $site_url . 'practices-home/' . $tax_term->slug . '" title="' . sprintf(__("View all posts in %s"), $tax_term->name) . '" ' . '>' . $tax_term->name . '</a></li>';
-                    }
-                    ?>
+<?php
+foreach ($tax_terms as $tax_term) {
+    echo '<li>' . '<a href="' . $site_url . 'practices-home/' . $tax_term->slug . '" title="' . sprintf(__("View all posts in %s"), $tax_term->name) . '" ' . '>' . $tax_term->name . '</a></li>';
+}
+?>
                 </ul>
 
 
@@ -89,11 +91,11 @@
 
     <div class="column front-right larger" >
 
-        <?php
-        if (!wp_is_mobile()) {
-            get_sidebar("practice");
-        }
-        ?>
+<?php
+if (!wp_is_mobile()) {
+    get_sidebar("practice");
+}
+?>
 
     </div>
     <div class="clearfix"></div>

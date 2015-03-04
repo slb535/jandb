@@ -32,7 +32,7 @@ Template Name: Our Story Timeline
             source:             'https://docs.google.com/spreadsheet/pub?key=0AsPwE-WJq-PQdEI4MjFMQmpEUnhhaWZLUDI1aTk2ZWc&output=html',
             start_at_end:       false,                          //OPTIONAL START AT LATEST DATE
             start_at_slide:     '0',                            //OPTIONAL START AT SPECIFIC SLIDE
-            start_zoom_adjust:  '1',                            //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL
+            start_zoom_adjust:  '5',                            //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL
             hash_bookmark:      true,                           //OPTIONAL LOCATION BAR HASHES
             css:                '/wp-content/themes/johnsonandbell/css/timeline-custom.css',     //OPTIONAL PATH TO CSS
             js:                 '/wp-content/themes/johnsonandbell/js/timeline-min.js'    //OPTIONAL PATH TO JS

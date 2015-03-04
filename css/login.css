@@ -7,6 +7,7 @@ body {
     #login h1 a { 
 	background-image: url("http://johnsonandbell.com/wp-content/themes/johnsonandbell/images/jandb_logo.png") !important; 
         background-size: 278px 45px;
+        width: 278px;
 	}
         
         
